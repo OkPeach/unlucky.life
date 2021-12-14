@@ -1,5 +1,9 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/okpeach/www)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Funlucky.life&count_bg=%2379C83D&title_bg=%23555555&icon=gnubash.svg&icon_color=%23E7E7E7&title=Visits&edge_flat=false)](https://hits.seeyoufarm.com)
+![GitHub contributors](https://img.shields.io/github/contributors/okpeach/www)
+![GitHub last commit](https://img.shields.io/github/last-commit/okpeach/www)
+![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCSj5M14XFoQnDsgs5LLOQ5g?style=social)
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Funlucky.life%2F)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Funlucky.life&count_bg=%2379C83D&title_bg=%23555555&icon=gnubash.svg&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
 <!-- PROJECT LOGO -->
