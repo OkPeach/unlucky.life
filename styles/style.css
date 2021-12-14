@@ -103,8 +103,8 @@ nav {
   position: fixed;
   z-index: -1;
   background: #303134;
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   border-radius: 0.5rem;
