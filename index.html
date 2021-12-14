@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-    <nav>
+    <nav id="mainNav">
         <svg width="357" id="logo" height="61" viewBox="0 0 357 61" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.608 51.376H27.528V58H2.40002V7.95998H10.608V51.376Z" stroke="#6610F2" stroke-width="3"/>
             <path d="M70.3202 18.328V58H62.1122V53.32C60.8162 54.952 59.1122 56.248 57.0002 57.208C54.9362 58.12 52.7282 58.576 50.3762 58.576C47.2562 58.576 44.4482 57.928 41.9522 56.632C39.5042 55.336 37.5602 53.416 36.1202 50.872C34.7282 48.328 34.0322 45.256 34.0322 41.656V18.328H42.1682V40.432C42.1682 43.984 43.0562 46.72 44.8322 48.64C46.6082 50.512 49.0322 51.448 52.1042 51.448C55.1762 51.448 57.6002 50.512 59.3762 48.64C61.2002 46.72 62.1122 43.984 62.1122 40.432V18.328H70.3202Z" stroke="#6610F2" stroke-width="3"/>
@@ -39,7 +39,20 @@
             <div class="bubble" id="bubble"></div>
         </ul>
     </nav>
-    </header>
+</header>
+    <nav role="navigation" id="naviburger">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>About me</li></a>
+            <a href="#projects"><li>Projects</li></a>
+            <a href="#contact"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>
     <div class="progress-wrap">
 		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
 			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
