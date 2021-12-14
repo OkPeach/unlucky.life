@@ -955,7 +955,7 @@ footer a {
 /* THIS HIDES THE SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 2px;
 }
 
 /* Track */
@@ -965,11 +965,11 @@ footer a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: #7c7aff;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: transparent;
+  background: #6610f2;
 }
 /*# sourceMappingURL=style.css.map */

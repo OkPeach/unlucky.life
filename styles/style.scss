@@ -806,7 +806,7 @@ footer{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 2px;
 }
 
 /* Track */
@@ -816,10 +816,10 @@ footer{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: $lightPurple;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-     background: transparent;
+     background: $indigo;
  }
