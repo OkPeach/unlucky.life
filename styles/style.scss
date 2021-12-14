@@ -130,7 +130,7 @@ nav{
 	padding: 30px;
 	margin: 20px 0;
 	transition: all 0.3s ease;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .card:hover {
@@ -403,7 +403,7 @@ footer{
 
 /* HIDING STUFF FOR MOBILE */
 @media (max-width:1024px) {
-    svg#logo, div#bubble, .interests_item, .interests_title, .interests, .flag, .flag_wrapper, .profile_img {
+    svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img {
       display: none;
     }
 
@@ -848,7 +848,7 @@ footer{
     }
 }
 
-/* THIS HIDES THE SCROLL BAR */
+/* THIS MAKES CUSTOM SCROLLBAR */
 
 /* width */
 ::-webkit-scrollbar {
@@ -870,6 +870,30 @@ footer{
      background: $indigo;
  }
 
+/* THIS HIDES THE SCROLL BAR FOR INFO CARD*/
+
+/* width */
+.card::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+.card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.card::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Handle on hover */
+.card::-webkit-scrollbar-thumb:hover {
+     background: transparent;
+ }
+
+
+/* Menu for mobile */
 #menuToggle
 {
   display: block;
@@ -908,15 +932,12 @@ footer{
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2; 
   
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
@@ -946,11 +967,6 @@ footer{
 {
   transform-origin: 0% 100%;
 }
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -958,27 +974,17 @@ footer{
   background: $white;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -1004,9 +1010,6 @@ footer{
   color: $white;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
