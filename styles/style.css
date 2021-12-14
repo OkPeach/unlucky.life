@@ -496,6 +496,12 @@ footer a {
     list-style: none;
     text-decoration: none;
   }
+  .contact-stuff {
+    top: 0px;
+  }
+  .card {
+    text-align: center;
+  }
 }
 
 #infoCard {
