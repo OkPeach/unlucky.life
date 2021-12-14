@@ -256,6 +256,8 @@ nav a {
   font-size: 3vh;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding: 0 10px;
+  margin-right: 0px;
 }
 
 .computer::before {
