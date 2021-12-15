@@ -33,9 +33,9 @@
             <path d="M354.704 25.024H347.36V58H339.08V25.024H334.4V18.328H339.08V15.52C339.08 10.96 340.28 7.64798 342.68 5.58398C345.128 3.47198 348.944 2.41599 354.128 2.41599V9.25598C351.632 9.25598 349.88 9.73598 348.872 10.696C347.864 11.608 347.36 13.216 347.36 15.52V18.328H354.704V25.024Z" stroke="#6610F2" stroke-width="3"/>
         </svg>
         <ul class="navbarUL">
-            <li><a data-page="sectionHome" href="#">Home</a></li>
-            <li><a data-page="sectionProjects" href="#projects">Projects</a></li>
-            <li><a data-page="sectionLinks" href="#contact">Contact</a></li>
+            <li><a id="selectionHome" data-page="sectionHome" href="#">Home</a></li>
+            <li><a id="selectionProjects" data-page="sectionProjects" href="#projects">Projects</a></li>
+            <li><a id="selectionLinks" data-page="sectionLinks" href="#contact">Contact</a></li>
             <div class="bubble" id="bubble"></div>
         </ul>
     </nav>
@@ -126,7 +126,7 @@
         <section data-index="2" class="sectionLinks" id="contact">
 
             <div id="contact" class="contact-stuff">
-                <h2 class="text-center contact-header" >Contact Me</h2><br/>
+                <h2 class="text-center contact-header">Contact Me</h2><br/>
                 <p>Get in touch with me <span class="email" id="email" onclick="CopyToClipboardEmail('email');return false;">contact@unlucky.life</span></p><br/>
                 <div class="text-center contact-social-icons">
                   <p>Or find me on:</p><br/><br/>
@@ -145,7 +145,7 @@
     </main>
 
     <footer>
-        <h4>2021 Lucien Pauer. All rights reserved.</h4>
+        <h4 id="rightsreserved">2021 Lucien Pauer. All rights reserved.</h4>
     </footer>
     <script src="javascript/script.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
