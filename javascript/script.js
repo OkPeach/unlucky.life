@@ -57,6 +57,6 @@ function CopyToClipboardEmail(id){
     window.getSelection().addRange(r);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-    setTimeout(function(){ document.getElementById(id).innerHTML = `PeachWRLD#8888`;$("#email").load(" #email > *"); }, 400);
+    setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 400);
     document.getElementById(id).innerHTML = "Copied! :)";
 }
