@@ -401,8 +401,22 @@ footer{
     }
 }
 
+@media (max-width:540px) {
+    .contact-stuff{
+        top: -20vh;
+    }
+
+}
+
+@media (min-device-width: 540px) and (max-device-width: 1024px) {
+    .contact-stuff{
+        top: 0vh;
+    }
+}
+
+
 /* HIDING STUFF FOR MOBILE */
-@media (max-width:1024px) {
+@media (max-device-width: 1024px) {
     svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img {
       display: none;
     }
@@ -426,8 +440,8 @@ footer{
         text-decoration: none;
     }
 
-    .contact-stuff{
-        top: 0px;
+    .right {
+        margin-left: -4vw;
     }
 
     .card {
@@ -454,6 +468,11 @@ footer{
     #naviburger{
         display: block;
     }
+
+    .sectionLinks{
+        top: 0px;
+    }
+
   }
 
 #infoCard{
