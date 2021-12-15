@@ -489,9 +489,6 @@ footer a {
   .contact-stuff {
     top: -20vh;
   }
-  svg#logo {
-    display: none;
-  }
 }
 
 @media (min-width: 540px) and (max-width: 1024px) {
@@ -502,7 +499,7 @@ footer a {
 
 /* HIDING STUFF FOR MOBILE */
 @media (max-width: 1024px) {
-  div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL {
+  svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL {
     display: none;
   }
   .navbarUL {
@@ -529,6 +526,12 @@ footer a {
   }
   .card {
     text-align: center;
+  }
+  header {
+    display: none;
+  }
+  #mainNav {
+    display: none;
   }
   .sectionHome {
     display: -webkit-box;
