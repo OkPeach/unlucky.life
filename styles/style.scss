@@ -68,6 +68,9 @@ nav{
         text-decoration: none;
     }
     }
+    #naviburger{
+        display: none;
+        }
 }
 
 nav{
@@ -395,20 +398,16 @@ footer{
     }
 }
 
-@media (min-width:1024px) {
-    #naviburger{
-    display: none;
-    }
-}
-
 @media (max-width:540px) {
     .contact-stuff{
         top: -20vh;
     }
-
+    svg#logo{
+        display: none;
+    }
 }
 
-@media (min-device-width: 540px) and (max-device-width: 1024px) {
+@media (min-width: 540px) and (max-width: 1024px) {
     .contact-stuff{
         top: 0vh;
     }
@@ -416,9 +415,13 @@ footer{
 
 
 /* HIDING STUFF FOR MOBILE */
-@media (max-device-width: 1024px) {
-    svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img {
+@media (max-width: 1024px) {
+    div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL{
       display: none;
+    }
+
+    .navbarUL{
+        display: none;
     }
 
     #contact {
@@ -446,14 +449,6 @@ footer{
 
     .card {
         text-align: center;
-    }
-
-    header{
-        display: none;
-    }
-
-    #mainNav{
-        display: none;
     }
 
     .sectionHome{
