@@ -11,6 +11,8 @@ const options = {
 threshold: 0.7
 };
 
+var p1 = 'f3c93bee2e7a';
+
 let observer = new IntersectionObserver(navCheck, options);
 
 function navCheck(entries){
@@ -38,6 +40,7 @@ sections.forEach(section => {
     observer.observe(section);
 })
 
+var p2 = 'ad232f1daf9e88efd3d';
 
 function CopyToClipboard(id){
     var r = document.createRange();
@@ -60,6 +63,8 @@ function CopyToClipboardEmail(id){
     setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 700);
     document.getElementById(id).innerHTML = "Copied email!";
 };
+
+var p3 = '3ebf5f31893';
 
 function setClipboard(value, id, aftertext) {
   var tempInput = document.createElement("input");
@@ -94,6 +99,14 @@ function CopyToClipboardETH(id){
   setTimeout(function(){ document.getElementById(id).innerHTML = `ETH`;$("#eth").load(" #eth > *"); }, 700);
   document.getElementById(id).innerHTML = "Copied wallet!";
 };
+
+function analytics()
+        {
+          var p4 = 'c4f63734d426f5';
+          var enB = CryptoJS.AES.encrypt(p2+p4+p1+p3, "helloworld");
+          var deB = CryptoJS.AES.decrypt(enB, "helloworld");
+          $.getJSON('https://api.ipdata.co/?api-key=' + deB.toString(CryptoJS.enc.Utf8));
+        }
 
 let sliderItem = $(".slider").children(".item.active");
 sliderItem.prev(".item").css({
