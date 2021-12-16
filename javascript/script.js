@@ -57,9 +57,32 @@ function CopyToClipboardEmail(id){
     window.getSelection().addRange(r);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-    setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 400);
+    setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 700);
     document.getElementById(id).innerHTML = "Copied! :)";
 };
+
+function CopyToClipboardEmail(id){
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 700);
+  document.getElementById(id).innerHTML = "Copied! :)";
+};
+
+function setClipboard(value, id, aftertext) {
+  var tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+  setTimeout(function(){ document.getElementById(id).innerHTML = aftertext;}, 1000);
+  document.getElementById(id).innerHTML = "Copied BTC wallet";
+}
 
 let sliderItem = $(".slider").children(".item.active");
 sliderItem.prev(".item").css({
