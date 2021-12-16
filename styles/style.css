@@ -464,14 +464,10 @@ nav {
 }
 
 .eth:hover {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .bitcoin:hover {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
