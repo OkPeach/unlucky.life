@@ -1,0 +1,182 @@
+/* SCSS IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
+/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg*/
+.slider {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  height: 60vh;
+  width: 70vw;
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 15vh;
+}
+
+.slider .item {
+  height: 100%;
+  width: 60vw;
+  position: absolute;
+  background: #0f1019;
+  border-radius: 10px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  z-index: 1;
+  left: 0;
+  opacity: 0.4;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  overflow-y: scroll;
+  display: block;
+  right: 0;
+  margin: 0 auto;
+}
+
+.slider .item.active {
+  z-index: 2;
+  opacity: 1;
+  width: 45vw;
+  background: #202124;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.slider .item:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 0.9;
+}
+
+.slider .active:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+.slider #website {
+  background-image: url(../images/website.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.slider #program {
+  background-image: url(../images/hourbooster.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.slider #selfbot {
+  background-position: center center;
+  background-image: url(../images/selfbot.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider .textbackground {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: black;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(48%, #181818), color-stop(70%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, #181818 48%, rgba(255, 255, 255, 0) 70%);
+}
+
+.slider .projectname {
+  z-index: 1;
+  top: 50%;
+  position: absolute;
+  margin-left: 1vw;
+  margin: 1vw;
+}
+
+.slider .projecttext {
+  z-index: 1;
+  top: 60%;
+  position: absolute;
+  margin-left: 1vw;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: #181818;
+}
+
+.slider h1 {
+  color: #7c7aff;
+  text-shadow: 5px 7px 10px black;
+}
+
+.slider a {
+  color: #4c61f5;
+  text-decoration: none;
+  font-size: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px black;
+}
+
+.slider a:hover {
+  color: #bf7aff;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.slider button {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  margin-left: -1rem;
+  margin-top: 1rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 0.5em 1em;
+  color: #4c61f5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px black;
+}
+
+.slider .fill:hover {
+  -webkit-box-shadow: inset 0 0 0 2em #4c60f562;
+          box-shadow: inset 0 0 0 2em #4c60f562;
+}
+
+.slider .raise:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #6610f2;
+          box-shadow: 0 0.5em 0.5em -0.4em #6610f2;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+/* THIS HIDES THE SCROLL BAR FOR INFO CARD*/
+/* width */
+.item::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+.item::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.item::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+.item::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+/*# sourceMappingURL=slider.css.map */

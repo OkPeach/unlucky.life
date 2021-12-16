@@ -134,6 +134,8 @@ nav{
 	margin: 20px 0;
 	transition: all 0.3s ease;
     overflow-y: scroll;
+    backface-visibility: hidden;
+    transform:translate3d(0,0,0);
 }
 
 .card:hover {
