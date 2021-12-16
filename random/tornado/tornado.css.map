@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACJ,gBAAgB,EAAE,IAAI;CACtB;;AACD,AAAA,MAAM,CAAC;EACN,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,kBAAkB;EACvB,IAAI,EAAE,kBAAkB;CACxB",
-    "sources": [
-        "tornado.scss"
-    ],
-    "names": [],
-    "file": "tornado.css"
-}
