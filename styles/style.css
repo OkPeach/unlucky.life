@@ -463,6 +463,33 @@ nav {
   cursor: pointer;
 }
 
+.eth:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bitcoin:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bitcoin::before {
+  font-family: unicons;
+  content: '\e8c3  ';
+}
+
+.paypal::before {
+  font-family: unicons;
+  content: '\ec14  ';
+}
+
+.eth::before {
+  font-family: unicons;
+  content: '\e982  ';
+}
+
 /* BOTTOM FOOTER */
 footer {
   display: -webkit-box;
@@ -497,7 +524,7 @@ footer a {
 
 @media (max-width: 540px) {
   .contact-stuff {
-    top: -20vh;
+    top: -22vh;
   }
 }
 

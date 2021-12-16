@@ -384,6 +384,31 @@ nav{
     cursor: pointer;
 }
 
+.eth:hover{
+	transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bitcoin:hover{
+	transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bitcoin::before{
+    font-family: unicons;
+    content: '\e8c3  ';
+}
+
+.paypal::before{
+    font-family: unicons;
+    content: '\ec14  ';
+}
+
+.eth::before{
+    font-family: unicons;
+    content: '\e982  ';
+}
+
 /* BOTTOM FOOTER */
 footer{
     @include flexCenter();
@@ -404,7 +429,7 @@ footer{
 
 @media (max-width:540px) {
     .contact-stuff{
-        top: -20vh;
+        top: -22vh;
     }
 
 }

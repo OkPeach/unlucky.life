@@ -46,8 +46,8 @@ function CopyToClipboard(id){
     window.getSelection().addRange(r);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
-    setTimeout(function(){ document.getElementById(id).innerHTML = `PeachWRLD#8888`;$("#discord").load(" #discord > *"); }, 400);
-    document.getElementById(id).innerHTML = "Copied! :)";
+    setTimeout(function(){ document.getElementById(id).innerHTML = `PeachWRLD#8888`;$("#discord").load(" #discord > *"); }, 700);
+    document.getElementById(id).innerHTML = "Copied tag!";
 };
 
 function CopyToClipboardEmail(id){
@@ -58,18 +58,7 @@ function CopyToClipboardEmail(id){
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
     setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 700);
-    document.getElementById(id).innerHTML = "Copied! :)";
-};
-
-function CopyToClipboardEmail(id){
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand('copy');
-  window.getSelection().removeAllRanges();
-  setTimeout(function(){ document.getElementById(id).innerHTML = `contact@unlucky.life`;}, 700);
-  document.getElementById(id).innerHTML = "Copied! :)";
+    document.getElementById(id).innerHTML = "Copied email!";
 };
 
 function setClipboard(value, id, aftertext) {
@@ -81,8 +70,30 @@ function setClipboard(value, id, aftertext) {
   document.execCommand("copy");
   document.body.removeChild(tempInput);
   setTimeout(function(){ document.getElementById(id).innerHTML = aftertext;}, 1000);
-  document.getElementById(id).innerHTML = "Copied BTC wallet";
+  document.getElementById(id).innerHTML = "Copied BTC wallet!";
 }
+
+function CopyToClipboardBTC(id){
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  setTimeout(function(){ document.getElementById(id).innerHTML = `BTC`;$("#bitcoin").load(" #bitcoin > *"); }, 700);
+  document.getElementById(id).innerHTML = "Copied wallet!";
+};
+
+function CopyToClipboardETH(id){
+  var r = document.createRange();
+  r.selectNode(document.getElementById(id));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(r);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+  setTimeout(function(){ document.getElementById(id).innerHTML = `ETH`;$("#eth").load(" #eth > *"); }, 700);
+  document.getElementById(id).innerHTML = "Copied wallet!";
+};
 
 let sliderItem = $(".slider").children(".item.active");
 sliderItem.prev(".item").css({
