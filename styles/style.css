@@ -96,19 +96,41 @@ header {
 }
 
 .navbarUL {
-  text-shadow: 0px 10px 10px black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#selectionHome {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#selectionProjects {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#selectionLinks {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #selectionHome:hover {
-  text-shadow: 0px 10px 10px #7c7aff;
+  text-shadow: 0px 5px 10px #7c7aff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #selectionProjects:hover {
-  text-shadow: 0px 10px 10px #7c7aff;
+  text-shadow: 0px 5px 10px #7c7aff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #selectionLinks:hover {
-  text-shadow: 0px 10px 10px #7c7aff;
+  text-shadow: 0px 5px 10px #7c7aff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav {

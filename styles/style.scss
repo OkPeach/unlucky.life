@@ -74,19 +74,34 @@ nav{
 }
 
 .navbarUL{
-    text-shadow: 0px 10px 10px $black
+    transition: all 0.3s ease;
+}
+
+#selectionHome{
+    transition: all 0.3s ease;
+}
+
+#selectionProjects{
+    transition: all 0.3s ease;
+}
+
+#selectionLinks{
+    transition: all 0.3s ease;
 }
 
 #selectionHome:hover{
-    text-shadow: 0px 10px 10px $lightPurple
+    text-shadow: 0px 5px 10px $lightPurple;
+    transition: all 0.3s ease;
 }
 
 #selectionProjects:hover{
-    text-shadow: 0px 10px 10px $lightPurple
+    text-shadow: 0px 5px 10px $lightPurple;
+    transition: all 0.3s ease;
 }
 
 #selectionLinks:hover{
-    text-shadow: 0px 10px 10px $lightPurple
+    text-shadow: 0px 5px 10px $lightPurple;
+    transition: all 0.3s ease;
 }
 
 nav{
