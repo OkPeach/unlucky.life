@@ -31,6 +31,7 @@
       transform:scale(0.8);
       overflow-y: scroll;
       display: block;
+      box-shadow: 0px 10px 10px $blackalpha;
         
         right:0;
         margin:0 auto;
@@ -40,15 +41,18 @@
         width:45vw;
         background:$googleBlack;
         transform:scale(1);
+        box-shadow: 0px 4px 10px $indigoalpha;
       }
     }
     .item:hover {
         transform:scale(0.9);
         opacity: 0.9;
+        box-shadow: 0px 15px 10px $blackalpha;
     }
     .active:hover{
         transform:scale(1.1);
         opacity: 1;
+        box-shadow: 0px 15px 10px $indigoalpha;
     }
     #website{
         background-image: url(../images/website.png);

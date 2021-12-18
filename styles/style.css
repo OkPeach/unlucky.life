@@ -95,6 +95,22 @@ header {
   }
 }
 
+.navbarUL {
+  text-shadow: 0px 10px 10px black;
+}
+
+#selectionHome:hover {
+  text-shadow: 0px 10px 10px #7c7aff;
+}
+
+#selectionProjects:hover {
+  text-shadow: 0px 10px 10px #7c7aff;
+}
+
+#selectionLinks:hover {
+  text-shadow: 0px 10px 10px #7c7aff;
+}
+
 nav {
   z-index: 100;
   top: 0vh;
@@ -186,6 +202,8 @@ nav {
           transform: scale(1.25);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-box-shadow: 10px 10px 10px #6710f260;
+          box-shadow: 10px 10px 10px #6710f260;
 }
 
 .location::before {
@@ -278,6 +296,8 @@ nav {
   transition: all 0.3s ease;
   padding: 5px;
   margin-right: 0px;
+  -webkit-box-shadow: 0px 10px 10px #6710f260;
+          box-shadow: 0px 10px 10px #6710f260;
 }
 
 .computer::before {
@@ -389,6 +409,10 @@ nav {
   top: 10vh;
 }
 
+.contact-header {
+  text-shadow: 0px 10px 10px black;
+}
+
 .contact-stuff p {
   font-size: 2vh;
 }
@@ -430,6 +454,7 @@ nav {
   color: #7c7aff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  text-shadow: 0px 10px 10px black;
 }
 
 .email::before {
@@ -516,6 +541,10 @@ footer a {
   z-index: 10;
   text-decoration: none;
   right: 2vh;
+}
+
+.rightsreserved {
+  text-shadow: 0px 10px 10px black;
 }
 
 @media (max-width: 540px) {
