@@ -19,7 +19,7 @@
 
 html {
   cursor: url("../images/cursor.png"), default;
-  overflow: hidden;
+  overscroll-behavior-y: none;
 }
 
 /* BODY */
@@ -28,6 +28,7 @@ body {
   color: white;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
+  overscroll-behavior-y: none;
 }
 
 /* NAVBAR BACKGROUND */

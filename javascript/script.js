@@ -100,6 +100,9 @@ function CopyToClipboardETH(id){
   document.getElementById(id).innerHTML = "Copied wallet!";
 };
 
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
 function analytics()
         {
           var p4 = 'c4f63734d426f5';
