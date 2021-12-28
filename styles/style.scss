@@ -22,6 +22,7 @@
 
 html {
     cursor: url("../images/cursor.png"), default;
+    overflow: hidden;
 }
 
 /* BODY */
@@ -150,29 +151,57 @@ nav{
 	margin: 5px 0;
 }
 
-.card {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    width: 40vw;
-    height: 50vh;
-	background-color: $navbar;
-	border-radius: 20px;
-    border-color: $indigo;
-    border-width: 1px;
-    border-style: solid;
-	display: flex;
-	flex-direction: row;
-	padding: 30px;
-	margin: 20px 0;
-	transition: all 0.3s ease;
-    overflow-y: scroll;
-    backface-visibility: hidden;
-    transform:translate3d(0,0,0);
+@media (min-width:1024px) {
+    .card {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        width: 40vw;
+        height: 50vh;
+        background-color: $navbar;
+        border-radius: 20px;
+        border-color: $indigo;
+        border-width: 1px;
+        border-style: solid;
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+        overflow-y: scroll;
+        backface-visibility: hidden;
+        transform:translate3d(0,0,0);
+        }
+    .card:hover {
+        transform: scale(1.25);
+        transition: all 0.3s ease;
+        box-shadow: 10px 10px 10px $indigoalpha
+    }
 }
 
-.card:hover {
-	transform: scale(1.25);
-	transition: all 0.3s ease;
-    box-shadow: 10px 10px 10px $indigoalpha
+@media (max-width:1024px) {
+    .card {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        width: 80vw;
+        height: 50vh;
+        background-color: $navbar;
+        border-radius: 20px;
+        border-color: $indigo;
+        border-width: 1px;
+        border-style: solid;
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+        overflow-y: scroll;
+        backface-visibility: hidden;
+        transform:translate3d(0,0,0);
+    }
+
+    .card:hover {
+        transform: scale(1);
+        transition: all 0.3s ease;
+        box-shadow: 10px 10px 10px $indigoalpha
+    } 
 }
 
 .location::before {

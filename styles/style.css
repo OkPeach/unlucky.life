@@ -19,6 +19,7 @@
 
 html {
   cursor: url("../images/cursor.png"), default;
+  overflow: hidden;
 }
 
 /* BODY */
@@ -191,41 +192,80 @@ nav {
   margin: 5px 0;
 }
 
-.card {
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  width: 40vw;
-  height: 50vh;
-  background-color: #212327;
-  border-radius: 20px;
-  border-color: #6610f2;
-  border-width: 1px;
-  border-style: solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 30px;
-  margin: 20px 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  overflow-y: scroll;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+@media (min-width: 1024px) {
+  .card {
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 40vw;
+    height: 50vh;
+    background-color: #212327;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 30px;
+    margin: 20px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    overflow-y: scroll;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .card:hover {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 10px 10px 10px #6710f260;
+            box-shadow: 10px 10px 10px #6710f260;
+  }
 }
 
-.card:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-box-shadow: 10px 10px 10px #6710f260;
-          box-shadow: 10px 10px 10px #6710f260;
+@media (max-width: 1024px) {
+  .card {
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 80vw;
+    height: 50vh;
+    background-color: #212327;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 30px;
+    margin: 20px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    overflow-y: scroll;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .card:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 10px 10px 10px #6710f260;
+            box-shadow: 10px 10px 10px #6710f260;
+  }
 }
 
 .location::before {
