@@ -23,6 +23,7 @@
 html {
     cursor: url("../images/cursor.png"), default;
     overscroll-behavior-y: none;
+    background-color: $googleBlack;
 }
 
 /* BODY */
@@ -33,6 +34,11 @@ body{
     font-family: 'Poppins', sans-serif;
     overscroll-behavior-y: none;
 }
+
+::selection {
+    color: #00bbff;
+  }
+
 
 /* NAVBAR BACKGROUND */
 header{
@@ -351,11 +357,24 @@ nav{
 }
 
 /* LINKS */
-.sectionLinks{
-    @include flexCenter();
-    height: 95vh;
-    width: 100%;
-    background-color: $googleBlack;
+@media (max-width:1024px) {
+    .sectionLinks{
+        @include flexCenter();
+        height: 95vh;
+        width: 100%;
+        background-color: $googleBlack;
+        margin-bottom: 10vh;
+    }
+}
+
+@media (min-width:1024px) {
+    .sectionLinks{
+        @include flexCenter();
+        height: 95vh;
+        width: 100%;
+        background-color: $googleBlack;
+        margin-bottom: 0vh;
+    }
 }
 
 #contact {
@@ -374,7 +393,7 @@ nav{
     text-align: center;
 
     position: relative;
-    top: 10vh;
+    top: 5vh;
 }
 
 .contact-header{
@@ -383,6 +402,22 @@ nav{
 
 .contact-stuff p {
     font-size: 2vh;
+}
+
+.wallet{
+    font-size: 2vh;
+    color: $textBlue;
+    list-style: none; 
+    text-decoration: none;
+    text-shadow: 5px 7px 10px $black;
+    transition: all 0.3s ease;
+    font-weight: bolder;
+}
+
+.wallet:hover{
+    color: $primaryText; 
+    text-decoration: none;
+    font-size: 3vh;
 }
 
 .contact-social-icons ul a {
@@ -399,6 +434,7 @@ nav{
       text-decoration: none;
       font-size: 3vh;
 	  transition: all 0.3s ease;
+      font-weight: bolder;
 }
 
 .contact-social-icons ul a li {
@@ -450,6 +486,7 @@ nav{
     font-size: 3vh;
 	transition: all 0.3s ease;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .eth:hover{

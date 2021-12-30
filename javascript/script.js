@@ -13,6 +13,25 @@ threshold: 0.7
 
 var p1 = 'f3c93bee2e7a';
 
+
+
+//BTC BALLANCE
+var btcAddress = "bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9";
+
+console.log('fetching blockchain...');
+fetch("https://blockchain.info/q/addressbalance/" + btcAddress)
+  .then(function(response) {
+    console.log('...got response from blockchain...');
+    return response.json();
+  })
+  .then(function(json) {
+    var btcBalance = parseInt(json, 10);
+    //document.getElementById("btc-address").innerHTML = btcAddress;
+    document.getElementById("btc-balance").innerHTML = btcBalance / 100000000;
+    console.log('balance set!');
+  });
+//BTC BALLANCE
+
 let observer = new IntersectionObserver(navCheck, options);
 
 function navCheck(entries){
@@ -78,24 +97,26 @@ function setClipboard(value, id, aftertext) {
   document.getElementById(id).innerHTML = "Copied BTC wallet!";
 }
 
-function CopyToClipboardBTC(id){
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand('copy');
-  window.getSelection().removeAllRanges();
+function CopyToClipboardBTC(value, id){
+  var tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
   setTimeout(function(){ document.getElementById(id).innerHTML = `BTC`;$("#bitcoin").load(" #bitcoin > *"); }, 700);
   document.getElementById(id).innerHTML = "Copied wallet!";
 };
 
-function CopyToClipboardETH(id){
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand('copy');
-  window.getSelection().removeAllRanges();
+function CopyToClipboardETH(value, id){
+  var tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
   setTimeout(function(){ document.getElementById(id).innerHTML = `ETH`;$("#eth").load(" #eth > *"); }, 700);
   document.getElementById(id).innerHTML = "Copied wallet!";
 };
