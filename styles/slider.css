@@ -200,15 +200,15 @@
             box-shadow: 0px 4px 10px #6710f260;
   }
   .slider .item:hover {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 0.9;
     -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
   }
   .slider .active:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
     -webkit-box-shadow: 0px 15px 10px #6710f260;
             box-shadow: 0px 15px 10px #6710f260;
