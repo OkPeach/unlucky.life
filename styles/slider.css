@@ -167,6 +167,7 @@
     right: 0;
     top: 15vh;
     white-space: initial;
+    padding-bottom: 2rem;
   }
   .slider .item {
     height: 100%;
