@@ -21,7 +21,7 @@
 <body onload="analytics()">
     <header>
     <nav id="mainNav">
-        <a href="#">
+        <a href="#" class="pointer">
             <svg width="357" id="logo" height="61" viewBox="0 0 357 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.608 51.376H27.528V58H2.40002V7.95998H10.608V51.376Z" stroke="#6610F2" stroke-width="3"/>
                 <path d="M70.3202 18.328V58H62.1122V53.32C60.8162 54.952 59.1122 56.248 57.0002 57.208C54.9362 58.12 52.7282 58.576 50.3762 58.576C47.2562 58.576 44.4482 57.928 41.9522 56.632C39.5042 55.336 37.5602 53.416 36.1202 50.872C34.7282 48.328 34.0322 45.256 34.0322 41.656V18.328H42.1682V40.432C42.1682 43.984 43.0562 46.72 44.8322 48.64C46.6082 50.512 49.0322 51.448 52.1042 51.448C55.1762 51.448 57.6002 50.512 59.3762 48.64C61.2002 46.72 62.1122 43.984 62.1122 40.432V18.328H70.3202Z" stroke="#6610F2" stroke-width="3"/>
@@ -36,10 +36,10 @@
             </svg>
         </a>
         <ul class="navbarUL">
-            <li><a id="selectionHome" data-page="sectionHome" href="#">Home</a></li>
-            <li><a id="selectionProjects" data-page="sectionProjects" href="#projects">Projects</a></li>
-            <li><a id="selectionLinks" data-page="sectionLinks" href="#contact">Contact</a></li>
-            <div class="bubble" id="bubble"></div>
+            <li><a id="selectionHome" data-page="sectionHome" href="#" class="pointer">Home</a></li>
+            <li><a id="selectionProjects" data-page="sectionProjects" href="#projects" class="pointer">Projects</a></li>
+            <li><a id="selectionLinks" data-page="sectionLinks" href="#contact" class="pointer">Contact</a></li>
+            <div class="bubble pointer" id="bubble"></div>
         </ul>
     </nav>
 </header>
@@ -92,7 +92,7 @@
             <!--information card end-->
 
             <!--Mouse-->
-        <a href="#projects">
+        <a href="#projects" class="pointer">
             <div class="mouse_scroll">
 		        <div class="mouse">
 			    <div class="wheel"></div>
@@ -116,9 +116,9 @@
                     <h1 class="projectname">Chromium discord selfbot</h1>
                     <span class="projecttext">
                         <p>Information: Discord bot with some usefull commands.</p>
-                        <p>Languages: <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a></p>
-                        <p>Program: <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>, <a href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a></p>
-                        <button id="buybot" class="raise" onclick="setClipboard('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'buybot', 'Buy - $10 BTC')">Buy - $10 BTC</button>
+                        <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a></p>
+                        <p>Program: <a href="https://www.jetbrains.com/pycharm/" target="_blank" class="pointer">PyCharm</a>, <a class="pointer" href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a></p>
+                        <button id="buybot" class="raise pointer" onclick="setClipboard('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'buybot', 'Buy - $10 BTC')">Buy - $10 BTC</button>
                     </span>
                 </div>
             </div>
@@ -127,9 +127,9 @@
                     <h1 class="projectname">My website</h1>
                     <span class="projecttext">
                         <p>Information: This is my portfolio website that contains some info about me.</p>
-                        <p>Languages: <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SCSS</a> and <a href="https://en.wikipedia.org/wiki/JavaScript">JS</a></p>
-                        <p>Program: <a href="https://code.visualstudio.com/" target="_blank">VS Code</a></p>
-                        <button class="raise" onClick="parent.open('https://github.com/OkPeach/www')">Visit Github</button>
+                        <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/HTML">HTML</a>, <a class="pointer" href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SCSS</a> and <a class="pointer" href="https://en.wikipedia.org/wiki/JavaScript">JS</a></p>
+                        <p>Program: <a class="pointer" href="https://code.visualstudio.com/" target="_blank">VS Code</a></p>
+                        <button class="raise pointer" onClick="parent.open('https://github.com/OkPeach/www')">Visit Github</button>
                     </span>
                 </div>
             </div>
@@ -138,9 +138,9 @@
                     <h1 class="projectname">Chromium steam hour booster</h1>
                     <span class="projecttext">
                         <p>Information: Steam hour booster that can run unlimited ammount of games at once, checks for bans and tells you who is trying to message you.</p>
-                        <p>Languages: <a href="https://en.wikipedia.org/wiki/Node.js" target="_blank">Node.JS</a></p>
-                        <p>Program: <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>, <a href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a></p>
-                        <button id="buyboost" class="raise" onclick="setClipboard('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'buyboost', 'Buy - $5 BTC')">Buy - $5 BTC</button>
+                        <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/Node.js" target="_blank">Node.JS</a></p>
+                        <p>Program: <a class="pointer" href="https://code.visualstudio.com/" target="_blank">VS Code</a>, <a class="pointer" href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a></p>
+                        <button id="buyboost" class="raise pointer" onclick="setClipboard('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'buyboost', 'Buy - $5 BTC')">Buy - $5 BTC</button>
                     </span>
                 </div>
             </div>
@@ -149,7 +149,7 @@
 
         <br/><br/>
             <!--Mouse-->
-        <a href="#contact">  
+        <a href="#contact" class="pointer">  
             <div class="mouse_scroll">
 		        <div class="mouse">
 			    <div class="wheel"></div>
@@ -171,17 +171,17 @@
                 <div class="text-center contact-social-icons">
                   <p>Or find me on:</p>
                   <ul class="shadow">
-                    <a href="https://github.com/okpeach" target="_blank"><li class="github"> Github</li></a>
-                    <a href="https://twitter.com/lucienkkk" target="_blank"><li class="twitter"> Twitter</li></a>
-                    <a href="https://www.youtube.com/c/Lucienrip" target="_blank"><li class="youtube"> YouTube</li></a>
-                    <a href="https://steamcommunity.com/id/PeachWRLD" target="_blank"><li class="steam"> Steam</li></a>
-                    <a onclick="CopyToClipboard('discord');return false;" id="discord"><li class="discord"> PeachWRLD#8888</li></a>
+                    <a href="https://github.com/okpeach" target="_blank"><li class="github pointer"> Github</li></a>
+                    <a href="https://twitter.com/lucienkkk" target="_blank"><li class="twitter pointer"> Twitter</li></a>
+                    <a href="https://www.youtube.com/c/Lucienrip" target="_blank"><li class="youtube pointer"> YouTube</li></a>
+                    <a href="https://steamcommunity.com/id/PeachWRLD" target="_blank"><li class="steam pointer"> Steam</li></a>
+                    <a class="pointer" onclick="CopyToClipboard('discord');return false;" id="discord"><li class="discord"> PeachWRLD#8888</li></a>
                   </ul>
                   <p>Support me:</p>
                   <ul class="shadow">
-                    <a onclick="CopyToClipboardBTC('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'bitcoin')" id="bitcoin"><li class="bitcoin"> BTC</li></a>
-                    <a href="https://paypal.me/lucienkkk/5USD" target="_blank"><li class="paypal"> PayPal</li></a>
-                    <a onclick="CopyToClipboardETH('0x64f74ad48cE1A6086C8822Ed9CC15401ABA22fa1', 'eth')" id="eth"><li class="eth"> ETH</li></a>
+                    <a class="pointer" onclick="CopyToClipboardBTC('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'bitcoin')" id="bitcoin"><li class="bitcoin"> BTC</li></a>
+                    <a class="pointer" href="https://paypal.me/lucienkkk/5USD" target="_blank"><li class="paypal"> PayPal</li></a>
+                    <a class="pointer" onclick="CopyToClipboardETH('0x64f74ad48cE1A6086C8822Ed9CC15401ABA22fa1', 'eth')" id="eth"><li class="eth"> ETH</li></a>
                   </ul>
                   <span class="wallet">Wallet - <span id="btc-balance"></span> BTC</span>
                 </p>

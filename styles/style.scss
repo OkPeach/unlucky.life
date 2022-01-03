@@ -26,6 +26,10 @@ html {
     background-color: $googleBlack;
 }
 
+.pointer{
+    cursor: url("../images/pointer.png"), pointer;
+}
+
 /* BODY */
 body{
     background: rgb(44, 44, 44);
@@ -479,22 +483,22 @@ nav{
 }
 
 .discord:hover{
-    cursor: pointer;
+    cursor: url("../images/pointer.png"), pointer;
 }
 
 .email:hover{
     font-size: 3vh;
 	transition: all 0.3s ease;
-    cursor: pointer;
+    cursor: url("../images/pointer.png"), pointer;
     font-weight: bolder;
 }
 
 .eth:hover{
-    cursor: pointer;
+    cursor: url("../images/pointer.png"), pointer;
 }
 
 .bitcoin:hover{
-    cursor: pointer;
+    cursor: url("../images/pointer.png"), pointer;
 }
 
 .bitcoin::before{
@@ -739,7 +743,7 @@ footer{
 	bottom: 50px;
 	height: 46px;
 	width: 46px;
-	cursor: pointer;
+	cursor: url("../images/pointer.png"), pointer;
 	display: block;
 	border-radius: 50px;
 	box-shadow: inset  0 0 0 2px rgba(255,255,255,0.2);
@@ -767,7 +771,7 @@ footer{
 	top: 0;
 	height: 46px;
 	width: 46px;
-	cursor: pointer;
+	cursor: url("../images/pointer.png"), pointer;
 	display: block;
 	z-index: 1;
 	-webkit-transition: all 200ms linear;
@@ -792,7 +796,7 @@ footer{
 	top: 0;
 	height: 46px;
 	width: 46px;
-	cursor: pointer;
+	cursor: url("../images/pointer.png"), pointer;
 	display: block;
 	z-index: 2;
 	-webkit-transition: all 200ms linear;
