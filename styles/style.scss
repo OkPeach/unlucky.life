@@ -51,7 +51,7 @@ header{
     width: 100%;
     background: $navbar;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
-    z-index: 100;
+    z-index: 1000;
     top: 0vh;
     position: fixed;
 }
@@ -65,7 +65,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1000;
     top: 0vh;
     position: fixed;
     ul{
@@ -82,7 +82,33 @@ nav{
     }
     #naviburger{
         display: none;
-        }
+    }
+}
+
+@media (min-width:1024px) {
+    .progbar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 10.2vh;
+        background: linear-gradient(to right, $lightPurple, $indigo);
+        width: 0%;
+        z-index: 1;
+        transition: width 0.1s ease-out;
+    }
+}
+
+@media (max-width:1024px) {
+    .progbar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 0.4vh;
+        background: linear-gradient(to right, $lightPurple, $indigo);
+        width: 0%;
+        z-index: 1;
+        transition: width 0.1s ease-out;
+    }
 }
 
 .navbarUL{
@@ -117,7 +143,7 @@ nav{
 }
 
 nav{
-    z-index: 100;
+    z-index: 1000;
     top: 0vh;
     position: fixed;
 }
@@ -1058,10 +1084,10 @@ footer{
 {
   display: block;
   position: relative;
-  top: 1vh;
-  left: 1vw;
+  top: 2vh;
+  left: 2vw;
   
-  z-index: 1;
+  z-index: 100;
   
   -webkit-user-select: none;
   user-select: none;
