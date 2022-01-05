@@ -40,7 +40,7 @@ body{
 }
 
 ::selection {
-    color: #00bbff;
+    color: $jinxlight;
   }
 
 
@@ -91,11 +91,11 @@ nav{
         left: 0;
         top: 0;
         height: 10.2vh;
-        background: linear-gradient(to right, $lightPurple, $indigo);
+        background: linear-gradient(to right, $jinxlight, $indigo);
         width: 0%;
         z-index: 1;
         transition: width 0.1s ease-out;
-        animation: Animation 10s ease infinite;
+        animation: Animation 5s ease infinite;
     }
 }
 
@@ -443,6 +443,8 @@ nav{
     text-shadow: 5px 7px 10px $black;
     transition: all 0.3s ease;
     font-weight: bolder;
+    padding: 2%; 
+    display: inline-block;
 }
 
 .wallet:hover{
@@ -581,7 +583,7 @@ footer{
 
 /* HIDING STUFF FOR MOBILE */
 @media (max-width: 1024px) {
-    svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL{
+    svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL, .mobilenodisplay{
       display: none;
     }
 

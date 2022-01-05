@@ -37,11 +37,11 @@ body {
 }
 
 ::-moz-selection {
-  color: #00bbff;
+  color: #30a8f0;
 }
 
 ::selection {
-  color: #00bbff;
+  color: #30a8f0;
 }
 
 /* NAVBAR BACKGROUND */
@@ -116,14 +116,14 @@ header {
     left: 0;
     top: 0;
     height: 10.2vh;
-    background: -webkit-gradient(linear, left top, right top, from(#7c7aff), to(#6610f2));
-    background: linear-gradient(to right, #7c7aff, #6610f2);
+    background: -webkit-gradient(linear, left top, right top, from(#30a8f0), to(#6610f2));
+    background: linear-gradient(to right, #30a8f0, #6610f2);
     width: 0%;
     z-index: 1;
     -webkit-transition: width 0.1s ease-out;
     transition: width 0.1s ease-out;
-    -webkit-animation: Animation 10s ease infinite;
-            animation: Animation 10s ease infinite;
+    -webkit-animation: Animation 5s ease infinite;
+            animation: Animation 5s ease infinite;
   }
 }
 
@@ -559,6 +559,8 @@ nav {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-weight: bolder;
+  padding: 2%;
+  display: inline-block;
 }
 
 .wallet:hover {
@@ -713,7 +715,7 @@ footer a {
 
 /* HIDING STUFF FOR MOBILE */
 @media (max-width: 1024px) {
-  svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL {
+  svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL, .mobilenodisplay {
     display: none;
   }
   .navbarUL {
