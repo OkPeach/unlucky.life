@@ -1300,7 +1300,7 @@ footer a {
 /* Menu for mobile */
 #menuToggle {
   display: block;
-  position: relative;
+  position: fixed;
   top: 2vh;
   left: 2vw;
   z-index: 100;
@@ -1381,25 +1381,25 @@ footer a {
 
 #menu {
   position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: transparent;
+  width: 30vw;
+  text-align: center;
+  border-radius: 20px;
+  background: #212327;
+  border-color: #6610f2;
+  border-width: 1px;
+  border-style: solid;
   list-style-type: none;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
+  -webkit-transition: -webkit-transform ease 0.5s;
+  transition: -webkit-transform ease 0.5s;
+  transition: transform ease 0.5s;
+  transition: transform ease 0.5s, -webkit-transform ease 0.5s;
 }
 
 #menu li {
-  padding: 10px 0;
-  margin: 5px;
   font-size: 22px;
   color: white;
 }

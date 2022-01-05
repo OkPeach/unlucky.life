@@ -1088,7 +1088,7 @@ footer{
 #menuToggle
 {
   display: block;
-  position: relative;
+  position: fixed;
   top: 2vh;
   left: 2vw;
   
@@ -1179,24 +1179,25 @@ footer{
 #menu
 {
   position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+  width: 30vw;
+  text-align: center;
   
-  background: transparent;
+  border-radius: 20px;
+  background: $navbar;
+  border-color: $indigo;
+  border-width: 1px;
+  border-style: solid;
+
   list-style-type: none;
   
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(-150%, 0);
   
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform ease 0.5s;
 }
 
 #menu li
 {
-  padding: 10px 0;
-  margin: 5px;
   font-size: 22px;
   color: $white;
 }
