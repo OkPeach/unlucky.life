@@ -1,0 +1,154 @@
+/* SCSS IMPORTS */
+@import "./colors";
+@import "./mixins";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+@font-face {
+    font-family: 'unicons';
+    src: url('../other/unicons.ttf');
+}
+
+/* ALL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR BACKGROUND */
+header{
+    @include flexCenter();
+    height: 7vh;
+    width: 100%;
+    background: $navbar;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    top: 0vh;
+    position: fixed;
+}
+
+html {
+    cursor: url("../images/cursor.png"), default;
+    overscroll-behavior-y: none;
+    background-color: $googleBlack;
+}
+
+.pointer{
+    cursor: url("../images/pointer.png"), pointer;
+}
+
+/* BODY */
+body{
+    background: $googleBlack;
+    color: white;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overscroll-behavior-y: none;
+}
+
+::selection {
+    color: $jinxlight;
+}
+
+h1{
+    color: $indigo; 
+    text-shadow: 0px 10px 10px $black;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* THIS MAKES CUSTOM SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $lightPurple;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+     background: $indigo;
+ }
+
+ /* THIS MAKES CUSTOM SCROLLBAR */
+
+/* width */
+.valuelookup::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+.valuelookup::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.valuelookup::-webkit-scrollbar-thumb {
+    background: $lightPurple;
+}
+
+/* Handle on hover */
+.valuelookup::-webkit-scrollbar-thumb:hover {
+     background: $indigo;
+ }
+
+.iframes{
+    border: 0;
+    border-top: solid 1px $indigo;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+h2{
+    color: $textBlue;
+}
+
+.calc{
+    @include flexCenter();
+    width: 15vw;
+    height: 38vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.valuelookup{
+    width: 15vw;
+    height: 35vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+}
+
+main{
+    @include flexCenter();
+    height: 94vh;
+    width: 100%;
+}
+
+ footer{
+    @include flexCenter();
+    height: 6vh;
+    width: 100%;
+    color: $lightPurple;
+    background: $navbar;
+    z-index: 1;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+}
