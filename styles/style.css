@@ -122,6 +122,8 @@ header {
     z-index: 1;
     -webkit-transition: width 0.1s ease-out;
     transition: width 0.1s ease-out;
+    -webkit-animation: Animation 10s ease infinite;
+            animation: Animation 10s ease infinite;
   }
 }
 
@@ -1066,6 +1068,30 @@ footer a {
   }
   84% {
     border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@-webkit-keyframes Animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 10% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 10% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }
 

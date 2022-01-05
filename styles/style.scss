@@ -95,6 +95,7 @@ nav{
         width: 0%;
         z-index: 1;
         transition: width 0.1s ease-out;
+        animation: Animation 10s ease infinite;
     }
 }
 
@@ -924,7 +925,11 @@ footer{
 	70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
 	84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
 }
-
+@keyframes Animation { 
+    0%{background-position:0% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:0% 0%}
+}
 
 /* LUCIENWTF LOGO */
 #logo{
