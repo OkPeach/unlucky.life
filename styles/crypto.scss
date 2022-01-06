@@ -118,23 +118,47 @@ h2{
     color: $textBlue;
 }
 
-.calc{
-    @include flexCenter();
-    width: 15vw;
-    height: 38vh;
-    border-radius: 20px;
-    border-color: $indigo;
-    border-width: 1px;
-    border-style: solid;
+
+@media (max-width:1500px) {
+    .calc{
+        @include flexCenter();
+        width: 45vw;
+        height: 58vh;
+        border-radius: 20px;
+        border-color: $indigo;
+        border-width: 1px;
+        border-style: solid;
+    }
+    
+    .valuelookup{
+        width: 45vw;
+        height: 55vh;
+        border-radius: 20px;
+        border-color: $indigo;
+        border-width: 1px;
+        border-style: solid;
+    }
 }
 
-.valuelookup{
-    width: 15vw;
-    height: 35vh;
-    border-radius: 20px;
-    border-color: $indigo;
-    border-width: 1px;
-    border-style: solid;
+@media (min-width:1500px) {
+    .calc{
+        @include flexCenter();
+        width: 15vw;
+        height: 38vh;
+        border-radius: 20px;
+        border-color: $indigo;
+        border-width: 1px;
+        border-style: solid;
+    }
+    
+    .valuelookup{
+        width: 15vw;
+        height: 35vh;
+        border-radius: 20px;
+        border-color: $indigo;
+        border-width: 1px;
+        border-style: solid;
+    }
 }
 
 main{

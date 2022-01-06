@@ -129,35 +129,68 @@ h2 {
   color: #4c61f5;
 }
 
-.calc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 15vw;
-  height: 38vh;
-  border-radius: 20px;
-  border-color: #6610f2;
-  border-width: 1px;
-  border-style: solid;
+@media (max-width: 1500px) {
+  .calc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 45vw;
+    height: 58vh;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+  }
+  .valuelookup {
+    width: 45vw;
+    height: 55vh;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+  }
 }
 
-.valuelookup {
-  width: 15vw;
-  height: 35vh;
-  border-radius: 20px;
-  border-color: #6610f2;
-  border-width: 1px;
-  border-style: solid;
+@media (min-width: 1500px) {
+  .calc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 15vw;
+    height: 38vh;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+  }
+  .valuelookup {
+    width: 15vw;
+    height: 35vh;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+  }
 }
 
 main {
