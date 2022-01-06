@@ -23,16 +23,35 @@
             <h1>Crypto prices - very WIP</h1>
         </header>
         <main>
-            
-            <div class="calc">
-                <h2>Coin converter</h2>
-                <iframe class="valuelookup" src="https://widget.coinlib.io/widget?type=converter&theme=dark"></iframe>
+            <div class="cryptoprice">
+                <span class="cryptocurrency" id="data">BTC</span>
+
             </div>
+            <div class="cards">
+                <div class="calc">
+                    <h2>Coin converter</h2>
+                    <iframe class="valuelookup" src="https://widget.coinlib.io/widget?type=converter&theme=dark"></iframe>
+                </div>
+                    
+                <div class="calc">
+                    <h2>BTC wallet checker</h2>
+                    <div class="walletckr">
+                        <div class="group">
+                             <input autocomplete="off" id="link" type="text" required class="js-copytextarea" /> <span class="highlight"></span>
+                             <span class="bar"></span>
+                             <label>BTC ADDRESS</label>
+                        </div>
+                        <button onclick="getValue()" class="pointer">Get balance</button>
+                        <br>
+                        <span id="btc-balance">Balance</span>
+                    </div>
+                </div>
         </main>
         <footer>
             <iframe class="iframes" src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no"></iframe>
         </footer>
-
+        <script src="javascript/console.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="javascript/crypto.js"></script>
     </body>
 </html>
