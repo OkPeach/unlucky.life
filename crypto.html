@@ -25,7 +25,7 @@
         <main>
             <div class="cryptoprice">
                 <span class="cryptocurrency" id="data">BTC</span>
-
+                <span class="cryptocurrency" id="dataeth">ETH - ?</span>
             </div>
             <div class="cards">
                 <div class="calc">
@@ -44,6 +44,22 @@
                         <button onclick="getValue()" class="pointer">Get balance</button>
                         <br>
                         <span id="btc-balance">Balance</span>
+                        <span id="btc-usd-balance"></span>
+                    </div>
+                </div>
+
+                <div class="calc">
+                    <h2>ETH wallet checker</h2>
+                    <div class="walletckr">
+                        <div class="group">
+                             <input autocomplete="off" id="ethbal" type="text" required class="js-copytextarea2" /> <span class="highlight"></span>
+                             <span class="bar"></span>
+                             <label>ETH ADDRESS</label>
+                        </div>
+                        <button onclick="getETH()" class="pointer">Get balance</button>
+                        <br>
+                        <span id="eth-balance" class="ethBal">Balance</span>
+                        <span id="eth-usd-balance" class="ethBalusd"></span>
                     </div>
                 </div>
         </main>

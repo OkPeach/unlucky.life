@@ -438,9 +438,18 @@ button{
     transform: translateY(-0.25em);
 }
 
-#btc-balance{
-    color: $indigo;
+#btc-balance, #btc-usd-balance{
+    color: $lightPurple;
     text-shadow: 0px 10px 10px $black;
     width: 80%;
     font-size: 1rem;
+    font-weight: bolder;
+}
+
+#eth-balance, #eth-usd-balance{
+    color: $lightPurple;
+    text-shadow: 0px 10px 10px $black;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: bolder;
 }
