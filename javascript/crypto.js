@@ -22,7 +22,7 @@ function btcbubble(){
         document.getElementById("data").innerHTML = usdValue;
   }
 
-  setTimeout(function(){ document.getElementById("data").style.color = 'white'; }, 100);
+  setTimeout(function(){ document.getElementById("data").style.color = 'white'; }, 200);
     
   setTimeout(btcbubble, 25000);
 }
@@ -50,7 +50,7 @@ function ethbubble(){
         document.getElementById("dataeth").innerHTML = usdValue;
   }
   
-  setTimeout(function(){ document.getElementById("dataeth").style.color = 'white'; }, 100);
+  setTimeout(function(){ document.getElementById("dataeth").style.color = 'white'; }, 200);
   
   setTimeout(ethbubble, 25000);
 }
