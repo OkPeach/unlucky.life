@@ -2,458 +2,462 @@
 @import "./colors";
 @import "./mixins";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
 
 @font-face {
-    font-family: 'unicons';
-    src: url('../other/unicons.ttf');
+  font-family: "unicons";
+  src: url("../other/unicons.ttf");
 }
 
 /* ALL */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* NAVBAR BACKGROUND */
-header{
-    @include flexCenter();
-    height: 7vh;
-    width: 100%;
-    background: $navbar;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    top: 0vh;
-    position: fixed;
+header {
+  @include flexCenter();
+  height: 7vh;
+  width: 100%;
+  background: $navbar;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  top: 0vh;
+  position: fixed;
 }
 
 html {
-    cursor: url("../images/cursor.png"), default;
-    overscroll-behavior-y: none;
-    background-color: $googleBlack;
-    text-align: center;
+  cursor: url("../images/cursor.png"), default;
+  overscroll-behavior-y: none;
+  background-color: $googleBlack;
+  text-align: center;
 }
 
-.pointer{
-    cursor: url("../images/pointer.png"), pointer;
+.pointer {
+  cursor: url("../images/pointer.png"), pointer;
 }
 
 /* BODY */
-body{
-    background: $googleBlack;
-    color: white;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    overscroll-behavior-y: none;
-    white-space:nowrap;
+body {
+  background: $googleBlack;
+  color: white;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overscroll-behavior-y: none;
+  white-space: nowrap;
 }
 
 ::selection {
-    color: $jinxlight;
+  color: $jinxlight;
 }
 
-h1{
-    color: $indigo; 
-    text-shadow: 0px 10px 10px $black;
-    text-align: center;
-    font-weight: bolder;
+h1 {
+  color: $indigo;
+  text-shadow: 0px 10px 10px $black;
+  text-align: center;
+  font-weight: bolder;
 }
 
 /* THIS MAKES CUSTOM SCROLLBAR */
 
 /* width */
 ::-webkit-scrollbar {
-    width: 2px;
+  width: 2px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $lightPurple;
+  background: $lightPurple;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-     background: $indigo;
- }
+  background: $indigo;
+}
 
- /* THIS MAKES CUSTOM SCROLLBAR */
+/* THIS MAKES CUSTOM SCROLLBAR */
 
 /* width */
 .valuelookup::-webkit-scrollbar {
-    width: 2px;
+  width: 2px;
 }
 
 /* Track */
 .valuelookup::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 /* Handle */
 .valuelookup::-webkit-scrollbar-thumb {
-    background: $lightPurple;
+  background: $lightPurple;
 }
 
 /* Handle on hover */
 .valuelookup::-webkit-scrollbar-thumb:hover {
-     background: $indigo;
- }
-
-.iframes{
-    border: 0;
-    border-top: solid 1px $indigo;
-    width:100%;
-    height:100%;
-    overflow: hidden;
+  background: $indigo;
 }
 
-h2{
-    color: $textBlue;
+.iframes {
+  border: 0;
+  border-top: solid 1px $indigo;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.cryptoprice{
-    width: 55%;
-    height: 45%;
+h2 {
+  color: $textBlue;
+}
+
+.cryptoprice {
+  width: 55%;
+  height: 45%;
+  border-radius: 20px;
+  border-color: $indigo;
+  border-width: 1px;
+  border-style: solid;
+  margin-top: 7vh;
+  margin-bottom: 1vh;
+  padding: 2%;
+  display: inline-block;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1500px) {
+  .walletckr {
+    width: 100%;
+    height: 55vh;
     border-radius: 20px;
     border-color: $indigo;
     border-width: 1px;
     border-style: solid;
-    margin-top: 7vh;
-    margin-bottom: 1vh;
-    padding: 2%;
-    display: inline-block;
+    @include flexCenter;
+  }
+}
+
+@media (min-width: 1500px) {
+  .walletckr {
+    @include flexCenter;
+    width: 15vw;
+    height: 35vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@media (max-width: 1500px) {
+  .cryptocurrency {
+    padding: 0.5% 1% 0.5% 1%;
+    line-height: 35px;
+    background-color: $googleBlack;
+    border-radius: 5px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    transition: all 0.3s ease;
+    margin: 1rem;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 3vh;
+    display: block;
+  }
+
+  .cryptocurrency:hover {
+    font-size: 4vh;
+    transition: all 0.3s ease;
+    padding: 0.5% 1% 0.5% 1%;
+    box-shadow: 0px 10px 10px $indigoalpha;
+  }
+  span {
+    overflow: hidden;
+  }
 }
 
-@media (max-width:1500px) {
-    .walletckr{
-        width: 100%;
-        height: 55vh;
-        border-radius: 20px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-        @include flexCenter;
-    }
+@media (min-width: 1500px) {
+  .cryptocurrency {
+    padding: 0.5% 1% 0.5% 1%;
+    line-height: 35px;
+    background-color: $googleBlack;
+    border-radius: 5px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    transition: all 0.3s ease;
+    margin: 1rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 3vh;
+  }
+
+  .cryptocurrency:hover {
+    font-size: 4vh;
+    transition: all 0.3s ease;
+    padding: 0.5% 1% 0.5% 1%;
+    box-shadow: 0px 10px 10px $indigoalpha;
+  }
 }
 
-@media (min-width:1500px) {
-    .walletckr{
-        @include flexCenter;
-        width: 15vw;
-        height: 35vh;
-        border-radius: 20px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-    }
+@media (max-width: 1500px) {
+  .cards {
+    display: block;
+    width: 75%;
+  }
 }
 
-@media (max-width:1500px) {
-    .cryptocurrency {
-        padding: 0.5% 1% 0.5% 1%;
-        line-height: 35px;
-        background-color: $googleBlack;
-        border-radius: 5px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-        transition: all 0.3s ease;
-        margin: 1rem;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-        font-size: 3vh;
-        display: block;
-    }
-    
-    .cryptocurrency:hover{
-        font-size: 4vh;
-        transition: all 0.3s ease;
-        padding: 0.5% 1% 0.5% 1%;
-        box-shadow: 0px 10px 10px $indigoalpha;
-    }
-    span{
-        overflow: hidden;
-    }
+@media (min-width: 1500px) {
+  .cards {
+    display: inline-flex;
+  }
 }
 
-
-@media (min-width:1500px) {
-    .cryptocurrency {
-        padding: 0.5% 1% 0.5% 1%;
-        line-height: 35px;
-        background-color: $googleBlack;
-        border-radius: 5px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-        transition: all 0.3s ease;
-        margin: 1rem;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-        font-size: 3vh;
-    }
-    
-    .cryptocurrency:hover{
-        font-size: 4vh;
-        transition: all 0.3s ease;
-        padding: 0.5% 1% 0.5% 1%;
-        box-shadow: 0px 10px 10px $indigoalpha;
-    }
-}
-
-@media (max-width:1500px) {
-    .cards{
-        display: block;
-        width: 75%;
-    }
-}
-
-@media (min-width:1500px) {
-    .cards{
-        display: inline-flex;
-    }
-}
-
-@media (max-width:1500px) {
-    .calc{
-        @include flexCenter();
-        width: 100%;
-        height: 58vh;
-        border-radius: 20px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-        margin: 1%;
-    }
-    
-    .valuelookup{
-        width: 100%;
-        height: 55vh;
-        border-radius: 20px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-    }
-}
-
-@media (min-width:1500px) {
-    .calc{
-        @include flexCenter();
-        width: 15vw;
-        height: 38vh;
-        border-radius: 20px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-        margin: 1%;
-    }
-    
-    .valuelookup{
-        width: 15vw;
-        height: 35vh;
-        border-radius: 20px;
-        border-color: $indigo;
-        border-width: 1px;
-        border-style: solid;
-    }
-}
-
-@media (min-width:1500px) {
-    main{   
-        @include flexCenter();
-        height: 94vh;
-        width: 100%;
-    }
-}
-
-@media (max-width:1500px) {
-    main{   
-        @include flexCenter();
-        width: 100%;
-    }
-}
-
- footer{
+@media (max-width: 1500px) {
+  .calc {
     @include flexCenter();
-    height: 6vh;
     width: 100%;
-    color: $lightPurple;
-    background: $navbar;
-    z-index: 1;
-    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+    height: 58vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 1%;
+  }
+
+  .valuelookup {
+    width: 100%;
+    height: 55vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@media (min-width: 1500px) {
+  .calc {
+    @include flexCenter();
+    width: 15vw;
+    height: 38vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 1%;
+  }
+
+  .valuelookup {
+    width: 15vw;
+    height: 35vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+@media (min-width: 1500px) {
+  main {
+    @include flexCenter();
+    height: 94vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1500px) {
+  main {
+    @include flexCenter();
+    width: 100%;
+  }
+}
+
+footer {
+  @include flexCenter();
+  height: 6vh;
+  width: 100%;
+  color: $lightPurple;
+  background: $navbar;
+  z-index: 1;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
 }
 
 /*Get Google Style Imput Elem from this pen: https://codepen.io/sevilayha/pen/IdGKH?editors=0100*/
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* form starting stylings ------------------------------- */
 .group {
-	position: relative;
-	margin-bottom: 5%;
-    width: 95%;
+  position: relative;
+  margin-bottom: 5%;
+  width: 95%;
 }
 input {
-	font-size: 18px;
-	padding: 10px 10px 10px 5px;
-	display: block;
-	width: 100%;
-	border: none;
-	border-bottom: 1px solid #757575;
-    background-color: $googleBlack;
-    color: $textBlue;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  background-color: $googleBlack;
+  color: $textBlue;
 }
 input:focus {
-	outline: none;
+  outline: none;
 }
 
 /* LABEL ======================================= */
 label {
-	color: #999;
-	font-size: 18px;
-	font-weight: normal;
-	position: absolute;
-	pointer-events: none;
-	left: 5px;
-	top: 10px;
-	transition: 0.2s ease all;
-	-moz-transition: 0.2s ease all;
-	-webkit-transition: 0.2s ease all;
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label {
-	top: -20px;
-	font-size: 14px;
-	color: #5264AE;
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264ae;
 }
 
 /* BOTTOM BARS ================================= */
 .bar {
-	position: relative;
-	display: block;
-	width: 100%;
+  position: relative;
+  display: block;
+  width: 100%;
 }
-.bar:before, .bar:after {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: 1px;
-	position: absolute;
-	background: #5264AE;
-	transition: 0.2s ease all;
-	-moz-transition: 0.2s ease all;
-	-webkit-transition: 0.2s ease all;
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 .bar:before {
-	left: 50%;
+  left: 50%;
 }
 .bar:after {
-	right: 50%;
+  right: 50%;
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-	width: 50%;
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
 }
 
 /* HIGHLIGHTER ================================== */
 .highlight {
-	position: absolute;
-	height: 60%;
-	width: 100px;
-	top: 25%;
-	left: 0;
-	pointer-events: none;
-	opacity: 0.5;
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* active state */
 input:focus ~ .highlight {
-	-webkit-animation: inputHighlighter 0.3s ease;
-	-moz-animation: inputHighlighter 0.3s ease;
-	animation: inputHighlighter 0.3s ease;
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
 }
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from {
-		background: #5264AE;
-	}
-	to {
-		width: 0;
-		background: transparent;
-	}
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @-moz-keyframes inputHighlighter {
-	from {
-		background: #5264AE;
-	}
-	to {
-		width: 0;
-		background: transparent;
-	}
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @keyframes inputHighlighter {
-	from {
-		background: #5264AE;
-	}
-	to {
-		width: 0;
-		background: transparent;
-	}
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
-button{
-    backface-visibility: hidden;
-    transform:translate3d(0,0,0);
-    margin-left: -1rem;
-    margin-top: 1rem;
-    transition: 0.25s;
-    background: none;
-    border: 2px solid;
-    line-height: 1;
-    padding: 0.5em 1em;
-    color: $textBlue;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 5px 7px 10px $black;
+button {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  margin-left: -1rem;
+  margin-top: 1rem;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 0.5em 1em;
+  color: $textBlue;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px $black;
 }
 .fill:hover {
-    box-shadow: inset 0 0 0 2em $buttonBlueBackground;
+  box-shadow: inset 0 0 0 2em $buttonBlueBackground;
 }
 .raise:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em $indigo;
-    transform: translateY(-0.25em);
+  box-shadow: 0 0.5em 0.5em -0.4em $indigo;
+  transform: translateY(-0.25em);
 }
 
-#btc-balance, #btc-usd-balance{
-    color: $lightPurple;
-    text-shadow: 0px 10px 10px $black;
-    width: 80%;
-    font-size: 1rem;
-    font-weight: bolder;
+#btc-balance,
+#btc-usd-balance {
+  color: $lightPurple;
+  text-shadow: 0px 10px 10px $black;
+  width: 80%;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
-#eth-balance, #eth-usd-balance{
-    color: $lightPurple;
-    text-shadow: 0px 10px 10px $black;
-    width: 80%;
-    font-size: 1rem;
-    font-weight: bolder;
+#eth-balance,
+#eth-usd-balance {
+  color: $lightPurple;
+  text-shadow: 0px 10px 10px $black;
+  width: 80%;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
-.shadow{
-    text-shadow: 0px 10px 10px $black;
+.shadow {
+  text-shadow: 0px 10px 10px $black;
 }

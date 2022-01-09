@@ -13,6 +13,9 @@ const lucienLogo = `
                                                                      
 `;
 
-console.log('%c' + lucienLogo + ':)', 'background: #00000; color: #6610f2');
-console.log(' \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
-console.log('%c Why are you even looking here? >:(', 'background: #00000; color: red');
+console.log("%c" + lucienLogo + ":)", "background: #00000; color: #6610f2");
+console.log(" \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+console.log(
+  "%c Why are you even looking here? >:(",
+  "background: #00000; color: red"
+);

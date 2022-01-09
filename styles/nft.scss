@@ -1,0 +1,164 @@
+/* SCSS IMPORTS */
+@import "./colors";
+@import "./mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
+
+@font-face {
+  font-family: "unicons";
+  src: url("../other/unicons.ttf");
+}
+
+/* ALL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR BACKGROUND */
+header {
+  @include flexCenter();
+  height: 7vh;
+  width: 100%;
+  background: $navbar;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  top: 0vh;
+  position: fixed;
+}
+
+html {
+  cursor: url("../images/cursor.png"), default;
+  overscroll-behavior-y: none;
+  background-color: $googleBlack;
+  text-align: center;
+}
+
+.pointer {
+  cursor: url("../images/pointer.png"), pointer;
+}
+
+/* BODY */
+body {
+  background: $googleBlack;
+  color: white;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overscroll-behavior-y: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 1500px) {
+  main {
+    @include flexCenter();
+    height: 100%;
+    width: 100%;
+    min-height: 94vh;
+  }
+}
+
+@media (max-width: 1500px) {
+  main {
+    @include flexCenter();
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+}
+
+::selection {
+  color: $jinxlight;
+}
+
+h1 {
+  color: $indigo;
+  text-shadow: 0px 10px 10px $black;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* THIS MAKES CUSTOM SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lightPurple;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $indigo;
+}
+
+footer {
+  @include flexCenter();
+  height: 6vh;
+  width: 100%;
+  color: $lightPurple;
+  background: $navbar;
+  z-index: 1000;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+}
+
+img {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.frame {
+  background-color: #ddc;
+  border: solid 1.5vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: 2px;
+  border-right-color: #eee;
+  border-top-color: #ddd;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+    0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  height: 40vh;
+  padding: 1vmin;
+  text-align: center;
+  position: relative;
+}
+
+a {
+  z-index: 100;
+  position: relative;
+  color: $white;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: url("../images/pointer.png"), pointer;
+}
+
+table {
+  top: 1vh;
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+
+.margin {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}

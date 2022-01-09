@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
 @font-face {
-  font-family: 'unicons';
+  font-family: "unicons";
   src: url("../other/unicons.ttf");
 }
 
@@ -32,7 +32,7 @@ body {
   background: #2c2c2c;
   color: white;
   height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
 }
 
@@ -315,13 +315,13 @@ nav {
 }
 
 .location::before {
-  font-family: 'unicons';
-  content: '\e8ec  Písek, Czech Republic';
+  font-family: "unicons";
+  content: "\e8ec  Písek, Czech Republic";
 }
 
 .dev::before {
-  font-family: 'unicons';
-  content: '\e969  Developer';
+  font-family: "unicons";
+  content: "\e969  Developer";
 }
 
 .profile_img {
@@ -410,52 +410,52 @@ nav {
 
 .computer::before {
   font-family: unicons;
-  content: '\e969  ';
+  content: "\e969  ";
 }
 
 .btc::before {
   font-family: unicons;
-  content: '\e8c3  ';
+  content: "\e8c3  ";
 }
 
 .html::before {
   font-family: unicons;
-  content: '\ec8b  ';
+  content: "\ec8b  ";
 }
 
 .technology::before {
   font-family: unicons;
-  content: '\ea0f  ';
+  content: "\ea0f  ";
 }
 
 .csharp::before {
   font-family: unicons;
-  content: '\ec50  ';
+  content: "\ec50  ";
 }
 
 .gaming::before {
   font-family: unicons;
-  content: '\e970  ';
+  content: "\e970  ";
 }
 
 .coding::before {
   font-family: unicons;
-  content: '\eb30  ';
+  content: "\eb30  ";
 }
 
 .technology::before {
   font-family: unicons;
-  content: '\ebfb  ';
+  content: "\ebfb  ";
 }
 
 .js::before {
   font-family: unicons;
-  content: '\ec18  ';
+  content: "\ec18  ";
 }
 
 .css::before {
   font-family: unicons;
-  content: '\ec8d  ';
+  content: "\ec8d  ";
 }
 
 /* PROJECTS */
@@ -595,12 +595,12 @@ nav {
 
 .github::before {
   font-family: unicons;
-  content: '\ec1d  ';
+  content: "\ec1d  ";
 }
 
 .twitter::before {
   font-family: unicons;
-  content: '\ec0c  ';
+  content: "\ec0c  ";
 }
 
 .email {
@@ -612,22 +612,22 @@ nav {
 
 .email::before {
   font-family: unicons;
-  content: '\ea0f  ';
+  content: "\ea0f  ";
 }
 
 .youtube::before {
   font-family: unicons;
-  content: '\ec06  ';
+  content: "\ec06  ";
 }
 
 .steam::before {
   font-family: unicons;
-  content: '\e9a5  ';
+  content: "\e9a5  ";
 }
 
 .discord::before {
   font-family: unicons;
-  content: '\ec8f  ';
+  content: "\ec8f  ";
 }
 
 .discord:hover {
@@ -652,17 +652,17 @@ nav {
 
 .bitcoin::before {
   font-family: unicons;
-  content: '\e8c3  ';
+  content: "\e8c3  ";
 }
 
 .paypal::before {
   font-family: unicons;
-  content: '\ec14  ';
+  content: "\ec14  ";
 }
 
 .eth::before {
   font-family: unicons;
-  content: '\e982  ';
+  content: "\e982  ";
 }
 
 /* BOTTOM FOOTER */
@@ -715,7 +715,13 @@ footer a {
 
 /* HIDING STUFF FOR MOBILE */
 @media (max-width: 1024px) {
-  svg#logo, div#bubble, .flag, .flag_wrapper, .profile_img, .navbarUL, .mobilenodisplay {
+  svg#logo,
+  div#bubble,
+  .flag,
+  .flag_wrapper,
+  .profile_img,
+  .navbarUL,
+  .mobilenodisplay {
     display: none;
   }
   .navbarUL {
@@ -787,7 +793,9 @@ footer a {
           animation: scaleLink 0.3s ease-in;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -819,14 +827,16 @@ footer a {
   margin-top: 1px;
 }
 
-.unu, .doi, .trei {
+.unu,
+.doi,
+.trei {
   -webkit-animation: mouse-scroll 1s infinite;
   animation: mouse-scroll 1s infinite;
 }
 
 .unu {
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
   -webkit-animation-delay: alternate;
@@ -834,19 +844,19 @@ footer a {
 }
 
 .doi {
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
   -webkit-animation-direction: alternate;
-  animation-delay: .2s;
+  animation-delay: 0.2s;
   animation-direction: alternate;
   margin-top: -6px;
 }
 
 .trei {
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
   -webkit-animation-direction: alternate;
-  animation-delay: .3s;
+  animation-delay: 0.3s;
   animation-direction: alternate;
   margin-top: -6px;
 }
@@ -909,8 +919,8 @@ footer a {
 
 .progress-wrap::after {
   position: absolute;
-  font-family: 'unicons';
-  content: '\eb56';
+  font-family: "unicons";
+  content: "\eb56";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -932,8 +942,8 @@ footer a {
 
 .progress-wrap::before {
   position: absolute;
-  font-family: 'unicons';
-  content: '\ebb6';
+  font-family: "unicons";
+  content: "\ebb6";
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -1006,7 +1016,7 @@ footer a {
     opacity: 0;
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -1018,7 +1028,7 @@ footer a {
     opacity: 0;
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -1026,7 +1036,8 @@ footer a {
 }
 
 @-webkit-keyframes border-transform {
-  0%, 100% {
+  0%,
+  100% {
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   }
   14% {
@@ -1050,7 +1061,8 @@ footer a {
 }
 
 @keyframes border-transform {
-  0%, 100% {
+  0%,
+  100% {
     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
   }
   14% {
@@ -1147,8 +1159,8 @@ footer a {
   stroke-dasharray: 210.09971618652344px;
   stroke-dashoffset: 210.09971618652344px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 1.0s;
-          animation: lineAnim 0.75s ease-in forwards 1.0s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 1s;
+          animation: lineAnim 0.75s ease-in forwards 1s;
 }
 
 #logo path:nth-child(7) {

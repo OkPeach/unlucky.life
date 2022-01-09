@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
 @font-face {
-  font-family: 'unicons';
+  font-family: "unicons";
   src: url("../other/unicons.ttf");
 }
 
@@ -57,7 +57,7 @@ body {
   background: #202124;
   color: white;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
   white-space: nowrap;
 }
@@ -440,10 +440,11 @@ label {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label {
+input:focus ~ label,
+input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: #5264AE;
+  color: #5264ae;
 }
 
 /* BOTTOM BARS ================================= */
@@ -453,13 +454,14 @@ input:focus ~ label, input:valid ~ label {
   width: 100%;
 }
 
-.bar:before, .bar:after {
-  content: '';
+.bar:before,
+.bar:after {
+  content: "";
   height: 2px;
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #5264AE;
+  background: #5264ae;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -474,7 +476,8 @@ input:focus ~ label, input:valid ~ label {
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
   width: 50%;
 }
 
@@ -498,7 +501,7 @@ input:focus ~ .highlight {
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
   from {
-    background: #5264AE;
+    background: #5264ae;
   }
   to {
     width: 0;
@@ -508,7 +511,7 @@ input:focus ~ .highlight {
 
 @keyframes inputHighlighter {
   from {
-    background: #5264AE;
+    background: #5264ae;
   }
   to {
     width: 0;
@@ -547,7 +550,8 @@ button {
           transform: translateY(-0.25em);
 }
 
-#btc-balance, #btc-usd-balance {
+#btc-balance,
+#btc-usd-balance {
   color: #7c7aff;
   text-shadow: 0px 10px 10px black;
   width: 80%;
@@ -555,7 +559,8 @@ button {
   font-weight: bolder;
 }
 
-#eth-balance, #eth-usd-balance {
+#eth-balance,
+#eth-usd-balance {
   color: #7c7aff;
   text-shadow: 0px 10px 10px black;
   width: 80%;
