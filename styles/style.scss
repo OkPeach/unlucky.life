@@ -93,7 +93,7 @@ header {
     background: linear-gradient(to right, $jinxlight, $indigo);
     width: 0%;
     z-index: 1;
-    transition: width 0.1s ease-out;
+    transition: width 0.01s ease-out;
     animation: Animation 5s ease infinite;
   }
 }
@@ -200,14 +200,11 @@ nav {
     flex-direction: row;
     padding: 30px;
     margin: 20px 0;
-    transition: all 0.3s ease;
     overflow-y: scroll;
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
   }
   .card:hover {
-    transform: scale(1.25);
-    transition: all 0.3s ease;
     box-shadow: 10px 10px 10px $indigoalpha;
   }
 }
@@ -226,15 +223,12 @@ nav {
     flex-direction: row;
     padding: 30px;
     margin: 20px 0;
-    transition: all 0.3s ease;
     overflow-y: scroll;
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
   }
 
   .card:hover {
-    transform: scale(1);
-    transition: all 0.3s ease;
     box-shadow: 10px 10px 10px $indigoalpha;
   }
 }

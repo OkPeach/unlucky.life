@@ -120,8 +120,8 @@ header {
     background: linear-gradient(to right, #30a8f0, #6610f2);
     width: 0%;
     z-index: 1;
-    -webkit-transition: width 0.1s ease-out;
-    transition: width 0.1s ease-out;
+    -webkit-transition: width 0.01s ease-out;
+    transition: width 0.01s ease-out;
     -webkit-animation: Animation 5s ease infinite;
             animation: Animation 5s ease infinite;
   }
@@ -258,8 +258,6 @@ nav {
             flex-direction: row;
     padding: 30px;
     margin: 20px 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -267,10 +265,6 @@ nav {
             transform: translate3d(0, 0, 0);
   }
   .card:hover {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     -webkit-box-shadow: 10px 10px 10px #6710f260;
             box-shadow: 10px 10px 10px #6710f260;
   }
@@ -296,8 +290,6 @@ nav {
             flex-direction: row;
     padding: 30px;
     margin: 20px 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -305,10 +297,6 @@ nav {
             transform: translate3d(0, 0, 0);
   }
   .card:hover {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     -webkit-box-shadow: 10px 10px 10px #6710f260;
             box-shadow: 10px 10px 10px #6710f260;
   }

@@ -132,8 +132,8 @@ img {
   border-radius: 2px;
   border-right-color: #eee;
   border-top-color: #ddd;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
-    0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.40) inset,
+  10px 10px 10px rgb(0, 0, 0);
   box-sizing: border-box;
   height: 40vh;
   padding: 1vmin;
@@ -142,6 +142,7 @@ img {
 }
 
 a {
+  margin-top: 100px;
   z-index: 100;
   position: relative;
   color: $white;
