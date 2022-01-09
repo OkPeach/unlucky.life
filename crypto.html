@@ -12,9 +12,6 @@
         <meta property="og:image" content="https://unlucky.life/images/favicon.png" />
         <meta property="og:description" content="Personal website:)" />
         <meta name="theme-color" content="#6610f2">
-
-        <!-- Include this to make the og:image larger -->
-        <meta name="twitter:card" content="summary_large_image">
         <link href="styles/crypto.css" rel="stylesheet">
         <title>Lucien.wtf</title>
     </head>
@@ -29,19 +26,19 @@
             </div>
             <div class="cards">
                 <div class="calc">
-                    <h2>Coin converter</h2>
+                    <h2 class="shadow">Coin converter</h2>
                     <iframe class="valuelookup" src="https://widget.coinlib.io/widget?type=converter&theme=dark"></iframe>
                 </div>
                     
                 <div class="calc">
-                    <h2>BTC wallet checker</h2>
+                    <h2 class="shadow">BTC wallet checker</h2>
                     <div class="walletckr">
                         <div class="group">
                              <input autocomplete="off" id="link" type="text" required class="js-copytextarea" /> <span class="highlight"></span>
                              <span class="bar"></span>
                              <label>BTC ADDRESS</label>
                         </div>
-                        <button onclick="getValue()" class="pointer">Get balance</button>
+                        <button onclick="getValue()" class="raise pointer">Get balance</button>
                         <br>
                         <span id="btc-balance">Balance</span>
                         <span id="btc-usd-balance"></span>
@@ -49,14 +46,14 @@
                 </div>
 
                 <div class="calc">
-                    <h2>ETH wallet checker</h2>
+                    <h2 class="shadow">ETH wallet checker</h2>
                     <div class="walletckr">
                         <div class="group">
                              <input autocomplete="off" id="ethbal" type="text" required class="js-copytextarea2" /> <span class="highlight"></span>
                              <span class="bar"></span>
                              <label>ETH ADDRESS</label>
                         </div>
-                        <button onclick="getETH()" class="pointer">Get balance</button>
+                        <button onclick="getETH()" class="raise pointer">Get balance</button>
                         <br>
                         <span id="eth-balance" class="ethBal">Balance</span>
                         <span id="eth-usd-balance" class="ethBalusd"></span>
