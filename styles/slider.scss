@@ -9,6 +9,13 @@
 
 /* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg*/
 
+.slider p{
+    font-weight: bolder;
+}
+.slider span{
+    font-weight: normal;
+}
+
 @media (min-width:1024px) {
     .slider{
         backface-visibility: hidden;
@@ -142,7 +149,6 @@
 
 @media (max-width:1024px) {
     .slider{
-        max-width: 98%;
         backface-visibility: hidden;
         transform:translate3d(0,0,0);
         height:60vh;
@@ -156,7 +162,7 @@
         padding-bottom: 2rem;
         .item {
           height:100%;
-          width:70vw;
+          width:48vw;
           position:absolute;
           background:$bodyBackground;
           border-radius:10px;

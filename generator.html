@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Lucien.wtf" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://unlucky.life" />
+    <meta property="og:image" content="https://unlucky.life/images/favicon.png" />
+    <meta property="og:description" content="Personal website:)" />
+    <meta name="theme-color" content="#6610f2" />
+    <link href="styles/generator.css" rel="stylesheet" />
+    <title>Lucien.wtf</title>
+</head>
+
+<body>
+    <header>
+        <h1>Generators</h1>
+    </header>
+    <main>
+            <div class="container">
+                <h2 class="title">Password Generator</h2>
+                <div class="result">
+                  <div class="result__title field-title">Generated Password</div>
+                  <div class="result__viewbox" id="result">CLICK GENERATE</div>
+                  <i class="far fa-copy"></i>
+                </div>
+                <div class="length range__slider" data-min="8" data-max="32">
+                  <div class="length__title field-title" data-length='0'>length:</div>
+                  <input id="slider" type="range" min="8" max="32" value="16" style="background: #7c7aff ;"/>
+                </div>
+              
+                <div class="settings">
+                  <span class="settings__title field-title">settings</span>
+                  <div class="setting">
+                    <input type="checkbox" id="uppercase" checked />
+                    <label for="uppercase">Include Uppercase</label>
+                  </div>
+                  <div class="setting">
+                    <input type="checkbox" id="lowercase" checked />
+                    <label for="lowercase">Include Lowercase</label>
+                  </div>
+                  <div class="setting">
+                    <input type="checkbox" id="number" checked />
+                    <label for="number">Include Numbers</label>
+                  </div>
+                  <div class="setting">
+                    <input type="checkbox" id="symbol" />
+                    <label for="symbol">Include Symbols</label>
+                  </div>
+                </div>
+              
+                <button class="btn generate" id="generate">Generate Password</button>
+              </div>
+
+              <div class="container">
+                <h2 class="title">Encode/decode</h2>
+              </div>
+    </main>
+    <footer>
+        <h4 id="rightsreserved" class="rightsreserved">
+            <a href="https://unlucky.life" target="_blank"><span style="color: white; font-weight: lighter;"
+                    class="pointer mobilenodisplay">Back home</span></a> • <span id="year"></span> Lucien Pauer. All
+            rights reserved • <a href="https://unlucky.life/#projects" target="_blank"><span style="color: white; font-weight: lighter;"
+                class="pointer mobilenodisplay">More projects</span></a>
+        </h4>
+    </footer>
+    <script src="javascript/console.js"></script>
+    <script src="javascript/vanilla-tilt.js"></script>
+    <script src="javascript/generator.js"></script>
+</body>
+
+</html>

@@ -1381,6 +1381,7 @@ footer a {
   position: absolute;
   width: 30vw;
   text-align: center;
+  padding: 1rem;
   border-radius: 20px;
   background: #212327;
   border-color: #6610f2;

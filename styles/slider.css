@@ -3,6 +3,14 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
 /* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg*/
+.slider p {
+  font-weight: bolder;
+}
+
+.slider span {
+  font-weight: normal;
+}
+
 @media (min-width: 1024px) {
   .slider {
     -webkit-backface-visibility: hidden;
@@ -155,7 +163,6 @@
 
 @media (max-width: 1024px) {
   .slider {
-    max-width: 98%;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
@@ -172,7 +179,7 @@
   }
   .slider .item {
     height: 100%;
-    width: 70vw;
+    width: 48vw;
     position: absolute;
     background: #0f1019;
     border-radius: 10px;
