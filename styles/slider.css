@@ -155,6 +155,7 @@
 
 @media (max-width: 1024px) {
   .slider {
+    max-width: 98%;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
