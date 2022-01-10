@@ -261,8 +261,6 @@ nav {
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
   }
   .card:hover {
     -webkit-box-shadow: 10px 10px 10px #6710f260;
@@ -293,8 +291,6 @@ nav {
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
   }
   .card:hover {
     -webkit-box-shadow: 10px 10px 10px #6710f260;

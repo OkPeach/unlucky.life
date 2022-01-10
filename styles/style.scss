@@ -202,7 +202,6 @@ nav {
     margin: 20px 0;
     overflow-y: scroll;
     backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
   }
   .card:hover {
     box-shadow: 10px 10px 10px $indigoalpha;
@@ -225,7 +224,6 @@ nav {
     margin: 20px 0;
     overflow-y: scroll;
     backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
   }
 
   .card:hover {
@@ -403,6 +401,7 @@ nav {
   background-color: $googleBlack;
   transition: all 0.3s ease;
 }
+
 #contact h2 {
   font-size: 5vh;
   color: $indigo;

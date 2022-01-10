@@ -171,6 +171,7 @@ img {
   border-top-color: #ccb;
   max-height: 100%;
   max-width: 100%;
+  z-index: 10;
 }
 
 .frame {
@@ -186,14 +187,16 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 40vh;
+  width: 40vh;
   padding: 1vmin;
   text-align: center;
   position: relative;
+  z-index: 10;
 }
 
 a {
   margin-top: 100px;
-  z-index: 100;
+  z-index: 1;
   position: relative;
   color: white;
   text-decoration: none;
@@ -212,5 +215,18 @@ table {
 .margin {
   margin-left: 2rem;
   margin-right: 2rem;
+  z-index: 10;
+}
+
+@media all and (max-width: 1024px) {
+  tr {
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+  td {
+    display: inline;
+    margin: 1em;
+  }
 }
 /*# sourceMappingURL=nft.css.map */

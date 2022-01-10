@@ -14,20 +14,20 @@ const options = {
 var p1 = "f3c93bee2e7a";
 
 //BTC BALLANCE
-var btcAddress = "bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9";
+//var btcAddress = "bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9";
 
-console.log("fetching blockchain...");
-fetch("https://blockchain.info/q/addressbalance/" + btcAddress)
-  .then(function (response) {
-    console.log("...got response from blockchain...");
-    return response.json();
-  })
-  .then(function (json) {
-    var btcBalance = parseInt(json, 10);
+//console.log("fetching blockchain...");
+//fetch("https://blockchain.info/q/addressbalance/" + btcAddress)
+//  .then(function (response) {
+//    console.log("...got response from blockchain...");
+ //   return response.json();
+ // })
+ // .then(function (json) {
+ //   var btcBalance = parseInt(json, 10);
     //document.getElementById("btc-address").innerHTML = btcAddress;
-    document.getElementById("btc-balance").innerHTML = btcBalance / 100000000;
-    console.log("balance set!");
-  });
+  //  document.getElementById("btc-balance").innerHTML = btcBalance / 100000000;
+ //   console.log("balance set!");
+ // });
 //BTC BALLANCE
 
 let observer = new IntersectionObserver(navCheck, options);
