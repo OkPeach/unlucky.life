@@ -202,7 +202,6 @@ a {
   position: relative;
   color: white;
   text-decoration: none;
-  text-shadow: 10px 10px 10px black;
 }
 
 a:hover {
@@ -230,6 +229,38 @@ table {
   td {
     display: inline;
     margin: 1em;
+  }
+}
+
+.anicolor {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  color: #4c61f5;
+  background-image: -webkit-linear-gradient(90deg, #4c61f5, #7c7aff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 6.5s infinite linear;
+  animation: hue 6.5s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
   }
 }
 /*# sourceMappingURL=nft.css.map */
