@@ -148,11 +148,12 @@ img {
 }
 
 a {
-  margin-top: 100px;
+  //margin-top: 100px;
   z-index: 1;
   position: relative;
   color: $white;
   text-decoration: none;
+  text-shadow: 10px 10px 10px $black;
 }
 
 a:hover {
@@ -161,7 +162,7 @@ a:hover {
 
 table {
   top: 1vh;
-  margin-top: 4%;
+  margin-top: 6%;
   margin-bottom: 2%;
 }
 
@@ -170,7 +171,6 @@ table {
   margin-right: 2rem;
   z-index: 10;
 }
-
 
 @media all and (max-width: 1024px) {
   tr{
