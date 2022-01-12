@@ -33,6 +33,9 @@ function getPlaying() {
         usersp.innerHTML = ismemalario;
         songcover.src = currentcover; 
         leftbackground.style.backgroundImage = "url("+coverbackground+")";
+        leftbackground.style.backgroundPosition = "center";
+        leftbackground.style.backgroundRepeat = "no-repeat";
+        leftbackground.style.backgroundSize = "cover";
         lastplayingsp.innerHTML = lastsong;
         lastartistsp.innerHTML = lastartist;
       },
