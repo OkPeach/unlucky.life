@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* SCSS IMPORTS */
+@import "./colors";
+@import "./mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
+
+@font-face {
+  font-family: "unicons";
+  src: url("../other/unicons.ttf");
+}
+
+/* ALL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR BACKGROUND */
+header {
+  @include flexCenter();
+  height: 7vh;
+  width: 100%;
+  background: $navbar;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  top: 0vh;
+  position: fixed;
+}
+
+html {
+  cursor: url("../images/cursor.png"), default;
+  overscroll-behavior-y: none;
+  background-color: $googleBlack;
+  text-align: center;
+}
+
+.pointer {
+  cursor: url("../images/pointer.png"), pointer;
+}
+
+/* BODY */
+body {
+  background: $googleBlack;
+  color: white;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  overscroll-behavior-y: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 1500px) {
+  main {
+    @include flexCenter();
+    height: 100%;
+    width: 100%;
+    min-height: 94vh;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1500px) {
+  main {
+    @include flexCenter();
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  .right{
+      min-width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+  }
+
+  .left{
+      display: none;
+  }
+
+  .nowplaying{
+    font-size: 1.3rem;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lastplaying{
+    font-size: 1.3rem;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+}
+
+::selection {
+  color: $jinxlight;
+}
+
+h1 {
+  color: $indigo;
+  text-shadow: 0px 10px 10px $black;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* THIS MAKES CUSTOM SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lightPurple;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $indigo;
+}
+
+footer {
+  @include flexCenter();
+  height: 6vh;
+  width: 100%;
+  color: $lightPurple;
+  background: $navbar;
+  z-index: 1000;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.cards{
+    display: block;
+    @include flexCenter();
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+hr{
+    margin: 2rem;
+    width: 50%;
+}
+
+.lucienplaying{
+    max-height: 60vh;
+    min-height: 40vh;
+    min-width: 60%;
+    max-width: 60%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: $navbar;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+h2{
+    font-size: 2.3rem;
+    color: $lightPurple;
+    text-shadow: 10px 10px 10px $black;
+}
+
+.fat{
+    font-weight: bolder;
+    color: $textBlue;
+}
+
+.notfat{
+    font-weight: normal;
+    color: $lightgray;
+}
+
+
+@media (min-width: 1500px) {
+    .nowplaying{
+        font-size: 1.7rem;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .lastplaying{
+        font-size: 1.7rem;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+.right{
+    min-height: 100%;
+    max-height: 100%;
+    display: block;
+    padding: 1rem;
+    max-width: 60%;
+    min-width: 60%;
+    overflow-x: hidden;
+    text-align: left;
+    border-left: 1px solid $indigo;
+    overflow-y: scroll;
+}
+
+.blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+}
+
+.noblur{
+    position: absolute;
+    @include flexCenter;
+    box-shadow: 0px 0px 20px $black;
+}
+
+.left{
+    position: relative;
+    min-height: 100%;
+    max-width: 40%;
+    min-width: 40%;
+    padding: 1rem;
+    @include flexCenter;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+}
+
+.yournowplaying{
+    max-height: 80%;
+    max-width: 60%;
+    min-width: 60%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: $navbar;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+  
+  .hidden {
+    display: none;
+  }
+  
+  /** Buttons **/
+  .btn {
+    background-color: transparent;
+    border-radius: 2em;
+    border: 0.2em solid #1ecd97;
+    color: #1ecd97;
+    cursor: pointer;
+    font-size: 3vmin;
+    padding: 0.7em 1.5em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+  }
+  
+  .btn:hover {
+    background: #1ecd97;
+    color: #333;
+  }
+  
+  .btn--login {
+    margin: 0 auto;
+  }
+  
+  /** Now Playing **/
+  .now-playing__name {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+  }
+  
+  .now-playing__artist {
+    margin-bottom: 1em;
+  }
+  
+  .now-playing__status {
+    margin-bottom: 1em;
+  }
+  
+  .now-playing__img {
+    float: left;
+    margin-right: 10px;
+    text-align: right;
+    width: 45%;
+  }
+  
+  .now-playing__img img {
+    max-width: 80vmin;
+    width: 100%;
+  }
+  
+  .now-playing__side {
+    margin-left: 5%;
+    width: 45%;
+  }
+  
+  /** Progress **/
+  .progress {
+    border: 0.15em solid #eee;
+    height: 1em;
+  }
+  
+  .progress__bar {
+    background-color: #eee;
+    border: 0.1em solid transparent;
+    height: 0.75em;
+  }
+  
+  /** Background **/
+  .background {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8em) opacity(0.6);
+    position: absolute;
+  }
+  
+  .main-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    z-index: 1;
+  }
+  
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .main-container {
+    flex: 1;
+  }
+
+  a {
+    z-index: 1;
+    position: relative;
+    color: $white;
+    text-decoration: none;
+  }

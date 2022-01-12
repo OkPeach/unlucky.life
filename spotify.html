@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Lucien.wtf" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://unlucky.life" />
+    <meta property="og:image" content="https://unlucky.life/images/favicon.png" />
+    <meta property="og:description" content="Personal website:)" />
+    <meta name="theme-color" content="#6610f2" />
+    <link href="styles/spotify.css" rel="stylesheet" />
+    <title>Lucien.wtf</title>
+</head>
+
+<body>
+    <header>
+        <h1>Spotify</h1>
+    </header>
+    <main>
+        <div class="cards">
+            <div class="lucienplaying">
+                <div class="left" id="left">
+                    <div class="blur" id="blur">
+                    </div>
+                    <div class="noblur">
+                        <img id="albumcover" />
+                    </div>
+                </div>
+                <div class="right">
+                    <h2 id="playing">Now playing:</h2>
+                    <div class="nowplaying">
+                    <span class="fat">User: <span class="notfat" id="user">...</span></span>
+                    <span class="fat">Song: <span class="notfat" id="nowplaying">...</span></span>
+                    <span class="fat">Artist: <span class="notfat" id="artist">...</span></span>
+                    <span class="fat">Album: <span class="notfat" id="album">...</span></span>
+                    </div>
+                    <h2>Last playing:</h2>
+                    <div class="lastplaying">
+                    <span class="fat">Song: <span class="notfat" id="lastplaying">...</span></span>
+                    <span class="fat">Artist: <span class="notfat" id="lastartist">...</span></span>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="yournowplaying">
+                <div class="container">
+                    <div class="login-container hidden" id="js-login-container">
+                        <span>Probably ad or nothing</span>
+                        <button class="btn btn--login" id="js-btn-login">
+                            Login with Spotify
+                        </button>
+                    </div>
+                    <div class="main-container hidden" id="js-main-container"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h4 id="rightsreserved" class="rightsreserved">
+            <a href="https://unlucky.life" target="_blank"><span style="color: white; font-weight: lighter"
+                    class="pointer mobilenodisplay">Back home</span></a>
+            • <span id="year"></span> Lucien Pauer. All rights reserved •
+            <a href="https://unlucky.life/#projects" target="_blank"><span style="color: white; font-weight: lighter"
+                    class="pointer mobilenodisplay">More projects</span></a>
+        </h4>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+    <script src="https://spotify-player.herokuapp.com/spotify-player.js"></script>
+    <script src="javascript/console.js"></script>
+    <script src="javascript/vanilla-tilt.js"></script>
+    <script src="javascript/spotify.js"></script>
+</body>
+
+</html>
