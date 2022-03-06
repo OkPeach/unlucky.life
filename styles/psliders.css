@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
-/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg*/
+/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg :)*/
 .slider p {
   font-weight: bolder;
 }
@@ -42,6 +42,8 @@
     display: block;
     -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
     right: 0;
     margin: 0 auto;
   }
@@ -54,6 +56,8 @@
             transform: scale(1);
     -webkit-box-shadow: 0px 4px 10px #6710f260;
             box-shadow: 0px 4px 10px #6710f260;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   .slider .item:hover {
     -webkit-transform: scale(0.9);
@@ -61,6 +65,8 @@
     opacity: 0.9;
     -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   .slider .active:hover {
     -webkit-transform: scale(1.1);
@@ -70,10 +76,18 @@
             box-shadow: 0px 15px 10px #6710f260;
   }
   .slider #website {
-    background-image: url(../images/website.png);
-    background-size: cover;
+    background-image: url(../images/websitenew.png);
+    background-size: 120%;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center 90%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .slider #website:hover {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-size: 100%;
+    background-position: center 150%;
   }
   .slider #program {
     background-image: url(../images/hourbooster.png);
@@ -82,10 +96,18 @@
     background-position: center center;
   }
   .slider #selfbot {
-    background-position: center center;
-    background-image: url(../images/selfbot.png);
-    background-size: cover;
+    background-image: url(../images/ug.png);
+    background-size: 120%;
     background-repeat: no-repeat;
+    background-position: center 100%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .slider #selfbot:hover {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-size: 100%;
+    background-position: center -100%;
   }
   .slider .textbackground {
     height: 100%;
@@ -195,6 +217,8 @@
     -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
     white-space: initial;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
     right: 0;
     margin: 0 auto;
   }
@@ -207,6 +231,8 @@
             transform: scale(1);
     -webkit-box-shadow: 0px 4px 10px #6710f260;
             box-shadow: 0px 4px 10px #6710f260;
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   .slider .item:hover {
     -webkit-transform: scale(1);
@@ -214,6 +240,8 @@
     opacity: 0.9;
     -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   .slider .active:hover {
     -webkit-transform: scale(1);
@@ -223,10 +251,18 @@
             box-shadow: 0px 15px 10px #6710f260;
   }
   .slider #website {
-    background-image: url(../images/website.png);
-    background-size: cover;
+    background-image: url(../images/websitenew.png);
+    background-size: 120%;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center 90%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .slider #website:hover {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-size: 100%;
+    background-position: center 150%;
   }
   .slider #program {
     background-image: url(../images/hourbooster.png);
@@ -235,10 +271,18 @@
     background-position: center center;
   }
   .slider #selfbot {
-    background-position: center center;
-    background-image: url(../images/selfbot.png);
-    background-size: cover;
+    background-image: url(../images/ug.png);
+    background-size: 120%;
     background-repeat: no-repeat;
+    background-position: center 100%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+  }
+  .slider #selfbot:hover {
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    background-size: 100%;
+    background-position: center -120%;
   }
   .slider .textbackground {
     height: 100%;
@@ -335,4 +379,4 @@
 .item::-webkit-scrollbar-thumb:hover {
   background: transparent;
 }
-/*# sourceMappingURL=slider.css.map */
+/*# sourceMappingURL=psliders.css.map */

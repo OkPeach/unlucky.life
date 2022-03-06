@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
 
 
-/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg*/
+/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg :)*/
 
 .slider p{
     font-weight: bolder;
@@ -41,6 +41,7 @@
           overflow-y: scroll;
           display: block;
           box-shadow: 0px 10px 10px $blackalpha;
+          filter: grayscale(100%);
             
             right:0;
             margin:0 auto;
@@ -51,23 +52,31 @@
             background:$googleBlack;
             transform:scale(1);
             box-shadow: 0px 4px 10px $indigoalpha;
+            filter: grayscale(0%);
           }
         }
         .item:hover {
             transform:scale(0.9);
             opacity: 0.9;
             box-shadow: 0px 15px 10px $blackalpha;
+            filter: grayscale(0%);
         }
         .active:hover{
             transform:scale(1.1);
             opacity: 1;
             box-shadow: 0px 15px 10px $indigoalpha;
         }
-        #website{
-            background-image: url(../images/website.png);
-            background-size: cover;
+        #website {
+            background-image: url(../images/websitenew.png);
+            background-size: 120%;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: center 90%;
+            transition: all ease 0.5s;
+          }
+        #website:hover {
+            transition: all ease 0.5s;
+            background-size: 100%;
+            background-position: center 150%;
         }
         #program{
             background-image: url(../images/hourbooster.png);
@@ -75,12 +84,18 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
-        #selfbot{
-            background-position: center center;
-            background-image: url(../images/selfbot.png);
-            background-size: cover;
+        #selfbot {
+            background-image: url(../images/ug.png);
+            background-size: 120%;
             background-repeat: no-repeat;
-        }
+            background-position: center 100%;
+            transition: all ease 0.5s;
+          }
+        #selfbot:hover {
+            transition: all ease 0.5s;
+            background-size: 100%;
+            background-position: center -100%;
+          }
         .textbackground{
             height: 100%;
             width: 100%;
@@ -175,6 +190,7 @@
           display: block;
           box-shadow: 0px 10px 10px $blackalpha;
           white-space: initial;
+          filter: grayscale(100%);
             
             right:0;
             margin:0 auto;
@@ -185,23 +201,31 @@
             background:$googleBlack;
             transform:scale(1);
             box-shadow: 0px 4px 10px $indigoalpha;
+            filter: grayscale(0%);
           }
         }
         .item:hover {
             transform:scale(1);
             opacity: 0.9;
             box-shadow: 0px 15px 10px $blackalpha;
+            filter: grayscale(0%);
         }
         .active:hover{
             transform:scale(1);
             opacity: 1;
             box-shadow: 0px 15px 10px $indigoalpha;
         }
-        #website{
-            background-image: url(../images/website.png);
-            background-size: cover;
+        #website {
+            background-image: url(../images/websitenew.png);
+            background-size: 120%;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: center 90%;
+            transition: all ease 0.5s;
+          }
+        #website:hover {
+            transition: all ease 0.5s;
+            background-size: 100%;
+            background-position: center 150%;
         }
         #program{
             background-image: url(../images/hourbooster.png);
@@ -209,12 +233,18 @@
             background-repeat: no-repeat;
             background-position: center center;
         }
-        #selfbot{
-            background-position: center center;
-            background-image: url(../images/selfbot.png);
-            background-size: cover;
+        #selfbot {
+            background-image: url(../images/ug.png);
+            background-size: 120%;
             background-repeat: no-repeat;
-        }
+            background-position: center 100%;
+            transition: all ease 0.5s;
+          }
+        #selfbot:hover {
+            transition: all ease 0.5s;
+            background-size: 100%;
+            background-position: center -120%;
+          }
         .textbackground{
             height: 100%;
             width: 100%;
