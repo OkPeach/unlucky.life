@@ -208,3 +208,18 @@ i.on("click", function (e) {
     }
   });
 });
+
+const backgroundArray = [
+  '1.png',
+  '2.jpg',
+  '3.jpg',
+  '4.jpg',
+  '5.jpg',
+  '6.gif'
+]
+
+const setBackgroundColor = () => {
+  indexedArray = '../images/bc/' + backgroundArray[Math.floor(Math.random()*backgroundArray.length)];
+  const bcgrd = "url('" + indexedArray + "')"
+  document.getElementById("projects").style.backgroundImage = bcgrd;
+}

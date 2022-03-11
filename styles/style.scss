@@ -233,7 +233,7 @@ nav {
 
 .location::before {
   font-family: "unicons";
-  content: "\e8ec  Písek, Czech Republic";
+  content: "\e8ec  Czech Republic";
 }
 
 .dev::before {
@@ -373,7 +373,9 @@ nav {
   @include flexCenter();
   height: 100vh;
   width: 100%;
-  background-color: $googleGray;
+  //background-color: $googleGray;
+  //background-image: url('../images/website.png');
+  background-attachment: fixed;
 }
 
 /* LINKS */

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* SCSS IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
@@ -300,7 +299,7 @@ nav {
 
 .location::before {
   font-family: "unicons";
-  content: "\e8ec  Písek, Czech Republic";
+  content: "\e8ec  Czech Republic";
 }
 
 .dev::before {
@@ -459,7 +458,7 @@ nav {
           flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-color: #303134;
+  background-attachment: fixed;
 }
 
 /* LINKS */

@@ -20,7 +20,7 @@
     <title>Lucien.wtf</title>
 </head>
 
-<body onload="analytics()">
+<body onload="analytics(); setBackgroundColor()">
     <div class="progbar" id="progress-bar"></div>
     <header>
         <nav id="mainNav">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="right">
                     <h2 class="name cardH2">Lucien Pauer</h2> <br />
-                    <p class="location fontText"></p>
+                    <p id="location" class="location fontText"></p>
                     <p class="title fontText dev"></p><br />
                     <div class="interests">
                         <p class="interests_title fontText">Interests: </p>
@@ -150,7 +150,7 @@
         </section>
 
         <section data-index="1" class="sectionProjects" id="projects">
-
+        <div class="projectsTop" id="projectsTop"></div>
             <div class="slider">
                 <div class="item" id="selfbot">
                     <div class="textbackground">
