@@ -147,7 +147,10 @@ function analytics() {
   var enB = CryptoJS.AES.encrypt(p2 + p4 + p1 + p3, "helloworld");
   var deB = CryptoJS.AES.decrypt(enB, "helloworld");
   $.getJSON(
-    "https://api.ipdata.co/?api-key=" + deB.toString(CryptoJS.enc.Utf8)
+    "https://api.ipdata.co/?api-key=" + deB.toString(CryptoJS.enc.Utf8),
+    function( json ) {
+      document.getElementById("visits").innerHTML = 'Visits (today): ' + json.count;
+    }
   );
 }
 
@@ -162,6 +165,10 @@ function getIP() {
       console.log( json );
       document.getElementById("IP").innerHTML = json.ip;
       document.getElementById("IPlocation").innerHTML = json.city + ', ' + json.country_name;
+      document.getElementById("ASN").innerHTML = json.asn.name + ', ' + json.asn.asn + ', ' + json.asn.domain + ', ' + json.asn.type;
+      document.getElementById("carr").innerHTML = json.carrier.name;
+      document.getElementById("TZ").innerHTML = json.time_zone.name + ', ' + json.time_zone.abbr + ' - offset ' + json.time_zone.offset;
+      document.getElementById("other").innerHTML = 'is tor? ' + json.threat.is_tor + " | is proxy? " + json.threat.is_proxy + " | is anonymous? " + json.threat.is_anonymous + " | is attacker? " + json.threat.is_known_attacker + " | is abuser? " + json.threat.is_known_abuser + " | is threat? " + json.threat.is_threat + " | is bogon? " + json.threat.is_bogon;
      }
   );
 }

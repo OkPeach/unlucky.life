@@ -233,15 +233,15 @@ nav {
 
 .location::before {
   font-family: "unicons";
-  content: "\e8ec ";
+  content: "\e8ec  ";
 }
 
-.location {
+.blurState {
   filter: blur(4px);
   transition: all 0.5s ease;
 }
 
-.location:hover{
+.blurState:hover{
   filter: blur(0px);
   transition: all 0.5s ease;
 }
@@ -249,6 +249,11 @@ nav {
 .dev::before {
   font-family: "unicons";
   content: "\e969  Developer";
+}
+
+.visits::before {
+  font-family: "unicons";
+  content: "\ebaf  ";
 }
 
 .profile_img {

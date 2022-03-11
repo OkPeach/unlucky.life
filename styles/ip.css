@@ -24,57 +24,204 @@ html {
 body {
   background: #2c2c2c;
   color: white;
-  height: 100vh;
   font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
 }
 
-#iptext {
-  font-size: 150%;
-  color: red;
+@media (min-width: 1600px) {
+  #iptext {
+    font-size: 2vw;
+    color: #4c61f5;
+  }
+  p {
+    font-size: 1vw;
+    color: #b1b1b1;
+  }
+  #location {
+    color: white;
+  }
+  #winRes {
+    color: #b1b1b1;
+  }
+  h1 {
+    font-size: 7vw;
+    color: #7c7aff;
+  }
+  .main {
+    height: 95vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  span {
+    color: #7c7aff;
+  }
+  #other {
+    -webkit-filter: grayscale(30%);
+            filter: grayscale(30%);
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 5vh;
+    width: 100%;
+    color: #7c7aff;
+    background: #212327;
+    z-index: 1;
+    -webkit-box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+  }
+  .ipdiv {
+    text-align: center;
+  }
+  ::-moz-selection {
+    color: #30a8f0;
+  }
+  ::selection {
+    color: #30a8f0;
+  }
 }
 
-p {
-  font-size: 75%;
-  color: #4c61f5;
+@media (max-width: 1600px) and (min-width: 1024px) {
+  #iptext {
+    font-size: 4vw;
+    color: #4c61f5;
+  }
+  p {
+    font-size: 1.5vw;
+    color: #b1b1b1;
+  }
+  #location {
+    color: white;
+  }
+  #winRes {
+    color: #b1b1b1;
+  }
+  h1 {
+    font-size: 14vw;
+    color: #7c7aff;
+  }
+  .main {
+    height: 95vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  span {
+    color: #7c7aff;
+  }
+  #other {
+    -webkit-filter: grayscale(30%);
+            filter: grayscale(30%);
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 5vh;
+    width: 100%;
+    color: #7c7aff;
+    background: #212327;
+    z-index: 1;
+    -webkit-box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+  }
+  .ipdiv {
+    text-align: center;
+  }
+  ::-moz-selection {
+    color: #30a8f0;
+  }
+  ::selection {
+    color: #30a8f0;
+  }
 }
 
-#location {
-  color: white;
-}
-
-#winRes {
-  color: #b1b1b1;
-}
-
-h1 {
-  font-size: 300%;
-  color: #7c7aff;
-}
-
-.main {
-  height: 100vh;
-  width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.ipdiv {
-  text-align: center;
-}
-
-::-moz-selection {
-  color: #30a8f0;
-}
-
-::selection {
-  color: #30a8f0;
+@media (max-width: 1024px) {
+  #iptext {
+    font-size: 8vw;
+    color: #4c61f5;
+  }
+  p {
+    font-size: 3vw;
+    color: #b1b1b1;
+  }
+  #location {
+    color: white;
+  }
+  #winRes {
+    color: #b1b1b1;
+  }
+  h1 {
+    font-size: 14vw;
+    color: #7c7aff;
+  }
+  .main {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  span {
+    color: #7c7aff;
+  }
+  #other {
+    -webkit-filter: grayscale(30%);
+            filter: grayscale(30%);
+  }
+  footer {
+    display: none;
+  }
+  .ipdiv {
+    text-align: center;
+  }
+  ::-moz-selection {
+    color: #30a8f0;
+  }
+  ::selection {
+    color: #30a8f0;
+  }
 }
 /*# sourceMappingURL=ip.css.map */
