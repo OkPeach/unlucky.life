@@ -458,6 +458,7 @@ nav {
           flex-direction: column;
   height: 100vh;
   width: 100%;
+  background-color: #303134;
   background-attachment: fixed;
 }
 
