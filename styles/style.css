@@ -243,7 +243,7 @@ nav {
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 40vw;
     height: 50vh;
-    background-color: #212327;
+    background-color: #303134;
     border-radius: 20px;
     border-color: #6610f2;
     border-width: 1px;
@@ -255,7 +255,6 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 30px;
     margin: 20px 0;
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
@@ -273,7 +272,7 @@ nav {
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 80vw;
     height: 50vh;
-    background-color: #212327;
+    background-color: #303134;
     border-radius: 20px;
     border-color: #6610f2;
     border-width: 1px;
@@ -299,7 +298,21 @@ nav {
 
 .location::before {
   font-family: "unicons";
-  content: "\e8ec  Czech Republic";
+  content: "\e8ec ";
+}
+
+.location {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.location:hover {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .dev::before {
@@ -350,12 +363,36 @@ nav {
   margin: auto auto;
 }
 
+.infoTab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .left {
   margin-right: 12.5px;
+  border-radius: 20px;
+  border-color: #6610f2;
+  border-width: 1px;
+  border-style: solid;
+  padding: 30px;
+  background-color: #202124;
 }
 
 .right {
   margin-left: 12.5px;
+  padding: 30px;
+  background-color: #303134;
 }
 
 .interests {
@@ -604,6 +641,16 @@ nav {
   content: "\ea0f  ";
 }
 
+.emailSmall::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.age::before {
+  font-family: unicons;
+  content: "\eaf8  ";
+}
+
 .youtube::before {
   font-family: unicons;
   content: "\ec06  ";
@@ -710,7 +757,8 @@ footer a {
   .flag_wrapper,
   .profile_img,
   .navbarUL,
-  .mobilenodisplay {
+  .mobilenodisplay,
+  .left {
     display: none;
   }
   .navbarUL {

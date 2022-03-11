@@ -191,14 +191,14 @@ nav {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 40vw;
     height: 50vh;
-    background-color: $navbar;
+    background-color: $googleGray;
     border-radius: 20px;
     border-color: $indigo;
     border-width: 1px;
     border-style: solid;
     display: flex;
     flex-direction: row;
-    padding: 30px;
+    //padding: 30px;
     margin: 20px 0;
     overflow-y: scroll;
     backface-visibility: hidden;
@@ -213,7 +213,7 @@ nav {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 80vw;
     height: 50vh;
-    background-color: $navbar;
+    background-color: $googleGray;
     border-radius: 20px;
     border-color: $indigo;
     border-width: 1px;
@@ -233,7 +233,17 @@ nav {
 
 .location::before {
   font-family: "unicons";
-  content: "\e8ec  Czech Republic";
+  content: "\e8ec ";
+}
+
+.location {
+  filter: blur(4px);
+  transition: all 0.5s ease;
+}
+
+.location:hover{
+  filter: blur(0px);
+  transition: all 0.5s ease;
 }
 
 .dev::before {
@@ -284,11 +294,23 @@ nav {
   margin: auto auto;
 }
 
+.infoTab{
+  @include flexCenter();
+}
+
 .left {
   margin-right: 12.5px;
+  border-radius: 20px;
+  border-color: $indigo;
+  border-width: 1px;
+  border-style: solid;
+  padding: 30px;
+  background-color: $googleBlack;
 }
 .right {
   margin-left: 12.5px;
+  padding: 30px;
+  background-color: $googleGray;
 }
 
 .interests {
@@ -495,6 +517,16 @@ nav {
   content: "\ea0f  ";
 }
 
+.emailSmall::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.age::before {
+  font-family: unicons;
+  content: "\eaf8  ";
+}
+
 .youtube::before {
   font-family: unicons;
   content: "\ec06  ";
@@ -586,7 +618,8 @@ footer {
   .flag_wrapper,
   .profile_img,
   .navbarUL,
-  .mobilenodisplay {
+  .mobilenodisplay,
+  .left {
     display: none;
   }
 

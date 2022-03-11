@@ -1,0 +1,80 @@
+/* SCSS IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/* ALL */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  cursor: url("../images/cursor.png"), default;
+  overscroll-behavior-y: none;
+  background-color: #202124;
+  font-size: 200%;
+}
+
+.pointer {
+  cursor: url("../images/pointer.png"), pointer;
+}
+
+/* BODY */
+body {
+  background: #2c2c2c;
+  color: white;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overscroll-behavior-y: none;
+}
+
+#iptext {
+  font-size: 150%;
+  color: red;
+}
+
+p {
+  font-size: 75%;
+  color: #4c61f5;
+}
+
+#location {
+  color: white;
+}
+
+#winRes {
+  color: #b1b1b1;
+}
+
+h1 {
+  font-size: 300%;
+  color: #7c7aff;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ipdiv {
+  text-align: center;
+}
+
+::-moz-selection {
+  color: #30a8f0;
+}
+
+::selection {
+  color: #30a8f0;
+}
+/*# sourceMappingURL=ip.css.map */

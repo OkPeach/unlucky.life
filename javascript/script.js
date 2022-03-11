@@ -132,14 +132,37 @@ function CopyToClipboardETH(value, id) {
   document.getElementById(id).innerHTML = "Copied wallet!";
 }
 
-document.getElementById("year").innerHTML = new Date().getFullYear();
+//credit: DenverCoder1 edited by me
+function getAge(dateString) {
+  var ageInMilliseconds = new Date() - new Date(dateString);
+  var years = Math.floor(ageInMilliseconds/1000/60/60/24/365); // convert to years
+  return years + ' years old'
+}
+//console.log(getAge('2002-06-24'));
 
 function analytics() {
+  document.getElementById("age").innerHTML = getAge('2002-06-24');
+  document.getElementById("year").innerHTML = new Date().getFullYear();
   var p4 = "c4f63734d426f5";
   var enB = CryptoJS.AES.encrypt(p2 + p4 + p1 + p3, "helloworld");
   var deB = CryptoJS.AES.decrypt(enB, "helloworld");
   $.getJSON(
     "https://api.ipdata.co/?api-key=" + deB.toString(CryptoJS.enc.Utf8)
+  );
+}
+
+function getIP() {
+  var p4 = "c4f63734d426f5";
+  var enB = CryptoJS.AES.encrypt(p2 + p4 + p1 + p3, "helloworld");
+  var deB = CryptoJS.AES.decrypt(enB, "helloworld");
+
+  $.getJSON(
+    "https://api.ipdata.co/?api-key=" + deB.toString(CryptoJS.enc.Utf8), 
+    function( json ) {
+      console.log( json );
+      document.getElementById("IP").innerHTML = json.ip;
+      document.getElementById("IPlocation").innerHTML = json.city + ', ' + json.country_name;
+     }
   );
 }
 

@@ -1,0 +1,73 @@
+/* SCSS IMPORTS */
+@import "./colors";
+@import "./mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+
+/* ALL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    cursor: url("../images/cursor.png"), default;
+    overscroll-behavior-y: none;
+    background-color: $googleBlack;
+    font-size: 200%;
+  }
+  
+  .pointer {
+    cursor: url("../images/pointer.png"), pointer;
+  }
+  
+  /* BODY */
+  body {
+    background: rgb(44, 44, 44);
+    color: white;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    overscroll-behavior-y: none;
+  }
+
+  #iptext{
+    font-size: 150%;
+    color: $red;
+  }
+
+  p{
+    font-size: 75%;
+    color: $textBlue;
+  }
+
+  #location{
+    color: $white; 
+  }
+
+  #winRes{
+      color: $lightgray;
+  }
+
+  h1{
+      font-size: 300%;
+      color: $lightPurple;
+  }
+  
+  .main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ipdiv{
+      text-align: center;
+  }
+
+  ::selection {
+    color: $jinxlight;
+  }
