@@ -248,6 +248,10 @@ nav {
   object-fit: cover;
   object-position: 50% 50%;
 
+  background-image: url('../images/pattern.png');
+
+  background-color: $black;
+
   border-radius: 100%;
   border-color: $textBlue;
   border-width: 1px;
@@ -376,6 +380,8 @@ nav {
   background-color: $googleGray;
   //background-image: url('../images/website.png');
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* LINKS */

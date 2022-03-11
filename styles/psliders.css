@@ -46,6 +46,9 @@
             filter: grayscale(100%);
     right: 0;
     margin: 0 auto;
+
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
   }
   .slider .item.active {
     z-index: 2;
@@ -58,6 +61,7 @@
             box-shadow: 0px 4px 10px #6710f260;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
+    image-rendering: auto;
   }
   .slider .item:hover {
     -webkit-transform: scale(0.9);
