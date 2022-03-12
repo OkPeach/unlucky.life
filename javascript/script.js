@@ -251,3 +251,11 @@ const setBackgroundColor = () => {
   const bcgrd = "url('" + indexedArray + "')"
   document.getElementById("projects").style.backgroundImage = bcgrd;
 }
+
+/* $(window).on('load', function () {
+  setTimeout(function () {
+    $('#loading').hide();
+  }, 700);
+
+  console.log('Loaded!')
+})  */

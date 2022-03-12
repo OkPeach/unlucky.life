@@ -317,7 +317,7 @@ nav {
 
 .dev::before {
   font-family: "unicons";
-  content: "\e969  Developer";
+  content: "\e969  ";
 }
 
 .visits::before {
@@ -1467,4 +1467,22 @@ footer a {
   -webkit-transform: none;
           transform: none;
 }
+
+/* #loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background: #21242d url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
+  z-index: 99999999999;
+}
+
+#loading-image {
+  z-index: 100000000000;
+} */
 /*# sourceMappingURL=style.css.map */
