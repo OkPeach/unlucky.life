@@ -1508,7 +1508,7 @@ footer a {
   bottom: 40px;
   position: absolute;
   border-radius: 50%;
-  border: 5px solid #30a8f0;
+  border: 5px solid #7c7aff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 0;
@@ -1522,7 +1522,7 @@ footer a {
   bottom: 32px;
   position: absolute;
   border-radius: 50%;
-  border: 21px solid #4c61f5;
+  border: 21px solid #7c7aff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 0;
@@ -1537,8 +1537,8 @@ footer a {
 }
 
 .animated {
-  -webkit-animation: 15s bgPos ease-in-out infinite alternate;
-          animation: 15s bgPos ease-in-out infinite alternate;
+  -webkit-animation: 7s bgPos ease-in-out infinite alternate;
+          animation: 7s bgPos ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes bgPos {

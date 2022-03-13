@@ -1346,7 +1346,7 @@ footer {
   bottom:  $beforeOffset;
   position: absolute;
   border-radius: 50%;
-  border: 5px solid $jinxlight;
+  border: 5px solid $lightPurple;
   box-sizing: border-box;
   z-index: 0;
  }
@@ -1360,7 +1360,7 @@ footer {
   bottom: $afterOffset;
   position: absolute;
   border-radius: 50%;
-  border: ($outOfBorderRange*2 + 5px) solid $textBlue;
+  border: ($outOfBorderRange*2 + 5px) solid $lightPurple;
   box-sizing: border-box;
   z-index: 0;
   filter: blur(5px * 2.5);
@@ -1373,7 +1373,7 @@ footer {
 }
 
 .animated {
- animation: 15s bgPos ease-in-out infinite alternate;
+ animation: 7s bgPos ease-in-out infinite alternate;
  
 }
 
