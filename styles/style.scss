@@ -189,7 +189,7 @@ nav {
 @media (min-width: 1024px) {
   .card {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    width: 40vw;
+    width: 50vw;
     height: 50vh;
     background-color: $googleGray;
     border-radius: 20px;
@@ -304,6 +304,7 @@ nav {
 }
 
 .left {
+  height: 100%;
   margin-right: 12.5px;
   border-radius: 20px;
   border-color: $indigo;
