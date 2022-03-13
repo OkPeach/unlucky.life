@@ -827,9 +827,9 @@ footer a {
   }
 }
 
-#infoCard {
-  -webkit-animation: scaleCard 0.3s ease-in 1.30s;
-          animation: scaleCard 0.3s ease-in 1.30s;
+.cardAnim {
+  -webkit-animation: scaleCard 0.3s ease-in;
+          animation: scaleCard 0.3s ease-in;
 }
 
 *,
@@ -1149,89 +1149,89 @@ footer a {
 }
 
 /* LUCIENWTF LOGO */
-#logo {
-  -webkit-animation: fill 0.3s ease-in forwards 3.15s;
-          animation: fill 0.3s ease-in forwards 3.15s;
+.logoAnim {
+  -webkit-animation: fill 0.3s ease-in forwards 2.55s;
+          animation: fill 0.3s ease-in forwards 2.55s;
 }
 
-#logo path:nth-child(1) {
+.logoAnim path:nth-child(1) {
   stroke-dasharray: 150.3359985351562px;
   stroke-dashoffset: 150.3359985351562px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 1.25s;
-          animation: lineAnim 0.75s ease-in forwards 1.25s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards;
+          animation: lineAnim 0.75s ease-in forwards;
 }
 
-#logo path:nth-child(2) {
+.logoAnim path:nth-child(2) {
   stroke-dasharray: 210.0889129638672px;
   stroke-dashoffset: 210.0889129638672px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 1.45s;
-          animation: lineAnim 0.75s ease-in forwards 1.45s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 0.2s;
+          animation: lineAnim 0.75s ease-in forwards 0.2s;
 }
 
-#logo path:nth-child(3) {
+.logoAnim path:nth-child(3) {
   stroke-dasharray: 193.95094299316406px;
   stroke-dashoffset: 193.95094299316406px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 1.65s;
-          animation: lineAnim 0.75s ease-in forwards 1.65s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 0.4s;
+          animation: lineAnim 0.75s ease-in forwards 0.4s;
 }
 
-#logo path:nth-child(4) {
+.logoAnim path:nth-child(4) {
   stroke-dasharray: 128.82608032226562px;
   stroke-dashoffset: 128.82608032226562px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 1.85s;
-          animation: lineAnim 0.75s ease-in forwards 1.85s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 0.6s;
+          animation: lineAnim 0.75s ease-in forwards 0.6s;
 }
 
-#logo path:nth-child(5) {
+.logoAnim path:nth-child(5) {
   stroke-dasharray: 245.4691162109375px;
   stroke-dashoffset: 245.4691162109375px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 2.05s;
-          animation: lineAnim 0.75s ease-in forwards 2.05s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 0.8s;
+          animation: lineAnim 0.75s ease-in forwards 0.8s;
 }
 
-#logo path:nth-child(6) {
+.logoAnim path:nth-child(6) {
   stroke-dasharray: 210.09971618652344px;
   stroke-dashoffset: 210.09971618652344px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 2.25s;
-          animation: lineAnim 0.75s ease-in forwards 2.25s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 1s;
+          animation: lineAnim 0.75s ease-in forwards 1s;
 }
 
-#logo path:nth-child(7) {
+.logoAnim path:nth-child(7) {
   stroke-dasharray: 33.0661506652832px;
   stroke-dashoffset: 33.0661506652832px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.5s ease-in forwards 2.45s;
-          animation: lineAnim 0.5s ease-in forwards 2.45s;
+  -webkit-animation: lineAnim 0.5s ease-in forwards 1.2s;
+          animation: lineAnim 0.5s ease-in forwards 1.2s;
 }
 
-#logo path:nth-child(8) {
+.logoAnim path:nth-child(8) {
   stroke-dasharray: 317.6097412109375px;
   stroke-dashoffset: 317.6097412109375px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 2.65s;
-          animation: lineAnim 0.75s ease-in forwards 2.65s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 1.4s;
+          animation: lineAnim 0.75s ease-in forwards 1.4s;
 }
 
-#logo path:nth-child(9) {
+.logoAnim path:nth-child(9) {
   stroke-dasharray: 157.89505004882812px;
   stroke-dashoffset: 157.89505004882812px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 2.85s;
-          animation: lineAnim 0.75s ease-in forwards 2.85s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 1.6s;
+          animation: lineAnim 0.75s ease-in forwards 1.6s;
 }
 
-#logo path:nth-child(10) {
+.logoAnim path:nth-child(10) {
   stroke-dasharray: 157.936279296875px;
   stroke-dashoffset: 157.936279296875px;
   stroke: #7c7aff;
-  -webkit-animation: lineAnim 0.75s ease-in forwards 3.05s;
-          animation: lineAnim 0.75s ease-in forwards 3.05s;
+  -webkit-animation: lineAnim 0.75s ease-in forwards 1.8s;
+          animation: lineAnim 0.75s ease-in forwards 1.8s;
 }
 
 @-webkit-keyframes lineAnim {
