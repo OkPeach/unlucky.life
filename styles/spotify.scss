@@ -39,14 +39,14 @@ header {
 }
 
 html {
-  cursor: url("../images/cursor.png"), default;
+  cursor: url("../images/cursor.webp"), default;
   overscroll-behavior-y: none;
   background-color: $googleBlack;
   text-align: center;
 }
 
 .pointer {
-  cursor: url("../images/pointer.png"), pointer;
+  cursor: url("../images/pointer.webp"), pointer;
 }
 
 /* BODY */

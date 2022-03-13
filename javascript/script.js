@@ -239,11 +239,11 @@ i.on("click", function (e) {
 });
 
 const backgroundArray = [
-  '1.png',
-  '2.jpg',
-  '3.jpg',
-  '4.jpg',
-  '5.jpg'
+  '1.webp',
+  '2.webp',
+  '3.webp',
+  '4.webp',
+  '5.webp'
 ]
 
 const setBackgroundColor = () => {

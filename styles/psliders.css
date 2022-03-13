@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
-/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg :)*/
+/* INSPIRATION: https://codepen.io/dpyudha/pen/rzEKmg :))*/
 .slider p {
   font-weight: bolder;
 }
@@ -35,7 +35,7 @@
     transition: all ease 0.5s;
     z-index: 1;
     left: 0;
-    opacity: 0.95;
+    opacity: 0.4;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
     overflow-y: scroll;
@@ -46,9 +46,6 @@
             filter: grayscale(100%);
     right: 0;
     margin: 0 auto;
-
-    -ms-interpolation-mode: nearest-neighbor;
-    image-rendering: pixelated;
   }
   .slider .item.active {
     z-index: 2;
@@ -61,12 +58,11 @@
             box-shadow: 0px 4px 10px #6710f260;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
-    image-rendering: auto;
   }
   .slider .item:hover {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
-    opacity: 1;
+    opacity: 0.9;
     -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.6);
     -webkit-filter: grayscale(0%);
@@ -80,7 +76,7 @@
             box-shadow: 0px 15px 10px #6710f260;
   }
   .slider #website {
-    background-image: url(../images/websitenew.png);
+    background-image: url(../images/websitenew.webp);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center 90%;
@@ -94,13 +90,13 @@
     background-position: center 150%;
   }
   .slider #program {
-    background-image: url(../images/hourbooster.png);
+    background-image: url(../images/hourbooster.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   .slider #selfbot {
-    background-image: url(../images/ug.png);
+    background-image: url(../images/ug.webp);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center 100%;
@@ -255,7 +251,7 @@
             box-shadow: 0px 15px 10px #6710f260;
   }
   .slider #website {
-    background-image: url(../images/websitenew.png);
+    background-image: url(../images/websitenew.webp);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center 90%;
@@ -269,13 +265,13 @@
     background-position: center 150%;
   }
   .slider #program {
-    background-image: url(../images/hourbooster.png);
+    background-image: url(../images/hourbooster.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   .slider #selfbot {
-    background-image: url(../images/ug.png);
+    background-image: url(../images/ug.webp);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center 100%;

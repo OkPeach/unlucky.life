@@ -42,14 +42,14 @@ header {
 }
 
 html {
-  cursor: url("../images/cursor.png"), default;
+  cursor: url("../images/cursor.webp"), default;
   overscroll-behavior-y: none;
   background-color: #202124;
   text-align: center;
 }
 
 .pointer {
-  cursor: url("../images/pointer.png"), pointer;
+  cursor: url("../images/pointer.webp"), pointer;
 }
 
 /* BODY */
@@ -174,7 +174,7 @@ a {
 }
 
 a:hover {
-  cursor: url("../images/pointer.png"), pointer;
+  cursor: url("../images/pointer.webp"), pointer;
 }
 
 @media (max-width: 1500px) {
