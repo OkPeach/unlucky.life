@@ -50,7 +50,7 @@ header {
   width: 100%;
   background: $navbar;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
-  z-index: 1000;
+  z-index: 998;
   top: 0vh;
   position: fixed;
 }
@@ -687,11 +687,7 @@ footer {
 }
 
 #infoCard {
-  animation: scaleCard 0.3s ease-in;
-}
-
-#contact {
-  animation: scaleLink 0.3s ease-in;
+  animation: scaleCard 0.3s ease-in 1.30s;
 }
 
 *,
@@ -1054,77 +1050,77 @@ footer {
 
 /* LUCIENWTF LOGO */
 #logo {
-  animation: fill 0.3s ease-in forwards 2.55s;
+  animation: fill 0.3s ease-in forwards 3.15s;
 }
 
 #logo path:nth-child(1) {
   stroke-dasharray: 150.3359985351562px;
   stroke-dashoffset: 150.3359985351562px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards;
+  animation: lineAnim 0.75s ease-in forwards 1.25s;
 }
 
 #logo path:nth-child(2) {
   stroke-dasharray: 210.0889129638672px;
   stroke-dashoffset: 210.0889129638672px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 0.2s;
+  animation: lineAnim 0.75s ease-in forwards 1.45s;
 }
 
 #logo path:nth-child(3) {
   stroke-dasharray: 193.95094299316406px;
   stroke-dashoffset: 193.95094299316406px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 0.4s;
+  animation: lineAnim 0.75s ease-in forwards 1.65s;
 }
 
 #logo path:nth-child(4) {
   stroke-dasharray: 128.82608032226562px;
   stroke-dashoffset: 128.82608032226562px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 0.6s;
+  animation: lineAnim 0.75s ease-in forwards 1.85s;
 }
 
 #logo path:nth-child(5) {
   stroke-dasharray: 245.4691162109375px;
   stroke-dashoffset: 245.4691162109375px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 0.8s;
+  animation: lineAnim 0.75s ease-in forwards 2.05s;
 }
 
 #logo path:nth-child(6) {
   stroke-dasharray: 210.09971618652344px;
   stroke-dashoffset: 210.09971618652344px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 1s;
+  animation: lineAnim 0.75s ease-in forwards 2.25s;
 }
 
 #logo path:nth-child(7) {
   stroke-dasharray: 33.0661506652832px;
   stroke-dashoffset: 33.0661506652832px;
   stroke: $lightPurple;
-  animation: lineAnim 0.5s ease-in forwards 1.2s;
+  animation: lineAnim 0.5s ease-in forwards 2.45s;
 }
 
 #logo path:nth-child(8) {
   stroke-dasharray: 317.6097412109375px;
   stroke-dashoffset: 317.6097412109375px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 1.4s;
+  animation: lineAnim 0.75s ease-in forwards 2.65s;
 }
 
 #logo path:nth-child(9) {
   stroke-dasharray: 157.89505004882812px;
   stroke-dashoffset: 157.89505004882812px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 1.6s;
+  animation: lineAnim 0.75s ease-in forwards 2.85s;
 }
 
 #logo path:nth-child(10) {
   stroke-dasharray: 157.936279296875px;
   stroke-dashoffset: 157.936279296875px;
   stroke: $lightPurple;
-  animation: lineAnim 0.75s ease-in forwards 1.8s;
+  animation: lineAnim 0.75s ease-in forwards 3.05s;
 }
 
 @keyframes lineAnim {
@@ -1153,7 +1149,7 @@ footer {
 
 @keyframes scaleLink {
   from {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   to {
     transform: scale(1);
@@ -1313,7 +1309,7 @@ footer {
   transform: none;
 }
 
-/* #loading {
+#loading {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -1323,10 +1319,76 @@ footer {
   top: 0;
   left: 0;
   opacity: 1;
-  background: #21242d url('https://cssauthor.com/wp-content/uploads/2018/06/Bouncy-Preloader.gif') no-repeat center;
-  z-index: 99999999999;
+  background: $black;
+  z-index: 999;
+  transition: opacity 1s;
 }
 
 #loading-image {
-  z-index: 100000000000;
-} */
+  z-index: 1000;
+}
+
+/* 
+ credit: https://codepen.io/rgembalik/pen/OJygXJR (rgembalik)
+*/
+
+.circle {
+ background: $black;
+ position: relative;
+ z-index: 0;
+ filter: contrast(1.3) brightness(2);
+ &:before {
+  $beforeOffset: 40px;
+  content: '';
+  top:  $beforeOffset;
+  left:  $beforeOffset;
+  right:  $beforeOffset;
+  bottom:  $beforeOffset;
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid $jinxlight;
+  box-sizing: border-box;
+  z-index: 0;
+ }
+ &:after {
+  $outOfBorderRange: 5px + 3px;
+  $afterOffset: 40px - $outOfBorderRange;
+  content: '';
+  top: $afterOffset;
+  left: $afterOffset;
+  right: $afterOffset;
+  bottom: $afterOffset;
+  position: absolute;
+  border-radius: 50%;
+  border: ($outOfBorderRange*2 + 5px) solid $textBlue;
+  box-sizing: border-box;
+  z-index: 0;
+  filter: blur(5px * 2.5);
+ }
+ .noise {
+  mix-blend-mode: multiply;
+  z-index: 1;
+  position: relative;
+ }
+}
+
+.animated {
+ animation: 15s bgPos ease-in-out infinite alternate;
+ 
+}
+
+@keyframes bgPos {
+ from {
+  background-position: 0% 0%;
+ }
+ to {
+  background-position: 512px 512px;
+ }
+}
+
+.noise {
+ width: 200px;
+ height: 200px;
+ background-size: 200%;
+ background-image: url('/images/noise.png');
+}

@@ -252,10 +252,26 @@ const setBackgroundColor = () => {
   document.getElementById("projects").style.backgroundImage = bcgrd;
 }
 
-/* $(window).on('load', function () {
+function fadeOutEffect() {
+  var fadeTarget = document.getElementById("loading");
+  var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+          fadeTarget.style.opacity = 1;
+      }
+      if (fadeTarget.style.opacity > 0) {
+          fadeTarget.style.opacity -= 0.1;
+      } else {
+          clearInterval(fadeEffect);
+      }
+  }, 200);
+}
+
+$(window).on('load', function () {
   setTimeout(function () {
-    $('#loading').hide();
-  }, 700);
+    const target = document.getElementById("loading");
+    target.style.opacity = '0'
+    target.addEventListener('transitionend', () => target.remove());  
+  }, 1250);
 
   console.log('Loaded!')
-})  */
+}) 
