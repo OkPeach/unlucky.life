@@ -36,7 +36,7 @@
           transition:all ease 0.5s;
           z-index:1;
           left:0;
-          opacity:0.4;
+          opacity:0.95;
           transform:scale(0.8);
           overflow-y: scroll;
           display: block;
@@ -57,7 +57,7 @@
         }
         .item:hover {
             transform:scale(0.9);
-            opacity: 0.9;
+            opacity: 1;
             box-shadow: 0px 15px 10px $blackalpha;
             filter: grayscale(0%);
         }
