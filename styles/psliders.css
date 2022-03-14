@@ -207,7 +207,7 @@
     border-radius: 10px;
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     opacity: 0.4;
     -webkit-transform: scale(0.9);
@@ -223,7 +223,7 @@
     margin: 0 auto;
   }
   .slider .item.active {
-    z-index: 2;
+    z-index: 3;
     opacity: 1;
     width: 70vw;
     background: #202124;

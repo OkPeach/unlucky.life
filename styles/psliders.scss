@@ -182,7 +182,7 @@
           background:$bodyBackground;
           border-radius:10px;
           transition:all ease 0.5s;
-          z-index:1;
+          z-index:2;
           left:0;
           opacity:0.4;
           transform:scale(0.9);
@@ -195,7 +195,7 @@
             right:0;
             margin:0 auto;
           &.active{
-            z-index:2;
+            z-index:3;
             opacity:1;
             width:70vw;
             background:$googleBlack;
