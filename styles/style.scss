@@ -92,7 +92,7 @@ header {
     height: 10.2vh;
     background: linear-gradient(to right, $jinxlight, $indigo);
     width: 0%;
-    z-index: 1;
+    z-index: 3;
     transition: width 0.01s ease-out;
     animation: Animation 5s ease infinite;
   }
@@ -106,7 +106,7 @@ header {
     height: 0.4vh;
     background: linear-gradient(to right, $lightPurple, $indigo);
     width: 0%;
-    z-index: 1;
+    z-index: 3;
     transition: width 0.1s ease-out;
   }
 }
