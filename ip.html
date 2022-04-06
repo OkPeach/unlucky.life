@@ -16,8 +16,15 @@
     <meta property="og:description" content="100% IP logger LUL" />
     <meta name="theme-color" content="#6610f2" />
     <link href="styles/ip.css" rel="stylesheet" />
+    <link href="styles/loading.css" rel="stylesheet">
     <title>Lucien.wtf</title>
   </head>
+
+  <div id="loading">
+    <div class="circle">
+        <div class="noise animated"></div>
+    </div>
+</div>
 
   <body onload="reportWindowSize(); getIP()" class="body">
     <main>
@@ -45,6 +52,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/loading.js"></script>
     <script src="javascript/console.js"></script>
     <script src="javascript/ip.js"></script>
     <script src="javascript/script.js"></script>
