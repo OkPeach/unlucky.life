@@ -232,6 +232,12 @@ table {
   }
 }
 
+#holyghost {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(116deg, #737DFE, #FFCAC9);
+}
+
 .anicolor {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2rem;
