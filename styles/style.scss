@@ -1309,3 +1309,17 @@ footer {
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+
+.particles{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 90vh;
+  top: 100vh;
+  backdrop-filter: blur(6px);
+}
+
+.projectsTop{
+  position: absolute;
+  z-index: 1;
+} 
