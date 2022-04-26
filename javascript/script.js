@@ -280,3 +280,14 @@ $(window).on('load', function () {
 
   console.log('Loaded, welcome!')
 }) 
+
+$(function(){
+  $.titleEffect({
+    effect: 'replace',
+    delay: 750,
+    titles: [
+      'home@unlucky.life ~ $',
+      'home@unlucky.life ~ $ _'
+    ]
+  });
+});
