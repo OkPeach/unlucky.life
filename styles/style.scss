@@ -32,11 +32,11 @@ html {
 
 /* BODY */
 body {
-  background: rgb(44, 44, 44);
   color: white;
   height: 100vh;
   font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
+  background: $prim-gradient; 
 }
 
 ::selection {
@@ -48,7 +48,8 @@ header {
   @include flexCenter();
   height: 10vh;
   width: 100%;
-  background: $navbar;
+  background: $sec-gradient; 
+  box-shadow: $sec-box-shadow;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 998;
   top: 0vh;
@@ -166,9 +167,10 @@ nav {
   @include flexCenter();
   height: 90vh;
   width: 100%;
-  background-color: $googleBlack;
+  background: $prim-to;
   position: relative;
   top: 10vh;
+  background-image: $prim-gradient;
 }
 
 /* ABOUT ME - CARD */
@@ -191,7 +193,6 @@ nav {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 50vw;
     height: 50vh;
-    background-color: $googleGray;
     border-radius: 20px;
     border-color: $indigo;
     border-width: 1px;
@@ -202,7 +203,11 @@ nav {
     margin: 20px 0;
     overflow-y: scroll;
     backface-visibility: hidden;
+    background: $sec-gradient; 
+    box-shadow: $sec-box-shadow;
+    z-index: 1;
   }
+
   .card:hover {
     box-shadow: 10px 10px 10px $indigoalpha;
   }
@@ -213,7 +218,6 @@ nav {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 80vw;
     height: 50vh;
-    background-color: $googleGray;
     border-radius: 20px;
     border-color: $indigo;
     border-width: 1px;
@@ -224,6 +228,8 @@ nav {
     margin: 20px 0;
     overflow-y: scroll;
     backface-visibility: hidden;
+    background: $sec-gradient; 
+    box-shadow: $sec-box-shadow;
   }
 
   .card:hover {
@@ -311,12 +317,11 @@ nav {
   border-width: 1px;
   border-style: solid;
   padding: 30px;
-  background-color: $googleBlack;
+  background:linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
 }
 .right {
   margin-left: 12.5px;
   padding: 30px;
-  background-color: $googleGray;
 }
 
 .interests {
@@ -332,7 +337,7 @@ nav {
   padding: 0 15px;
   margin-right: 5px;
   line-height: 35px;
-  background-color: $googleBlack;
+  background: $sec-gradient;
   border-radius: 5px;
   border-color: $indigo;
   border-width: 1px;
@@ -351,7 +356,7 @@ nav {
   box-shadow: 0px 10px 10px $indigoalpha;
 }
 
-.computer::before {
+.secuter::before {
   font-family: unicons;
   content: "\e969  ";
 }
@@ -419,8 +424,9 @@ nav {
     @include flexCenter();
     height: 95vh;
     width: 100%;
-    background-color: $googleBlack;
+    background: $prim-gradient;
     margin-bottom: 10vh;
+    background-color: $prim-to;
   }
 }
 
@@ -429,13 +435,13 @@ nav {
     @include flexCenter();
     height: 95vh;
     width: 100%;
-    background-color: $googleBlack;
+    background: $prim-gradient;
     margin-bottom: 0vh;
+    background-color: $prim-to;
   }
 }
 
 #contact {
-  background-color: $googleBlack;
   transition: all 0.3s ease;
 }
 
@@ -589,7 +595,8 @@ footer {
   height: 5vh;
   width: 100%;
   color: $lightPurple;
-  background: $navbar;
+  background: $sec-gradient; 
+  box-shadow: $sec-box-shadow;
   z-index: 1;
   box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
   a {
@@ -1288,7 +1295,7 @@ footer {
   padding: 1rem;
 
   border-radius: 20px;
-  background: $navbar;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), rgb(12, 9, 38); box-shadow: rgba(171, 196, 255, 0.12) 8px 0px 48px;
   border-color: $indigo;
   border-width: 1px;
   border-style: solid;

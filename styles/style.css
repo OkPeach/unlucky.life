@@ -28,11 +28,12 @@ html {
 
 /* BODY */
 body {
-  background: #2c2c2c;
   color: white;
   height: 100vh;
   font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+  background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
 }
 
 ::-moz-selection {
@@ -60,7 +61,9 @@ header {
           flex-direction: column;
   height: 10vh;
   width: 100%;
-  background: #212327;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+  -webkit-box-shadow: rgba(171, 196, 255, 0.12);
+          box-shadow: rgba(171, 196, 255, 0.12);
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 998;
@@ -217,9 +220,11 @@ nav {
           flex-direction: column;
   height: 90vh;
   width: 100%;
-  background-color: #202124;
+  background: #110d36;
   position: relative;
   top: 10vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+  background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
 }
 
 /* ABOUT ME - CARD */
@@ -243,7 +248,6 @@ nav {
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 50vw;
     height: 50vh;
-    background-color: #303134;
     border-radius: 20px;
     border-color: #6610f2;
     border-width: 1px;
@@ -259,6 +263,10 @@ nav {
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+    -webkit-box-shadow: rgba(171, 196, 255, 0.12);
+            box-shadow: rgba(171, 196, 255, 0.12);
+    z-index: 1;
   }
   .card:hover {
     -webkit-box-shadow: 10px 10px 10px #6710f260;
@@ -272,7 +280,6 @@ nav {
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 80vw;
     height: 50vh;
-    background-color: #303134;
     border-radius: 20px;
     border-color: #6610f2;
     border-width: 1px;
@@ -289,6 +296,9 @@ nav {
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+    background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+    -webkit-box-shadow: rgba(171, 196, 255, 0.12);
+            box-shadow: rgba(171, 196, 255, 0.12);
   }
   .card:hover {
     -webkit-box-shadow: 10px 10px 10px #6710f260;
@@ -392,13 +402,12 @@ nav {
   border-width: 1px;
   border-style: solid;
   padding: 30px;
-  background-color: #202124;
+  background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
 }
 
 .right {
   margin-left: 12.5px;
   padding: 30px;
-  background-color: #303134;
 }
 
 .interests {
@@ -414,7 +423,7 @@ nav {
   padding: 0 15px;
   margin-right: 5px;
   line-height: 35px;
-  background-color: #202124;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
   border-radius: 5px;
   border-color: #6610f2;
   border-width: 1px;
@@ -438,7 +447,7 @@ nav {
           box-shadow: 0px 10px 10px #6710f260;
 }
 
-.computer::before {
+.secuter::before {
   font-family: unicons;
   content: "\e969  ";
 }
@@ -529,8 +538,10 @@ nav {
             flex-direction: column;
     height: 95vh;
     width: 100%;
-    background-color: #202124;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+    background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
     margin-bottom: 10vh;
+    background-color: #110d36;
   }
 }
 
@@ -551,13 +562,14 @@ nav {
             flex-direction: column;
     height: 95vh;
     width: 100%;
-    background-color: #202124;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+    background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
     margin-bottom: 0vh;
+    background-color: #110d36;
   }
 }
 
 #contact {
-  background-color: #202124;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -727,7 +739,9 @@ footer {
   height: 5vh;
   width: 100%;
   color: #7c7aff;
-  background: #212327;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+  -webkit-box-shadow: rgba(171, 196, 255, 0.12);
+          box-shadow: rgba(171, 196, 255, 0.12);
   z-index: 1;
   -webkit-box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
@@ -1439,7 +1453,9 @@ footer a {
   text-align: center;
   padding: 1rem;
   border-radius: 20px;
-  background: #212327;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+  -webkit-box-shadow: rgba(171, 196, 255, 0.12) 8px 0px 48px;
+          box-shadow: rgba(171, 196, 255, 0.12) 8px 0px 48px;
   border-color: #6610f2;
   border-width: 1px;
   border-style: solid;
