@@ -291,3 +291,20 @@ $(function(){
     ]
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.getElementById("switch-css");
+
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      var link = document.getElementById("maincss");
+      link.setAttribute("href", "styles/style.css");
+      console.log('Checked');
+    } else {
+      var link = document.getElementById("maincss");
+      link.setAttribute("href", "styles/old.min.css");
+      console.log('Not checked');
+    }
+  });
+});
+

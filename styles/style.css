@@ -19,7 +19,9 @@
 html {
   cursor: url("../images/cursor.webp"), default;
   overscroll-behavior-y: none;
-  background-color: #202124;
+  background: #110d36;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+  background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
 }
 
 .pointer {
@@ -32,8 +34,9 @@ body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
-  background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
+  background: #110d36;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+  background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
 }
 
 ::-moz-selection {
@@ -159,11 +162,6 @@ header {
   transition: all 0.3s ease;
 }
 
-#selectionLinks {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
 #selectionHome:hover {
   text-shadow: 0px 5px 10px #7c7aff;
   -webkit-transition: all 0.3s ease;
@@ -176,12 +174,10 @@ header {
   transition: all 0.3s ease;
 }
 
-#selectionLinks:hover {
-  text-shadow: 0px 5px 10px #7c7aff;
-  -webkit-transition: all 0.3s ease;
+/* #selectionLinks:hover {
+  text-shadow: 0px 5px 10px $lightPurple;
   transition: all 0.3s ease;
-}
-
+} */
 nav {
   z-index: 1000;
   top: 0vh;
@@ -192,7 +188,8 @@ nav {
 .bubble {
   position: fixed;
   z-index: -1;
-  background: #303134;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+  background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   -webkit-transition: all 0.15s ease;
@@ -220,9 +217,9 @@ nav {
           flex-direction: column;
   height: 90vh;
   width: 100%;
-  background: #110d36;
   position: relative;
   top: 10vh;
+  background: #110d36;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
   background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
 }
@@ -441,8 +438,7 @@ nav {
   font-size: 3vh;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  padding: 5px;
-  margin-right: 0px;
+  padding: 0.4rem;
   -webkit-box-shadow: 0px 10px 10px #6710f260;
           box-shadow: 0px 10px 10px #6710f260;
 }
@@ -460,6 +456,11 @@ nav {
 .html::before {
   font-family: unicons;
   content: "\ec8b  ";
+}
+
+.computer::before {
+  font-family: unicons;
+  content: "\e969  ";
 }
 
 .technology::before {
@@ -569,11 +570,9 @@ nav {
   }
 }
 
-#contact {
-  -webkit-transition: all 0.3s ease;
+/* #contact {
   transition: all 0.3s ease;
-}
-
+} */
 #contact h2 {
   font-size: 5vh;
   font-weight: bolder;
@@ -786,9 +785,9 @@ footer a {
   .navbarUL {
     display: none;
   }
-  #contact {
-    background-color: #202124;
-  }
+  /* #contact {
+    background-color: $googleBlack;
+  } */
   #contact h2 {
     font-size: 7vh;
     color: #6610f2;
@@ -830,7 +829,9 @@ footer a {
             flex-direction: column;
     height: 100vh;
     width: 100%;
-    background-color: #202124;
+    background: #110d36;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
+    background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
     position: relative;
     top: 0vh;
   }
@@ -1493,5 +1494,72 @@ footer a {
 .projectsTop {
   position: absolute;
   z-index: 1;
+}
+
+.toggle {
+  position: absolute;
+  right: 2rem;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+  border-radius: 15px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+  border-color: #cdcdcd;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+
+.toggle-switch:before {
+  display: block;
+  background: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  -webkit-transition: left 0.25s;
+  transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+  background: #bdbdbd;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+  border-color: #cdcdcd;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -23,7 +23,8 @@
 html {
   cursor: url("../images/cursor.webp"), default;
   overscroll-behavior-y: none;
-  background-color: $googleBlack;
+  background: $prim-to;
+  background-image: $prim-gradient;
 }
 
 .pointer {
@@ -36,7 +37,8 @@ body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
   overscroll-behavior-y: none;
-  background: $prim-gradient; 
+  background: $prim-to;
+  background-image: $prim-gradient;
 }
 
 ::selection {
@@ -124,10 +126,6 @@ header {
   transition: all 0.3s ease;
 }
 
-#selectionLinks {
-  transition: all 0.3s ease;
-}
-
 #selectionHome:hover {
   text-shadow: 0px 5px 10px $lightPurple;
   transition: all 0.3s ease;
@@ -138,10 +136,10 @@ header {
   transition: all 0.3s ease;
 }
 
-#selectionLinks:hover {
+/* #selectionLinks:hover {
   text-shadow: 0px 5px 10px $lightPurple;
   transition: all 0.3s ease;
-}
+} */
 
 nav {
   z-index: 1000;
@@ -153,7 +151,7 @@ nav {
 .bubble {
   position: fixed;
   z-index: -1;
-  background: $googleGray;
+  background: $prim-gradient;
   transform: scale(1.5);
   transition: all 0.15s ease;
   border-radius: 0.5rem;
@@ -167,9 +165,9 @@ nav {
   @include flexCenter();
   height: 90vh;
   width: 100%;
-  background: $prim-to;
   position: relative;
   top: 10vh;
+  background: $prim-to;
   background-image: $prim-gradient;
 }
 
@@ -351,8 +349,8 @@ nav {
 .interests_item:hover {
   font-size: 3vh;
   transition: all 0.3s ease;
-  padding: 5px;
-  margin-right: 0px;
+  padding: 0.4rem;
+  //margin-right: 0px;
   box-shadow: 0px 10px 10px $indigoalpha;
 }
 
@@ -369,6 +367,11 @@ nav {
 .html::before {
   font-family: unicons;
   content: "\ec8b  ";
+}
+
+.computer::before {
+  font-family: unicons;
+  content: "\e969  ";
 }
 
 .technology::before {
@@ -441,9 +444,9 @@ nav {
   }
 }
 
-#contact {
+/* #contact {
   transition: all 0.3s ease;
-}
+} */
 
 #contact h2 {
   font-size: 5vh;
@@ -641,9 +644,9 @@ footer {
     display: none;
   }
 
-  #contact {
+  /* #contact {
     background-color: $googleBlack;
-  }
+  } */
   #contact h2 {
     font-size: 7vh;
     color: $indigo;
@@ -680,7 +683,8 @@ footer {
     @include flexCenter();
     height: 100vh;
     width: 100%;
-    background-color: $googleBlack;
+    background: $prim-to;
+    background-image: $prim-gradient;
     position: relative;
     top: 0vh;
   }
@@ -1330,3 +1334,59 @@ footer {
   position: absolute;
   z-index: 1;
 } 
+
+.toggle {
+  position: absolute;
+  right: 2rem;
+}
+.toggle-switch {
+  display: inline-block;
+  background: $sec-gradient;
+  border-radius: 15px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  border-color: #cdcdcd;
+  border-width: 1px;
+  border-style: solid;
+  &:before,
+  &:after {
+    content: "";
+  }
+  &:before {
+    display: block;
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: $offwhite;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+  }
+  .toggle-checkbox:checked + & {
+    background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
+    &:before {
+      left: 30px;
+    }
+  }
+}
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+  border-color: #cdcdcd;
+  border-width: 1px;
+  border-style: solid;
+}
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
