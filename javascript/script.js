@@ -1,5 +1,7 @@
 const logo = document.querySelectorAll("#logo path");
 
+var stored = localStorage['last-css'];
+
 //for(let i = 0; i < logo.length; i++){
 //    console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 //}
@@ -141,6 +143,17 @@ function getAge(dateString) {
 //console.log(getAge('2002-06-24'));
 
 function analytics() {
+  var swcss = document.getElementById("switch-css");
+
+  var result = stored.replaceAll("\"", "");
+
+  if(result == "styles/style.css") {
+    swcss.setAttribute("checked", "true");
+  }
+
+  var link = document.getElementById("maincss");
+  link.setAttribute("href", result);
+
   document.getElementById("age").innerHTML = getAge('2002-06-24');
   document.getElementById("year").innerHTML = new Date().getFullYear();
   var p4 = "c4f63734d426f5";
@@ -271,7 +284,9 @@ $(window).on('load', function () {
     //locate "target" aka the preload screen and slowly transition to 0 opacity and after transition deletes the whole element
     const target = document.getElementById("loading");
     target.style.opacity = '0'
-    target.addEventListener('transitionend', () => target.remove());  
+    target.addEventListener('transitionend', () => target.remove());
+
+    console.log(stored)
 
     //adds animation after load
     $("#logo").addClass("logoAnim");
@@ -295,15 +310,19 @@ $(function(){
 document.addEventListener('DOMContentLoaded', function () {
   var checkbox = document.getElementById("switch-css");
 
+
   checkbox.addEventListener('change', function () {
     if (checkbox.checked) {
       var link = document.getElementById("maincss");
       link.setAttribute("href", "styles/style.css");
-      console.log('Checked');
-    } else {
+      var newstyle = "styles/style.css";
+      localStorage['last-css'] = JSON.stringify(newstyle);
+    } 
+    else {
       var link = document.getElementById("maincss");
       link.setAttribute("href", "styles/old.min.css");
-      console.log('Not checked');
+      var oldstyle = "styles/old.min.css";
+      localStorage['last-css'] = JSON.stringify(oldstyle);
     }
   });
 });
