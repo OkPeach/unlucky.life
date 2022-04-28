@@ -1,10 +1,8 @@
 const logo = document.querySelectorAll("#logo path");
 
-var stored = localStorage['last-css'];
 
-//for(let i = 0; i < logo.length; i++){
-//    console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
-//}
+var stored = localStorage.getItem('last-css') || 'styles/style.css';
+var cookies = localStorage.getItem('cookies-closed') || 'false';
 
 const sections = document.querySelectorAll("section");
 const bubble = document.querySelector(".bubble");
@@ -62,28 +60,17 @@ sections.forEach((section) => {
 var p2 = "ad232f1daf9e88efd3d";
 
 function CopyToClipboard(id) {
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
   setTimeout(function () {
-    document.getElementById(id).innerHTML = `PeachWRLD#8888`;
+    navigator.clipboard.writeText("PeachWRLD#8888");
     $("#discord").load(" #discord > *");
   }, 700);
   document.getElementById(id).innerHTML = "Copied tag!";
 }
 
 function CopyToClipboardEmail(id) {
-  var r = document.createRange();
-  r.selectNode(document.getElementById(id));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(r);
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
   setTimeout(function () {
-    document.getElementById(id).innerHTML = `contact@unlucky.life`;
+    document.getElementById(id).innerHTML = `lucien@unlucky.life`;
+    navigator.clipboard.writeText("lucien@unlucky.life");
   }, 700);
   document.getElementById(id).innerHTML = "Copied email!";
 }
@@ -91,28 +78,16 @@ function CopyToClipboardEmail(id) {
 var p3 = "3ebf5f31893";
 
 function setClipboard(value, id, aftertext) {
-  var tempInput = document.createElement("input");
-  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-  tempInput.value = value;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand("copy");
-  document.body.removeChild(tempInput);
   setTimeout(function () {
     document.getElementById(id).innerHTML = aftertext;
+    navigator.clipboard.writeText(value);
   }, 1000);
   document.getElementById(id).innerHTML = "Copied BTC wallet!";
 }
 
 function CopyToClipboardBTC(value, id) {
-  var tempInput = document.createElement("input");
-  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-  tempInput.value = value;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand("copy");
-  document.body.removeChild(tempInput);
   setTimeout(function () {
+    navigator.clipboard.writeText(value);
     document.getElementById(id).innerHTML = `BTC`;
     $("#bitcoin").load(" #bitcoin > *");
   }, 700);
@@ -120,14 +95,8 @@ function CopyToClipboardBTC(value, id) {
 }
 
 function CopyToClipboardETH(value, id) {
-  var tempInput = document.createElement("input");
-  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-  tempInput.value = value;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand("copy");
-  document.body.removeChild(tempInput);
   setTimeout(function () {
+    navigator.clipboard.writeText(value);
     document.getElementById(id).innerHTML = `ETH`;
     $("#eth").load(" #eth > *");
   }, 700);
@@ -286,11 +255,25 @@ $(window).on('load', function () {
     target.style.opacity = '0'
     target.addEventListener('transitionend', () => target.remove());
 
-    console.log(stored)
+    console.log('Last theme: ' + stored)
+    console.log('Are cookies accepted? ' + cookies)
 
     //adds animation after load
     $("#logo").addClass("logoAnim");
     $("#infoCard").addClass("cardAnim");
+
+    var isaccepted = cookies.replaceAll("\"", "");
+  
+    if(isaccepted=="false") {
+      $("#cookies").addClass("cookieAnim");
+    }
+    else{
+      $('#cookies').remove();
+
+      var defaultcookie = "true";
+      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
+    }
+
   }, 1250);
 
   console.log('Loaded, welcome!')
@@ -327,3 +310,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+function deleteCookie() {
+  $('#cookies').remove();
+
+  var cookiesask = "true";
+  localStorage['cookies-closed'] = JSON.stringify(cookiesask);
+}

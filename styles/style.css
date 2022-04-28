@@ -1561,4 +1561,74 @@ footer a {
   position: relative;
   top: 2px;
 }
+
+.cookies {
+  display: block;
+  position: fixed;
+  top: 11vh;
+  left: 1vw;
+  z-index: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
+  border-radius: 20px;
+  border-color: #4c61f5;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1rem;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cookies a {
+  -webkit-text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+          text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  color: #bdbdbd;
+}
+
+.cookies a:hover {
+  color: white;
+  -webkit-text-decoration-color: #bf7aff;
+          text-decoration-color: #bf7aff;
+}
+
+.cookies span {
+  font-size: x-large;
+}
+
+.cookies svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    top: -50vh;
+  }
+  to {
+    top: 11vh;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    top: -50vh;
+  }
+  to {
+    top: 11vh;
+  }
+}
+
+.cookieAnim {
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
+}
+
+.cookies:hover {
+  -webkit-box-shadow: 6px 6px 10px #6710f260;
+          box-shadow: 6px 6px 10px #6710f260;
+}
 /*# sourceMappingURL=style.css.map */

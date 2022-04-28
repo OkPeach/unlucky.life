@@ -50,4 +50,12 @@ $prim-stops: #0c0927, (#110d36, rgba(12,9,39,0));
 
 $prim-gradient: linear-gradient(to bottom, #0c0927, (#110d36, rgba(12,9,39,0)));
 
+//tertiary color
+$ter-col-1: rgba(0, 182, 191, 0.15);
+$ter-col-2: rgba(27, 22, 89, 0.1);
+$ter-col-3: #18134D;
+$ter-col-4: #1B1659;
+
+$ter-gradient: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
+
 
