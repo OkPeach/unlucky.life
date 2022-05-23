@@ -2,6 +2,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
+.secuter::before {
+  font-family: unicons;
+  content: "\e969  ";
+}
+
+.btc::before {
+  font-family: unicons;
+  content: "\e8c3  ";
+}
+
+.html::before {
+  font-family: unicons;
+  content: "\ec8b  ";
+}
+
+.computer::before {
+  font-family: unicons;
+  content: "\e969  ";
+}
+
+.technology::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.csharp::before {
+  font-family: unicons;
+  content: "\ec50  ";
+}
+
+.gaming::before {
+  font-family: unicons;
+  content: "\e970  ";
+}
+
+.coding::before {
+  font-family: unicons;
+  content: "\eb30  ";
+}
+
+.technology::before {
+  font-family: unicons;
+  content: "\ebfb  ";
+}
+
+.js::before {
+  font-family: unicons;
+  content: "\ec18  ";
+}
+
+.css::before {
+  font-family: unicons;
+  content: "\ec8d  ";
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");
@@ -441,61 +496,6 @@ nav {
   padding: 0.4rem;
   -webkit-box-shadow: 0px 10px 10px #6710f260;
           box-shadow: 0px 10px 10px #6710f260;
-}
-
-.secuter::before {
-  font-family: unicons;
-  content: "\e969  ";
-}
-
-.btc::before {
-  font-family: unicons;
-  content: "\e8c3  ";
-}
-
-.html::before {
-  font-family: unicons;
-  content: "\ec8b  ";
-}
-
-.computer::before {
-  font-family: unicons;
-  content: "\e969  ";
-}
-
-.technology::before {
-  font-family: unicons;
-  content: "\ea0f  ";
-}
-
-.csharp::before {
-  font-family: unicons;
-  content: "\ec50  ";
-}
-
-.gaming::before {
-  font-family: unicons;
-  content: "\e970  ";
-}
-
-.coding::before {
-  font-family: unicons;
-  content: "\eb30  ";
-}
-
-.technology::before {
-  font-family: unicons;
-  content: "\ebfb  ";
-}
-
-.js::before {
-  font-family: unicons;
-  content: "\ec18  ";
-}
-
-.css::before {
-  font-family: unicons;
-  content: "\ec8d  ";
 }
 
 /* PROJECTS */

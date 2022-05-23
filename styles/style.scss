@@ -1,6 +1,7 @@
 /* SCSS IMPORTS */
 @import "./colors";
 @import "./mixins";
+@import "./icons";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
@@ -352,61 +353,6 @@ nav {
   padding: 0.4rem;
   //margin-right: 0px;
   box-shadow: 0px 10px 10px $indigoalpha;
-}
-
-.secuter::before {
-  font-family: unicons;
-  content: "\e969  ";
-}
-
-.btc::before {
-  font-family: unicons;
-  content: "\e8c3  ";
-}
-
-.html::before {
-  font-family: unicons;
-  content: "\ec8b  ";
-}
-
-.computer::before {
-  font-family: unicons;
-  content: "\e969  ";
-}
-
-.technology::before {
-  font-family: unicons;
-  content: "\ea0f  ";
-}
-
-.csharp::before {
-  font-family: unicons;
-  content: "\ec50  ";
-}
-
-.gaming::before {
-  font-family: unicons;
-  content: "\e970  ";
-}
-
-.coding::before {
-  font-family: unicons;
-  content: "\eb30  ";
-}
-
-.technology::before {
-  font-family: unicons;
-  content: "\ebfb  ";
-}
-
-.js::before {
-  font-family: unicons;
-  content: "\ec18  ";
-}
-
-.css::before {
-  font-family: unicons;
-  content: "\ec8d  ";
 }
 
 /* PROJECTS */

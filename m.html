@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/images/favicon.webp" />
+    <link rel="icon" type="image/png" href="/images/favicon.webp" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Lucien.wtf" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://unlucky.life" />
+    <meta property="og:image" content="https://unlucky.life/images/favicon.webp" />
+    <meta property="og:description" content="Personal website:)" />
+    <meta name="theme-color" content="#6610f2">
+
+    <!-- Include this to make the og:image larger 
+    <meta name="twitter:card" content="summary_large_image"> -->
+    <link href="styles/m.css" rel="stylesheet" id="maincss">
+    <link href="styles/psliders.css" rel="stylesheet">
+    <link href="styles/loading.css" rel="stylesheet">
+    <title>Lucien.wtf</title>
+</head>
+
+<body onload="onload()">
+    
+    <div id="loading">
+        <div class="circle">
+            <div class="noise animated"></div>
+        </div>
+    </div>
+
+    <div class="progbar" id="progress-bar"></div>
+    
+    <nav role="navigation" id="naviburger">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#">
+                    <li>About me</li>
+                </a>
+                <a href="#projects">
+                    <li>Projects</li>
+                </a>
+                <a href="#contact">
+                    <li>Contact</li>
+                </a>
+                <a href="/crypto">
+                    <li>Crypto</li>
+                </a>
+                <a href="/nft">
+                    <li>NFT Gallery</li>
+                </a>
+                <a href="/generator">
+                    <li>Generators</li>
+                </a>
+                <a href="/spotify">
+                    <li>Spotify</li>
+                </a>
+                <a href="/ip">
+                    <li>IP Info</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <main>
+        <section data-index="0" class="sectionHome" id="aboutme">
+            <H1 id="name">Hi, my name is Lucien Pauer</H1>
+
+            <hr id="line" class="line">
+
+            <div id="about" class="aboutdiv">
+                <h3>About me:</h3>
+                <p class="offwhite">I'm <a id="age" class="age offwhite"></a> developer from Czech Republic. I enjoy programming, modern technology and I love to learn and expand my knowlage of said things. I also like to play games and watch twitch.</p>
+            </div>
+        
+            <hr id="line2" class="line">
+
+            <div id="hobbies" class="aboutdiv">
+                <h3>My hobbies and interests:</h3>
+                <span class="interests_item fontText computer">Computers</span>
+                <span class="interests_item fontText technology">Technology</span>
+                <span class="interests_item fontText coding">Coding</span>
+                <span class="interests_item fontText btc">Crypto</span>
+                <span class="interests_item fontText gaming">Gaming</span>
+                <span class="interests_item fontText csharp">C#</span>
+                <span class="interests_item fontText html">HTML</span>
+                <span class="interests_item fontText css">CSS</span>
+                <span class="interests_item fontText js">JavaScript</span>
+                <span class="interests_item fontText js">NodeJS</span>
+            </div>
+
+        </section>
+
+        <section data-index="1" class="sectionProjects" id="projects" rel="preload">
+       
+        </section>
+
+        <section data-index="2" class="sectionLinks" id="contact">
+
+        </section>
+    </main>
+
+    <footer>
+            <h4 id="rightsreserved" class="rightsreserved"><span id="year"></span> Lucien Pauer. All rights reserved.</h4>  
+    </footer>
+    <script src="javascript/particles/particles.min.js"></script>
+    <script src="javascript/particles/app.js"></script>
+    <script src="javascript/bar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascript/vanilla-tilt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/titleEffect.jquery.min.js"></script>
+    <script src="javascript/console.js"></script>
+    <script src="javascript/loading.js"></script>
+    <script src="javascript/m.js"></script>
+    <script src="javascript/backToTop.js"></script>
+</body>
+</body>
+
+</html>
