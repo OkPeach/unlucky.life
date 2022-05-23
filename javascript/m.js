@@ -18,4 +18,7 @@ function onload(){
     document.getElementById("hobbies").classList.add("hobbiesanimation");
 
     document.getElementById("name").classList.add("nameanimation");
+
+    document.getElementById("header").classList.add("headeranim");
+    document.getElementById("menuToggle").classList.add("menutoggleanimation");
 }

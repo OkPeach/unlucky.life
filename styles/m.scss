@@ -58,15 +58,19 @@
   
   /* NAVBAR BACKGROUND */
   header {
-    @include flexCenter();
-    height: 10vh;
+    height: 4rem;
     width: 100%;
     background: $sec-gradient; 
     box-shadow: $sec-box-shadow;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
-    z-index: 998;
-    top: 0vh;
+    z-index: 1000;
+    top: -4rem;
     position: fixed;
+  }
+
+  .headeranim{
+    animation: slidetop 0.5s ease forwards;
+    animation-delay: 1.75s;
   }
 
   nav {
@@ -107,12 +111,13 @@
   //home
   .sectionHome {
     //@include flexCenter();
-    height: 90vh;
+    display: inline-block;
     width: 100%;
     position: relative;
-    top: 10vh;
+    padding-top: 5rem;
     background: $prim-to;
     background-image: $prim-gradient;
+    padding-bottom: 1rem;
   }
 
   #name{
@@ -150,6 +155,8 @@
 
       position: relative;
       left: -100vw;
+
+      overflow: scroll;
   }
 
   .aboutanimation{
@@ -163,7 +170,7 @@
   }
 
   .aboutdiv h3{
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
   }
 
   .aboutdiv p{
@@ -258,7 +265,7 @@
 #menuToggle {
     display: block;
     position: fixed;
-    top: 2vh;
+    top: -4vh;
     left: 2vw;
   
     z-index: 100;
@@ -268,6 +275,11 @@
     padding: 1rem;
   }
   
+  .menutoggleanimation{
+      animation: slidenavigation 0.5s ease forwards;
+      animation-delay: 1.75s;
+  }
+
   #menuToggle a {
     text-decoration: none;
     color: $white;
@@ -473,3 +485,16 @@
             left: 0;
         }
       }
+  
+  //animated slide
+  @keyframes slidetop {
+    100% {
+        top: 0;
+    }
+  }
+
+  @keyframes slidenavigation {
+    100% {
+        top: 0.5vh;
+    }
+  }
