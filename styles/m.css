@@ -339,7 +339,7 @@ nav a {
   border-image-slice: 1;
   border-style: solid;
   padding: 1rem;
-  width: 65%;
+  width: 75%;
   margin: 0 auto 1.5rem auto;
 }
 
@@ -357,6 +357,7 @@ nav a {
   vertical-align: top;
   word-break: normal;
   padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .sectionLinks {
@@ -766,8 +767,8 @@ footer a {
 
 /* inViewport */
 [data-inviewport="scale-in"] {
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
   opacity: 0;
   -webkit-transform: scale(0.1);
           transform: scale(0.1);
