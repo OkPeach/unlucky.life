@@ -38,13 +38,23 @@
   /* BODY */
   body {
     color: white;
-    height: 100vh;
     font-family: 'Rubik', sans-serif;
     overscroll-behavior-y: none;
     background: $prim-to;
     background-image: $prim-gradient;
     font-weight: 300;
     font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .arrows{
+    width: 15%;
+    margin: 5vh auto 0 auto;
+    bottom: 1px;
+  }
+
+  .arrowsanimation{
+    animation: moveupdown 5s ease infinite;
     transition: all 0.3s ease;
   }
 
@@ -66,6 +76,8 @@
     z-index: 1000;
     top: -4rem;
     position: fixed;
+
+    @include flexCenter();
   }
 
   .headeranim{
@@ -100,7 +112,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    height: 0.1rem;
+    height: 4.2rem;
     background: linear-gradient(to right, $jinxlight, $indigo);
     width: 0%;
     z-index: 3;
@@ -214,14 +226,42 @@
 
   //projects
   .sectionProjects {
-    @include flexCenter();
-    height: 100vh;
+    //@include flexCenter();
+    //height: 100vh;
     width: 100%;
-    background-color: $googleGray;
+    background-color: $ter-gradient;
     //background-image: url('../images/website.webp');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .project-div{
+    border-image: linear-gradient(298deg, $indigo, $textBlue);
+    border-image-width: 1px;
+    border-image-slice: 1;
+    border-style: solid;
+    padding: 1rem;
+    width: 65%;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .project-div h3{
+    margin-bottom: 0.5rem;
+  }
+
+  .project-div a{
+    text-decoration: none;
+    color: $lighteroffwhite;
+  }
+
+  .project-div p{
+    display: inline-block;
+    vertical-align: top;
+    word-break:normal;
+    padding-left: 0.5rem;
   }
 
   //links
@@ -468,6 +508,30 @@
     transition: all 200ms linear;
   }
 
+  .st0{
+    fill:none;
+    stroke:$peach;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+  }
+  
+  .st1{
+    fill:none;
+    stroke:$purple-blue;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+  }
+
+  .icon{
+    position: fixed;
+    align-items: center;
+    margin: 0 auto 0 auto;
+  }
+
   //animated lines
   @keyframes lines {
     0% {
@@ -497,4 +561,31 @@
     100% {
         top: 0.5vh;
     }
+  }
+
+  @keyframes moveupdown {
+    0%   { 
+        transform:translate(0,-10px);
+        opacity: 1;  
+    }
+    50%  { 
+        transform:translate(0,10px);
+        opacity: 1; 
+    }
+    100% { 
+        transform:translate(0,-10px);
+        opacity: 1; 
+    }
+  }
+  
+  /* inViewport */
+  
+  [data-inviewport="scale-in"] { 
+    transition: 2s;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  [data-inviewport="scale-in"].is-inViewport { 
+    transform: scale(1);
+    opacity: 1;
   }
