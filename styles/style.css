@@ -125,8 +125,29 @@ header {
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 998;
-  top: 0vh;
+  top: -10vh;
   position: fixed;
+}
+
+#mainNav {
+  top: -10vh;
+}
+
+.headeranim {
+  -webkit-animation: slidetop 1s forwards;
+          animation: slidetop 1s forwards;
+}
+
+@-webkit-keyframes slidetop {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slidetop {
+  100% {
+    top: 0;
+  }
 }
 
 /* NAVBAR ITEMS */
@@ -253,6 +274,26 @@ nav {
   border-color: #4c61f5;
   border-width: 0.1vw;
   border-style: solid;
+  opacity: 0;
+}
+
+.bubbleanim {
+  -webkit-animation: opacity 1s forwards;
+          animation: opacity 1s forwards;
+}
+
+@-webkit-keyframes opacity {
+  100% {
+    opacity: 1;
+    top: 30.34375px;
+  }
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+    top: 30.34375px;
+  }
 }
 
 /* ABOUT ME */
@@ -1630,5 +1671,30 @@ footer a {
 .cookies:hover {
   -webkit-box-shadow: 6px 6px 10px #6710f260;
           box-shadow: 6px 6px 10px #6710f260;
+}
+
+/* inViewport */
+[data-inviewport="scale-in"] {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+}
+
+[data-inviewport="scale-in"].is-inViewport {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+[data-inviewport="footer"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
+[data-inviewport="footer"].is-inViewport {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

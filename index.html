@@ -37,7 +37,7 @@
     </div>
 
     <div class="progbar" id="progress-bar"></div>
-    <header>
+    <header id="header">
         <nav id="mainNav">
             <a href="#" class="pointer">
                 <svg width="357" id="logo" height="61" viewBox="0 0 357 61" fill="none"
@@ -186,7 +186,7 @@
 
         <section data-index="1" class="sectionProjects" id="projects" rel="preload">
         <div id="particles-js" class="particles"></div>
-        <div class="projectsTop" id="projectsTop">
+        <div class="projectsTop" id="projectsTop" data-inviewport="scale-in">
             <div class="slider">
                 <div class="item" id="selfbot" rel="preload">
                     <div class="textbackground">
@@ -257,7 +257,7 @@
 
         <section data-index="2" class="sectionLinks" id="contact">
 
-            <div id="contact" class="contact-stuff">
+            <div id="contact" class="contact-stuff" data-inviewport="scale-in">
                 <h2 class="text-center contact-header">Contact Me</h2><br />
                 <p>Get in touch with me <span class="email" id="email"
                         onclick="CopyToClipboardEmail('email')">lucien@unlucky.life</span></p><br />
@@ -319,7 +319,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer data-inviewport="footer">
             <h4 id="rightsreserved" class="rightsreserved"><span id="year"></span> Lucien Pauer. All rights reserved.</h4>  
     </footer>
     <script src="javascript/particles/particles.min.js"></script>

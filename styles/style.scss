@@ -55,9 +55,24 @@ header {
   box-shadow: $sec-box-shadow;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
   z-index: 998;
-  top: 0vh;
+  top: -10vh;
   position: fixed;
 }
+
+#mainNav{
+  top: -10vh;
+}
+
+.headeranim{
+  animation: slidetop 1s forwards;
+}
+
+@keyframes slidetop {
+  100% {
+      top: 0;
+  }
+}
+
 
 /* NAVBAR ITEMS */
 @media (min-width: 1024px) {
@@ -159,6 +174,19 @@ nav {
   border-color: $textBlue;
   border-width: 0.1vw;
   border-style: solid;
+
+  opacity: 0;
+}
+
+.bubbleanim{
+  animation: opacity 1s forwards;
+}
+
+@keyframes opacity {
+  100% {
+      opacity: 1;
+      top: 30.34375px;
+  }
 }
 
 /* ABOUT ME */
@@ -1390,3 +1418,23 @@ footer {
 .cookies:hover{
   box-shadow: 6px 6px 10px $indigoalpha;
 }
+
+  /* inViewport */
+  
+  [data-inviewport="scale-in"] { 
+    transition: 0.5s;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  [data-inviewport="scale-in"].is-inViewport { 
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  [data-inviewport="footer"] { 
+    transition: 1s;
+    opacity: 0;
+  }
+  [data-inviewport="footer"].is-inViewport { 
+    opacity: 1;
+  }
