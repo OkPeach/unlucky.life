@@ -39,3 +39,29 @@ const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
 ELs_inViewport.forEach(EL => {
   Obs.observe(EL, obsOptions);
 });
+
+//some code from https://codepen.io/Mamboleoo/pen/NWaogXW
+const svg = document.querySelector('svg');
+const fuse = svg.querySelector('.st1');
+
+const val = { distance: 0 };
+gsap.to(val, {
+  distance: fuse.getTotalLength(),
+  repeat: -1,
+  repeatDelay: 0.1,
+  duration: 6,
+  ease: Power0.easeNone,
+  onUpdate: () => {
+    const point = fuse.getPointAtLength(val.distance);
+  }
+});
+
+fuse.setAttribute('stroke-dasharray', fuse.getTotalLength());
+fuse.setAttribute('stroke-dashoffset', fuse.getTotalLength() * -1);
+gsap.to(fuse, {
+  strokeDashoffset: fuse.getTotalLength(),
+  duration: 6,
+  repeat: -1,
+  repeatDelay: 0.1,
+  ease: Power0.easeNone,
+});

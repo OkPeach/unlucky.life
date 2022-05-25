@@ -127,10 +127,12 @@ header {
   z-index: 998;
   top: -10vh;
   position: fixed;
+  min-height: 5rem;
 }
 
 #mainNav {
   top: -10vh;
+  width: 97%;
 }
 
 .headeranim {
@@ -155,7 +157,7 @@ header {
   nav {
     min-height: 10vh;
     margin: auto;
-    width: 90%;
+    width: 97%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -181,6 +183,9 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  nav li {
+    padding-right: clamp(2rem, 0rem, 0rem);
   }
   nav a {
     color: #4c61f5;
@@ -311,13 +316,14 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   position: relative;
   top: 10vh;
   background: #110d36;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
   background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
+  z-index: 3;
 }
 
 /* ABOUT ME - CARD */
@@ -330,7 +336,7 @@ nav {
 
 .fontText {
   font-family: "Avenir";
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: white;
   margin: 5px 0;
 }
@@ -352,7 +358,6 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 20px 0;
     overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -360,6 +365,40 @@ nav {
     -webkit-box-shadow: rgba(171, 196, 255, 0.12);
             box-shadow: rgba(171, 196, 255, 0.12);
     z-index: 1;
+    min-height: 25rem;
+  }
+  .card:hover {
+    -webkit-box-shadow: 10px 10px 10px #6710f260;
+            box-shadow: 10px 10px 10px #6710f260;
+  }
+}
+
+@media (max-height: 770px) {
+  .card {
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-y: scroll;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+    -webkit-box-shadow: rgba(171, 196, 255, 0.12);
+            box-shadow: rgba(171, 196, 255, 0.12);
+    z-index: 1;
+    min-height: 25rem;
+    margin-top: 4rem;
   }
   .card:hover {
     -webkit-box-shadow: 10px 10px 10px #6710f260;
@@ -554,7 +593,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #303134;
   background-attachment: fixed;
@@ -578,12 +617,13 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 95vh;
+    min-height: 95vh;
     width: 100%;
     background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
     background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
     margin-bottom: 10vh;
     background-color: #110d36;
+    z-index: 3;
   }
 }
 
@@ -602,7 +642,8 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 95vh;
+    z-index: 3;
+    min-height: 95vh;
     width: 100%;
     background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
     background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
@@ -615,17 +656,18 @@ nav {
   transition: all 0.3s ease;
 } */
 #contact h2 {
-  font-size: 5vh;
+  font-size: 3rem;
   font-weight: bolder;
   color: #6610f2;
 }
 
 .contact-stuff {
   width: 50vw;
-  height: 50vh;
+  min-height: 50vh;
   text-align: center;
   position: relative;
-  top: 5vh;
+  margin-top: clamp(10vh, 5vh, 5vh);
+  margin-bottom: clamp(3rem, 0rem, 0rem);
 }
 
 .contact-header {
@@ -633,11 +675,11 @@ nav {
 }
 
 .contact-stuff p {
-  font-size: 2vh;
+  font-size: 1.2rem;
 }
 
 .wallet {
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: #4c61f5;
   list-style: none;
   text-decoration: none;
@@ -652,11 +694,11 @@ nav {
 .wallet:hover {
   color: #bf7aff;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 1.5rem;
 }
 
 .contact-social-icons ul a {
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: #4c61f5;
   list-style: none;
   text-decoration: none;
@@ -668,7 +710,7 @@ nav {
 .contact-social-icons ul a:hover {
   color: #bf7aff;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 1.5rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-weight: bolder;
@@ -776,13 +818,14 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 3rem;
   height: 5vh;
   width: 100%;
   color: #7c7aff;
   background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
   -webkit-box-shadow: rgba(171, 196, 255, 0.12);
           box-shadow: rgba(171, 196, 255, 0.12);
-  z-index: 1;
+  z-index: 5;
   -webkit-box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
 }
@@ -830,7 +873,7 @@ footer a {
     background-color: $googleBlack;
   } */
   #contact h2 {
-    font-size: 7vh;
+    font-size: 3rem;
     color: #6610f2;
   }
   .contact-stuff p {
@@ -1523,11 +1566,10 @@ footer a {
 }
 
 .particles {
-  position: absolute;
   z-index: 0;
   width: 100%;
-  height: 90vh;
-  top: 100vh;
+  min-height: 100vh;
+  position: relative;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
@@ -1535,10 +1577,6 @@ footer a {
 .projectsTop {
   position: absolute;
   z-index: 1;
-}
-
-.toggle {
-  position: absolute;
 }
 
 .toggle-switch {
@@ -1696,5 +1734,27 @@ footer a {
 
 [data-inviewport="footer"].is-inViewport {
   opacity: 1;
+}
+
+.st0 {
+  fill: none;
+  stroke: #FFCAC9;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.st1 {
+  fill: none;
+  stroke: #737DFE;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.big-logo {
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */

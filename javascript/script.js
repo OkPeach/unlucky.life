@@ -255,10 +255,18 @@ $(window).on('load', function () {
     target.style.opacity = '0'
     target.addEventListener('transitionend', () => target.remove());
 
-    bubble.style.setProperty("left", `1137.5px`);
-    bubble.style.setProperty("top", `-30.34375px`);
-    bubble.style.setProperty("width", `71.171875px`);
-    bubble.style.setProperty("height", `33px`);
+    const activeAnchor = document.querySelector(`[data-page="sectionHome"]`);
+    const coords = activeAnchor.getBoundingClientRect();
+    const directions = {
+      height: coords.height,
+      width: coords.width,
+      top: coords.top,
+      left: coords.left,
+    };
+      bubble.style.setProperty("left", `${directions.left}px`);
+      bubble.style.setProperty("top", `${directions.top}px`);
+      bubble.style.setProperty("width", `${directions.width}px`);
+      bubble.style.setProperty("height", `${directions.height}px`);
 
     console.log('Last theme: ' + stored)
     console.log('Are cookies accepted? ' + cookies)
@@ -288,6 +296,24 @@ $(window).on('load', function () {
 
   console.log('Loaded, welcome!')
 }) 
+
+function setBubbleOnResize(){
+  const activeAnchor = document.querySelector(`[data-page="sectionHome"]`);
+    const coords = activeAnchor.getBoundingClientRect();
+    const directions = {
+      height: coords.height,
+      width: coords.width,
+      top: coords.top,
+      left: coords.left,
+    };
+      bubble.style.setProperty("left", `${directions.left}px`);
+      bubble.style.setProperty("top", `${directions.top}px`);
+      bubble.style.setProperty("width", `${directions.width}px`);
+      bubble.style.setProperty("height", `${directions.height}px`);
+}
+  
+// Attaching the event listener function to window's resize event
+window.addEventListener("resize", setBubbleOnResize);
 
 $(function(){
   $.titleEffect({
@@ -342,4 +368,31 @@ const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/I
 const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
 ELs_inViewport.forEach(EL => {
   Obs.observe(EL, obsOptions);
+});
+
+
+//some code from https://codepen.io/Mamboleoo/pen/NWaogXW
+const svg = document.querySelector('svg');
+const fuse = svg.querySelector('.st1');
+
+const val = { distance: 0 };
+gsap.to(val, {
+  distance: fuse.getTotalLength(),
+  repeat: -1,
+  repeatDelay: 0.1,
+  duration: 6,
+  ease: Power0.easeNone,
+  onUpdate: () => {
+    const point = fuse.getPointAtLength(val.distance);
+  }
+});
+
+fuse.setAttribute('stroke-dasharray', fuse.getTotalLength());
+fuse.setAttribute('stroke-dashoffset', fuse.getTotalLength() * -1);
+gsap.to(fuse, {
+  strokeDashoffset: fuse.getTotalLength(),
+  duration: 6,
+  repeat: -1,
+  repeatDelay: 0.1,
+  ease: Power0.easeNone,
 });

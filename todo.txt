@@ -1,0 +1,1 @@
+1. Fix projects tab on main siite (top and bottom not being kept in section)

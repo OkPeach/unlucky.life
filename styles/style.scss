@@ -57,10 +57,12 @@ header {
   z-index: 998;
   top: -10vh;
   position: fixed;
+  min-height: 5rem;
 }
 
 #mainNav{
   top: -10vh;
+  width: 97%;
 }
 
 .headeranim{
@@ -79,7 +81,7 @@ header {
   nav {
     min-height: 10vh;
     margin: auto;
-    width: 90%;
+    width: 97%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,6 +94,9 @@ header {
       list-style: none;
       display: flex;
       justify-content: space-between;
+    }
+    li{
+      padding-right: clamp(2rem, 0rem, 0rem);
     }
     a {
       color: $textBlue;
@@ -192,12 +197,13 @@ nav {
 /* ABOUT ME */
 .sectionHome {
   @include flexCenter();
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   position: relative;
   top: 10vh;
   background: $prim-to;
   background-image: $prim-gradient;
+  z-index: 3;
 }
 
 /* ABOUT ME - CARD */
@@ -210,7 +216,7 @@ nav {
 
 .fontText {
   font-family: "Avenir";
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: $white;
   margin: 5px 0;
 }
@@ -227,12 +233,40 @@ nav {
     display: flex;
     flex-direction: row;
     //padding: 30px;
-    margin: 20px 0;
+    //margin: 20px 0;
     overflow-y: scroll;
     backface-visibility: hidden;
     background: $sec-gradient; 
     box-shadow: $sec-box-shadow;
     z-index: 1;
+    min-height: 25rem;
+  }
+
+  .card:hover {
+    box-shadow: 10px 10px 10px $indigoalpha;
+  }
+}
+
+@media (max-height: 770px) {
+  .card {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    border-color: $indigo;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    //padding: 30px;
+    //margin: 20px 0;
+    overflow-y: scroll;
+    backface-visibility: hidden;
+    background: $sec-gradient; 
+    box-shadow: $sec-box-shadow;
+    z-index: 1;
+    min-height: 25rem;
+    margin-top: 4rem;
   }
 
   .card:hover {
@@ -386,7 +420,7 @@ nav {
 /* PROJECTS */
 .sectionProjects {
   @include flexCenter();
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: $googleGray;
   //background-image: url('../images/website.webp');
@@ -399,18 +433,20 @@ nav {
 @media (max-width: 1024px) {
   .sectionLinks {
     @include flexCenter();
-    height: 95vh;
+    min-height: 95vh;
     width: 100%;
     background: $prim-gradient;
     margin-bottom: 10vh;
     background-color: $prim-to;
+    z-index: 3;
   }
 }
 
 @media (min-width: 1024px) {
   .sectionLinks {
     @include flexCenter();
-    height: 95vh;
+    z-index: 3;
+    min-height: 95vh;
     width: 100%;
     background: $prim-gradient;
     margin-bottom: 0vh;
@@ -423,19 +459,19 @@ nav {
 } */
 
 #contact h2 {
-  font-size: 5vh;
+  font-size: 3rem;
   font-weight: bolder;
   color: $indigo;
 }
 
 .contact-stuff {
   width: 50vw;
-  height: 50vh;
-
+  min-height: 50vh;
   text-align: center;
 
   position: relative;
-  top: 5vh;
+  margin-top: clamp(10vh, 5vh, 5vh);
+  margin-bottom: clamp(3rem, 0rem, 0rem);
 }
 
 .contact-header {
@@ -443,11 +479,11 @@ nav {
 }
 
 .contact-stuff p {
-  font-size: 2vh;
+  font-size: 1.2rem;
 }
 
 .wallet {
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: $textBlue;
   list-style: none;
   text-decoration: none;
@@ -461,11 +497,11 @@ nav {
 .wallet:hover {
   color: $primaryText;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 1.5rem;
 }
 
 .contact-social-icons ul a {
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: $textBlue;
   list-style: none;
   text-decoration: none;
@@ -476,7 +512,7 @@ nav {
 .contact-social-icons ul a:hover {
   color: $primaryText;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
   font-weight: bolder;
 }
@@ -569,12 +605,13 @@ nav {
 /* BOTTOM FOOTER */
 footer {
   @include flexCenter();
+  min-height: 3rem;
   height: 5vh;
   width: 100%;
   color: $lightPurple;
   background: $sec-gradient; 
   box-shadow: $sec-box-shadow;
-  z-index: 1;
+  z-index: 5;
   box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
   a {
     color: $indigo;
@@ -622,7 +659,7 @@ footer {
     background-color: $googleBlack;
   } */
   #contact h2 {
-    font-size: 7vh;
+    font-size: 3rem;
     color: $indigo;
   }
 
@@ -1296,11 +1333,11 @@ footer {
 }
 
 .particles{
-  position: absolute;
+  //position: absolute;
   z-index: 0;
   width: 100%;
-  height: 90vh;
-  top: 100vh;
+  min-height: 100vh;
+  position: relative;
   backdrop-filter: blur(6px);
 }
 
@@ -1309,9 +1346,6 @@ footer {
   z-index: 1;
 } 
 
-.toggle {
-  position: absolute;
-}
 .toggle-switch {
   display: inline-block;
   background: $sec-gradient;
@@ -1437,4 +1471,26 @@ footer {
   }
   [data-inviewport="footer"].is-inViewport { 
     opacity: 1;
+  }
+
+  .st0{
+    fill:none;
+    stroke:$peach;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+  }
+  
+  .st1{
+    fill:none;
+    stroke:$purple-blue;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+  }
+
+  .big-logo{
+    left: 0;
   }
