@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SCSS IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
@@ -56,6 +57,61 @@
 .css::before {
   font-family: unicons;
   content: "\ec8d  ";
+}
+
+.github::before {
+  font-family: unicons;
+  content: "\ec1d  ";
+}
+
+.twitter::before {
+  font-family: unicons;
+  content: "\ec0c  ";
+}
+
+.email::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.emailSmall::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.age::before {
+  font-family: unicons;
+  content: "\eaf8  ";
+}
+
+.youtube::before {
+  font-family: unicons;
+  content: "\ec06  ";
+}
+
+.steam::before {
+  font-family: unicons;
+  content: "\e9a5  ";
+}
+
+.discord::before {
+  font-family: unicons;
+  content: "\ec8f  ";
+}
+
+.bitcoin::before {
+  font-family: unicons;
+  content: "\e8c3  ";
+}
+
+.paypal::before {
+  font-family: unicons;
+  content: "\ec14  ";
+}
+
+.eth::before {
+  font-family: unicons;
+  content: "\e982  ";
 }
 
 @font-face {
@@ -238,11 +294,12 @@ nav a {
 .line {
   margin: 1rem auto 1rem auto;
   width: 0vw;
-  opacity: 0;
+  opacity: 1;
   border-width: 0px;
   border-style: none;
   background: linear-gradient(298deg, #6610f2, #4c61f5);
   height: 0.1rem;
+  z-index: 10;
 }
 
 .lineanimation {
@@ -348,10 +405,18 @@ nav a {
 }
 
 .project-div a {
-  text-decoration: none;
-  color: #cfcece;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4c61f5;
+          text-decoration-color: #4c61f5;
+  color: #737DFE;
 }
 
+/* .other::before{
+    text-decoration: none;
+    text-decoration-color: transparent;
+    color: $peach;
+    content: "• ";
+  } */
 .project-div p {
   display: inline-block;
   vertical-align: top;
@@ -380,6 +445,26 @@ nav a {
   background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
   margin-bottom: 0vh;
   background-color: #110d36;
+}
+
+.link-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* BOTTOM FOOTER */
@@ -518,6 +603,7 @@ footer a {
   position: absolute;
   text-align: left;
   padding: 1rem;
+  width: 11.5rem;
   border-radius: 20px;
   background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
   -webkit-box-shadow: rgba(171, 196, 255, 0.12) 8px 0px 48px;
@@ -559,8 +645,8 @@ footer a {
 /* Progress button */
 .progress-wrap {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 1rem;
+  bottom: 4rem;
   height: 46px;
   width: 46px;
   cursor: url("../images/pointer.webp"), pointer;
@@ -778,5 +864,99 @@ footer a {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
+}
+
+[data-inviewport="opacity"] {
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
+[data-inviewport="opacity"].is-inViewport {
+  opacity: 1;
+}
+
+#contact-me {
+  font-size: 3.5rem;
+  color: #4c61f5;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-shadow: 0px 10px 10px black;
+}
+
+.email-div {
+  padding-bottom: 2rem;
+}
+
+.sectionLinks h3 {
+  padding-bottom: 0.5rem;
+}
+
+.email {
+  color: #7c7aff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-shadow: 0px 10px 10px black;
+  font-size: 1.5rem;
+}
+
+.email::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.find-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.find-me a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4c61f5;
+          text-decoration-color: #4c61f5;
+  color: #737DFE;
+}
+
+.peach {
+  color: #FFCAC9;
+  text-decoration: none;
+}
+
+.support-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.support-me a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4c61f5;
+          text-decoration-color: #4c61f5;
+  color: #737DFE;
+}
+
+.margin-center {
+  text-align: center;
 }
 /*# sourceMappingURL=m.css.map */

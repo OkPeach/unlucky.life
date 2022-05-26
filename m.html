@@ -48,28 +48,13 @@
             <span></span>
             <ul id="menu">
                 <a href="#">
-                    <li>About me</li>
+                    <li>About-me</li>
                 </a>
                 <a href="#projects">
                     <li>Projects</li>
                 </a>
                 <a href="#contact">
                     <li>Contact</li>
-                </a>
-                <a href="/crypto">
-                    <li>Crypto</li>
-                </a>
-                <a href="/nft">
-                    <li>NFT Gallery</li>
-                </a>
-                <a href="/generator">
-                    <li>Generators</li>
-                </a>
-                <a href="/spotify">
-                    <li>Spotify</li>
-                </a>
-                <a href="/ip">
-                    <li>IP Info</li>
                 </a>
             </ul>
         </div>
@@ -85,27 +70,27 @@
             <div class="aboutselection">
             <H1 id="name">Hi, my name is Lucien Pauer</H1>
 
-            <hr id="line" class="line">
+            <hr id="line" class="line" data-inviewport="scale-in">
 
             <div id="about" class="aboutdiv">
                 <h3>About me:</h3>
-                <p class="offwhite">I'm <a id="age" class="age offwhite"></a> developer from Czech Republic. I enjoy programming, modern technology and I love to learn and expand my knowlage of said things. I also like to play games and watch twitch.</p>
+                <p class="offwhite">I'm <a id="age" class="offwhite"></a> developer from Czech Republic. I enjoy programming, modern technology and I love to learn and expand my knowlage of said things. I also like to play games and watch twitch.</p>
             </div>
         
-            <hr id="line2" class="line">
+            <hr id="line2" class="line" data-inviewport="scale-in">
 
             <div id="hobbies" class="aboutdiv">
                 <h3>My hobbies and interests:</h3>
-                <span class="interests_item offwhite computer">Computers</span>
-                <span class="interests_item offwhite technology">Technology</span>
-                <span class="interests_item offwhite coding">Coding</span>
-                <span class="interests_item offwhite btc">Crypto</span>
-                <span class="interests_item offwhite gaming">Gaming</span>
-                <span class="interests_item offwhite csharp">C#</span>
-                <span class="interests_item offwhite html">HTML</span>
-                <span class="interests_item offwhite css">CSS</span>
-                <span class="interests_item offwhite js">JavaScript</span>
-                <span class="interests_item js offwhite">NodeJS</span>
+                <span class="interests_item offwhite computer" data-inviewport="scale-in">Computers</span>
+                <span class="interests_item offwhite technology" data-inviewport="scale-in">Technology</span>
+                <span class="interests_item offwhite coding" data-inviewport="scale-in">Coding</span>
+                <span class="interests_item offwhite btc" data-inviewport="scale-in">Crypto</span>
+                <span class="interests_item offwhite gaming" data-inviewport="scale-in">Gaming</span>
+                <span class="interests_item offwhite csharp" data-inviewport="scale-in">C#</span>
+                <span class="interests_item offwhite html" data-inviewport="scale-in">HTML</span>
+                <span class="interests_item offwhite css" data-inviewport="scale-in">CSS</span>
+                <span class="interests_item offwhite js" data-inviewport="scale-in">JavaScript</span>
+                <span class="interests_item js offwhite" data-inviewport="scale-in">NodeJS</span>
             </div>
 
             <div class="arrows">
@@ -117,23 +102,35 @@
         </section>
 
         <section data-index="1" class="sectionProjects" id="projects" rel="preload">
+
             <div data-inviewport="scale-in" class="project-div">
                 <h3>My website</h3>
                 <p class="offwhite">Personal website used for showing of my projects.</p>
                 <p class="offwhite">Languages: HTML, CSS (SCSS), JS</p>
                 <p class="offwhite">Program: Visual Studio Code</p>
+                <h3 class="margin-center"><a href="https://github.com/OkPeach/www">Visit github</a></h3>
             </div>
             <div data-inviewport="scale-in" class="project-div">
                 <h3>Discord bot</h3>
                 <p class="offwhite">Useful utility discord bot, 40+ commands.</p>
                 <p class="offwhite">Languages: NodeJS</p>
                 <p class="offwhite">Program: Visual Studio Code</p>
+                <h3 class="margin-center"><a href="https://discord.com/api/oauth2/authorize?client_id=850821506321350686&permissions=8&scope=bot">Invite</a></h3>
             </div>
             <div data-inviewport="scale-in" class="project-div">
                 <h3>Company website</h3>
                 <p class="offwhite">Website for Security System Záleský. <a href="https://zsystem.cz">(zsystem.cz)</a></p>
                 <p class="offwhite">Languages: HTML, CSS (SCSS), JS</p>
                 <p class="offwhite">Program: Visual Studio Code</p>
+                <h3 class="margin-center"><a href="https://zsystem.cz">Visit website</a></h3>
+            </div>
+            <div data-inviewport="scale-in" class="project-div">
+                <h3>Other projects</h3>
+                <p class="peach">• <a class="offwhite other" href="nft">NFT Gallery</a></p><br>
+                <p class="peach">• <a class="offwhite other" href="crypto">Crypto information</a></p><br>
+                <p class="peach">• <a class="offwhite other" href="generator">Generators</a></p><br>
+                <p class="peach">• <a class="offwhite other" href="ip">IP information</a></p><br>
+                <p class="peach">• <a class="offwhite other" href="spotify">Spotify</a></p>
             </div>
 
             <div class="arrows">
@@ -144,7 +141,32 @@
         </section>
 
         <section data-index="2" class="sectionLinks" id="contact">
+            <div class="link-section">
+                <H1 data-inviewport="scale-in" id="contact-me">Contact me!</H1>
+    
+                <hr data-inviewport="scale-in" id="line3" class="line">
+    
+                <div data-inviewport="scale-in" class="email-div">
+                    <h3>Get in touch with me:</h3>
+                    <p><span class="email" id="email">lucien@unlucky.life</span></p>
+                </div>
+                <div class="find-me">
+                    <h3 data-inviewport="scale-in">Or find me on:</h3>
+                    <p data-inviewport="scale-in" class="peach steam">• <a class="offwhite other" href="https://steamcommunity.com/id/PeachWRLD">Steam</a></p>
+                    <p data-inviewport="scale-in" class="peach github">• <a class="offwhite other" href="https://github.com/okpeach">Github</a></p>
+                    <p data-inviewport="scale-in" class="peach twitter">• <a class="offwhite other" href="https://twitter.com/lucienkkk">Twitter</a></p>
+                    <p data-inviewport="scale-in" class="peach youtube">• <a class="offwhite other" href="https://www.youtube.com/c/Lucienrip">YouTube</a></p>
+                    <p data-inviewport="scale-in" class="peach discord">• <a class="offwhite other" href="">PeachWRLD#8888</a></p>
+                </div>
+            
+                <hr data-inviewport="scale-in" id="line4" class="line">
 
+                <div class="support-me">
+                    <h3 data-inviewport="scale-in">Or find me on:</h3>
+                    <p data-inviewport="scale-in" class="peach btc">• <a class="offwhite other">BTC</a></p>
+                    <p data-inviewport="scale-in" class="peach eth">• <a class="offwhite other">ETH</a></p>
+                    <p data-inviewport="scale-in" class="peach paypal">• <a class="offwhite other" href="https://www.paypal.com/paypalme/lucienkkk/5USD">PayPal</a></p>
+                </div>
         </section>
     </main>
 

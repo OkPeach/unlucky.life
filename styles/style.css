@@ -57,6 +57,61 @@
   content: "\ec8d  ";
 }
 
+.github::before {
+  font-family: unicons;
+  content: "\ec1d  ";
+}
+
+.twitter::before {
+  font-family: unicons;
+  content: "\ec0c  ";
+}
+
+.email::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.emailSmall::before {
+  font-family: unicons;
+  content: "\ea0f  ";
+}
+
+.age::before {
+  font-family: unicons;
+  content: "\eaf8  ";
+}
+
+.youtube::before {
+  font-family: unicons;
+  content: "\ec06  ";
+}
+
+.steam::before {
+  font-family: unicons;
+  content: "\e9a5  ";
+}
+
+.discord::before {
+  font-family: unicons;
+  content: "\ec8f  ";
+}
+
+.bitcoin::before {
+  font-family: unicons;
+  content: "\e8c3  ";
+}
+
+.paypal::before {
+  font-family: unicons;
+  content: "\ec14  ";
+}
+
+.eth::before {
+  font-family: unicons;
+  content: "\e982  ";
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");

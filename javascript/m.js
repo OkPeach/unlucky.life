@@ -14,6 +14,9 @@ function onload(){
     document.getElementById("line").classList.add("lineanimation");
     document.getElementById("line2").classList.add("lineanimation");
 
+    document.getElementById("line3").classList.add("lineanimation");
+    document.getElementById("line4").classList.add("lineanimation");
+
     document.getElementById("about").classList.add("aboutanimation");
     document.getElementById("hobbies").classList.add("hobbiesanimation");
 
@@ -21,6 +24,8 @@ function onload(){
 
     document.getElementById("header").classList.add("headeranim");
     document.getElementById("menuToggle").classList.add("menutoggleanimation");
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 
 

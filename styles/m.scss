@@ -148,11 +148,12 @@
   .line{
       margin: 1rem auto 1rem auto;
       width: 0vw;
-      opacity: 0;
+      opacity: 1;
       border-width: 0px;
       border-style: none;
       background: linear-gradient(298deg, $indigo, $textBlue);
       height: 0.1rem;
+      z-index: 10;
   }
 
   .lineanimation{
@@ -253,9 +254,17 @@
   }
 
   .project-div a{
-    text-decoration: none;
-    color: $lighteroffwhite;
+    text-decoration: underline;
+    text-decoration-color: $textBlue;
+    color: $purple-blue;
   }
+
+  /* .other::before{
+    text-decoration: none;
+    text-decoration-color: transparent;
+    color: $peach;
+    content: "• ";
+  } */
 
   .project-div p{
     display: inline-block;
@@ -273,6 +282,14 @@
     background: $prim-gradient;
     margin-bottom: 0vh;
     background-color: $prim-to;
+  }
+
+  .link-section{
+    @include flexCenter();
+    height: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   /* BOTTOM FOOTER */
@@ -392,6 +409,8 @@
     position: absolute;
     text-align: left;
     padding: 1rem;
+
+    width: 11.5rem;
   
     border-radius: 20px;
     background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), rgb(12, 9, 38); box-shadow: rgba(171, 196, 255, 0.12) 8px 0px 48px;
@@ -432,8 +451,8 @@
 
 .progress-wrap {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 1rem;
+    bottom: 4rem;
     height: 46px;
     width: 46px;
     cursor: url("../images/pointer.webp"), pointer;
@@ -589,4 +608,68 @@
   [data-inviewport="scale-in"].is-inViewport { 
     transform: scale(1);
     opacity: 1;
+  }
+
+  [data-inviewport="opacity"] { 
+    transition: 1s;
+    opacity: 0;
+  }
+  [data-inviewport="opacity"].is-inViewport { 
+    opacity: 1;
+  }
+
+  #contact-me{
+    font-size: 3.5rem;
+    color: $textBlue;
+    transition: all 0.3s ease;
+    text-shadow: 0px 10px 10px $black;
+  }
+
+  .email-div{
+    padding-bottom: 2rem;
+  }
+
+  .sectionLinks h3{
+    padding-bottom: 0.5rem;
+  }
+
+  .email {
+    color: $lightPurple;
+    transition: all 0.3s ease;
+    text-shadow: 0px 10px 10px $black;
+    font-size: 1.5rem;
+  }
+  
+  .email::before {
+    font-family: unicons;
+    content: "\ea0f  ";
+  }
+
+  .find-me{
+    @include flexCenter();
+  }
+
+  .find-me a{
+    text-decoration: underline;
+    text-decoration-color: $textBlue;
+    color: $purple-blue;
+  }
+
+  .peach{
+    color: $peach;
+    text-decoration: none;
+  }
+
+  .support-me{
+    @include flexCenter();
+  }
+
+  .support-me a{
+    text-decoration: underline;
+    text-decoration-color: $textBlue;
+    color: $purple-blue;
+  }
+
+  .margin-center{
+    text-align: center;
   }
