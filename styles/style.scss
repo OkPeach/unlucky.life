@@ -1494,3 +1494,29 @@ footer {
   .big-logo{
     left: 0;
   }
+
+  .line{
+    margin: 1rem auto 1rem auto;
+    width: 0vw;
+    opacity: 0;
+    border-width: 0px;
+    border-style: none;
+    background: linear-gradient(298deg, $indigo, $textBlue);
+    height: 0.15rem;
+    z-index: 10;
+}
+
+.lineanimation{
+    animation: lines 0.75s forwards;
+    animation-delay: 0.25s;
+}
+
+@keyframes lines {
+  0% {
+    opacity: 1;
+  }
+  100% {
+      width: 90%;
+      opacity: 1;
+  }
+}

@@ -1812,4 +1812,42 @@ footer a {
 .big-logo {
   left: 0;
 }
+
+.line {
+  margin: 1rem auto 1rem auto;
+  width: 0vw;
+  opacity: 0;
+  border-width: 0px;
+  border-style: none;
+  background: linear-gradient(298deg, #6610f2, #4c61f5);
+  height: 0.15rem;
+  z-index: 10;
+}
+
+.lineanimation {
+  -webkit-animation: lines 0.75s forwards;
+          animation: lines 0.75s forwards;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+@-webkit-keyframes lines {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    width: 90%;
+    opacity: 1;
+  }
+}
+
+@keyframes lines {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    width: 90%;
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=style.css.map */

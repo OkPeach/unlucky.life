@@ -275,6 +275,10 @@ $(window).on('load', function () {
     $("#logo").addClass("logoAnim");
     $("#infoCard").addClass("cardAnim");
 
+    $("#line").addClass("lineanimation");
+    $("#line2").addClass("lineanimation");
+    $("#line3").addClass("lineanimation");
+
     $("#mainNav").addClass("headeranim");
     $("#header").addClass("headeranim");
 
