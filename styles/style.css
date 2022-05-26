@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .secuter::before {
   font-family: unicons;
   content: "\e969  ";
@@ -142,11 +143,12 @@ html {
 body {
   color: white;
   height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Rubik', sans-serif;
   overscroll-behavior-y: none;
   background: #110d36;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
   background-image: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
+  font-weight: 300;
 }
 
 ::-moz-selection {
@@ -288,6 +290,10 @@ header {
   transition: all 0.3s ease;
 }
 
+.navbarUL a {
+  font-weight: 500;
+}
+
 #selectionHome {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -334,6 +340,7 @@ nav {
   border-color: #4c61f5;
   border-width: 0.1vw;
   border-style: solid;
+  padding: 0.1rem;
   opacity: 0;
 }
 
@@ -390,8 +397,9 @@ nav {
 }
 
 .fontText {
-  font-family: "Avenir";
+  font-family: 'Rubik', sans-serif;
   font-size: 1.2rem;
+  font-weight: 300;
   color: white;
   margin: 5px 0;
 }
@@ -1849,5 +1857,9 @@ footer a {
     width: 90%;
     opacity: 1;
   }
+}
+
+.center-text {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
