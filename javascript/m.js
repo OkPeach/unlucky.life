@@ -40,6 +40,8 @@ ELs_inViewport.forEach(EL => {
   Obs.observe(EL, obsOptions);
 });
 
+//planet animation
+/* 
 //some code from https://codepen.io/Mamboleoo/pen/NWaogXW
 const svg = document.querySelector('svg');
 const fuse = svg.querySelector('.st1');
@@ -64,4 +66,4 @@ gsap.to(fuse, {
   repeat: -1,
   repeatDelay: 0.1,
   ease: Power0.easeNone,
-});
+}); */

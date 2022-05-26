@@ -125,7 +125,7 @@ header {
         background: -webkit-gradient(linear, left top, right top, from(#30a8f0), to(#6610f2));
         background: linear-gradient(to right, #30a8f0, #6610f2);
         width: 0%;
-        z-index: 3;
+        z-index: 997;
         -webkit-transition: width 10ms ease-out;
         transition: width 10ms ease-out;
         -webkit-animation: Animation 5s ease infinite;
@@ -141,7 +141,7 @@ header {
         background: -webkit-gradient(linear, left top, right top, from(#7c7aff), to(#6610f2));
         background: linear-gradient(to right, #7c7aff, #6610f2);
         width: 0%;
-        z-index: 3;
+        z-index: 997;
         -webkit-transition: width 0.1s ease-out;
         transition: width 0.1s ease-out;
     }
