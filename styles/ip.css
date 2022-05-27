@@ -1,5 +1,6 @@
 /* SCSS IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* ALL */
 * {
   margin: 0;
@@ -24,89 +25,103 @@ html {
 body {
   background: #2c2c2c;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
   overscroll-behavior-y: none;
 }
 
-@media (min-width: 1600px) {
-  #iptext {
-    font-size: 2vw;
-    color: #4c61f5;
-  }
-  p {
-    font-size: 1vw;
-    color: #b1b1b1;
-  }
-  #location {
-    color: white;
-  }
-  #winRes {
-    color: #b1b1b1;
-  }
-  h1 {
-    font-size: 7vw;
-    color: #7c7aff;
-  }
-  .main {
-    height: 95vh;
-    width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  span {
-    color: #7c7aff;
-  }
-  #other {
-    -webkit-filter: grayscale(30%);
-            filter: grayscale(30%);
-  }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 5vh;
-    width: 100%;
-    color: #7c7aff;
-    background: #212327;
-    z-index: 1;
-    -webkit-box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
-  }
-  .ipdiv {
-    text-align: center;
-  }
-  ::-moz-selection {
-    color: #30a8f0;
-  }
-  ::selection {
-    color: #30a8f0;
-  }
+#iptext {
+  font-size: 3rem;
+  color: #4c61f5;
+}
+
+p {
+  font-size: 1rem;
+  color: #b1b1b1;
+}
+
+#location {
+  color: white;
+}
+
+#winRes {
+  color: #b1b1b1;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #7c7aff;
+}
+
+.main {
+  height: 95vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+span {
+  color: #7c7aff;
+}
+
+#other {
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 5vh;
+  width: 100%;
+  color: #7c7aff;
+  background: #212327;
+  z-index: 1;
+  -webkit-box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+  font-size: 0.5rem;
+}
+
+.ipdiv {
+  text-align: center;
+}
+
+::-moz-selection {
+  color: #30a8f0;
+}
+
+::selection {
+  color: #30a8f0;
 }
 
 @media (max-width: 1600px) and (min-width: 1024px) {
   #iptext {
-    font-size: 4vw;
+    font-size: 2rem;
     color: #4c61f5;
   }
   p {
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: #b1b1b1;
   }
   #location {
@@ -116,7 +131,7 @@ body {
     color: #b1b1b1;
   }
   h1 {
-    font-size: 14vw;
+    font-size: 4rem;
     color: #7c7aff;
   }
   .main {
