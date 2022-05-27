@@ -226,6 +226,15 @@ nav {
   margin: 5px 0;
 }
 
+.infoTab p{
+  font-family: 'Rubik', sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: $white;
+  margin: 5px 0;
+  word-break:normal;
+}
+
 @media (min-width: 1024px) {
   .card {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
