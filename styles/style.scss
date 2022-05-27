@@ -218,6 +218,10 @@ nav {
   margin: 3px 0;
 }
 
+.cardH2::after {
+  content: url("https://cdn.discordapp.com/emojis/979732190499852328.gif?size=24&quality=lossless");
+}
+
 .fontText {
   font-family: 'Rubik', sans-serif;
   font-size: 1.2rem;
