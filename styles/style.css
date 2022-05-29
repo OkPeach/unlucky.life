@@ -130,6 +130,11 @@
   content: "\ec67  ";
 }
 
+.linkedin::before {
+  font-family: unicons;
+  content: "\ec03  ";
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");
