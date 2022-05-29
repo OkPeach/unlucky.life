@@ -110,6 +110,26 @@
   content: "\e982  ";
 }
 
+.skills::before {
+  font-family: unicons;
+  content: "\e8c7  ";
+}
+
+.programming::before {
+  font-family: unicons;
+  content: "\ec50  ";
+}
+
+.programs::before {
+  font-family: unicons;
+  content: "\eabf  ";
+}
+
+.visual::before {
+  font-family: unicons;
+  content: "\ec67  ";
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");
@@ -256,8 +276,8 @@ header {
     left: 0;
     top: 0;
     height: 10.2vh;
-    background: -webkit-gradient(linear, left top, right top, from(#30a8f0), to(#6610f2));
-    background: linear-gradient(to right, #30a8f0, #6610f2);
+    background: -webkit-gradient(linear, left top, right top, from(#FFCAC9), to(#737DFE));
+    background: linear-gradient(to right, #FFCAC9, #737DFE);
     width: 0%;
     z-index: 997;
     -webkit-transition: width 0.01s ease-out;
@@ -613,6 +633,127 @@ nav {
 .right {
   margin-left: 12.5px;
   padding: 30px;
+}
+
+.p-left {
+  height: 100%;
+  border-radius: 20px;
+  border-color: #6610f2;
+  border-width: 1px;
+  border-style: solid;
+  padding: 30px;
+  background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
+  width: 30%;
+}
+
+.meter-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.meter-div label {
+  margin: 0 auto 0 3vw;
+}
+
+.meters {
+  height: 1.5rem;
+  padding-bottom: 0.3rem;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.meters:hover {
+  height: 2rem;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: -webkit-gradient(linear, left top, right top, from(#30a8f0), to(#737DFE));
+  background: linear-gradient(to right, #30a8f0, #737DFE);
+}
+
+.p-left p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  word-break: normal;
+  margin: auto;
+}
+
+.p-right {
+  padding: 30px;
+  width: 70%;
+  background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
+}
+
+.p-right h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 1000;
+  font-size: 4vh;
+  margin: 3px 0;
+  text-align: center;
+}
+
+.p-right h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.other-p {
+  text-align: center;
+}
+
+.other-p p {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.project-text {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.padding-bottom {
+  padding-bottom: 1rem;
+}
+
+.padding-top {
+  padding-top: 2rem;
+}
+
+.p-right p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  word-break: normal;
+}
+
+.p-right a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #4c61f5;
+          text-decoration-color: #4c61f5;
+  color: #737DFE;
+  text-shadow: 0px 0px 0px black;
+}
+
+.peach {
+  color: #FFCAC9;
 }
 
 .interests {
@@ -1786,8 +1927,8 @@ footer a {
 
 /* inViewport */
 [data-inviewport="scale-in"] {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
   opacity: 0;
   -webkit-transform: scale(0.1);
           transform: scale(0.1);

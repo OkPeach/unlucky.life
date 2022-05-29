@@ -28,8 +28,8 @@
           height:100%;
           width:60vw;
           position:absolute;
-          background:$bodyBackground;
-          border-radius:10px;
+          background: $sec-gradient;
+          border-radius:20px;
           transition:all ease 0.5s;
           z-index:1;
           left:0;
@@ -46,7 +46,7 @@
             z-index:2;
             opacity:1;
             width:45vw;
-            background:$googleBlack;
+            background:$sec-gradient;
             transform:scale(1);
             box-shadow: 0px 4px 10px $indigoalpha;
             filter: grayscale(0%);
@@ -98,7 +98,7 @@
             width: 100%;
             z-index: 2;
             background-color: $black;
-            border-radius:10px;
+            border-radius:20px;
             background: linear-gradient(0deg, rgb(24, 24, 24) 48%, rgba(255,255,255,0) 70%);
         }
         .projectname{
@@ -177,7 +177,7 @@
           width:48vw;
           position:absolute;
           background:$bodyBackground;
-          border-radius:10px;
+          border-radius:20px;
           transition:all ease 0.5s;
           z-index:2;
           left:0;
@@ -247,7 +247,7 @@
             width: 100%;
             z-index: 2;
             background-color: $black;
-            border-radius:10px;
+            border-radius:20px;
             background: linear-gradient(0deg, rgb(24, 24, 24) 48%, rgba(255,255,255,0) 70%);
         }
         .projectname{

@@ -112,7 +112,7 @@ header {
     left: 0;
     top: 0;
     height: 10.2vh;
-    background: linear-gradient(to right, $jinxlight, $indigo);
+    background: linear-gradient(to right, $peach, $purple-blue);
     width: 0%;
     z-index: 997;
     transition: width 0.01s ease-out;
@@ -401,6 +401,113 @@ nav {
 .right {
   margin-left: 12.5px;
   padding: 30px;
+}
+
+
+.p-left {
+  height: 100%;
+  border-radius: 20px;
+  border-color: $indigo;
+  border-width: 1px;
+  border-style: solid;
+  padding: 30px;
+  background: $ter-gradient;
+  width: 30%;
+}
+
+.meter-div {
+  @include flexCenter();
+}
+
+.meter-div label {
+  margin: 0 auto 0 3vw;
+}
+
+.meters{
+  height: 1.5rem;
+  padding-bottom: 0.3rem;
+  transition: all 0.1s ease;
+}
+
+.meters:hover {
+  height: 2rem;
+  transition: all 0.1s ease;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: linear-gradient(to right, $jinxlight, $purple-blue);
+}
+
+.p-left p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  color: $white;
+  text-align: center;
+  word-break: normal;
+  margin: auto;
+}
+
+.p-right {
+  padding: 30px;
+  width: 70%;
+  background: $sec-gradient;
+}
+
+.p-right h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 1000;
+  font-size: 4vh;
+  margin: 3px 0;
+  text-align: center;
+}
+
+.p-right h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.other-p {
+  text-align: center;
+}
+
+.other-p p {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.project-text {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.padding-bottom{
+  padding-bottom: 1rem;
+}
+
+.padding-top{
+  padding-top: 2rem;
+}
+
+.p-right p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  word-break:normal;
+}
+
+.p-right a {
+  text-decoration: underline;
+  text-decoration-color: $textBlue;
+  color: $purple-blue;
+
+  text-shadow: 0px 0px 0px black;
+}
+
+.peach {
+  color: $peach;
 }
 
 .interests {
@@ -1474,7 +1581,7 @@ footer {
   /* inViewport */
   
   [data-inviewport="scale-in"] { 
-    transition: 0.5s;
+    transition: 0.75s;
     opacity: 0;
     transform: scale(0.1);
   }

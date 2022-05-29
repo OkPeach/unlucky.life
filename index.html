@@ -22,9 +22,10 @@
 
     <!-- Include this to make the og:image larger 
     <meta name="twitter:card" content="summary_large_image"> -->
-    <link href="styles/style.css" rel="stylesheet" id="maincss">
     <link href="styles/psliders.css" rel="stylesheet">
     <link href="styles/loading.css" rel="stylesheet">
+
+    <link href="styles/style.css" rel="stylesheet" id="maincss">
     <title>Lucien.wtf</title>
 </head>
 
@@ -175,7 +176,7 @@
 
             <!--Mouse-->
             <a href="#projects" class="pointer">
-                <div class="mouse_scroll">
+                <div class="mouse_scroll" data-inviewport="scale-in">
                     <div class="mouse">
                         <div class="wheel"></div>
                     </div>
@@ -192,27 +193,13 @@
 
         <section data-index="1" class="sectionProjects" id="projects" rel="preload">
         <div id="particles-js" class="particles"></div>
-        <div class="projectsTop" id="projectsTop" data-inviewport="scale-in">
+        <div class="projectsTop" id="projectsTop">
             <div class="slider">
-                <div class="item" id="selfbot" rel="preload">
-                    <div class="textbackground">
-                        <h1 class="projectname">Unlucky.life Discord bot</h1>
-                        <span class="projecttext">
-                            <p>Information: <span style="color: #b1b1b1;">Discord bot with some usefull commands.</span></p>
-                            <p>Languages: <a class="pointer"
-                                    href="https://cs.wikipedia.org/wiki/Node.js"
-                                    target="_blank">Javascript (nodejs)</a></p>
-                            <p>Program: <a href="https://code.visualstudio.com/" target="_blank"
-                                    class="pointer">VS Code</a><span style="color: #b1b1b1;"></p>
-                                        <button class="raise pointer" onClick="parent.open('https://discord.com/api/oauth2/authorize?client_id=850821506321350686&permissions=8&scope=bot')">Invite</button>
-                        </span>
-                    </div>
-                </div>
-                <div class="item active" id="website" rel="preload">
+                <div class="item" id="website" rel="preload">
                     <div class="textbackground">
                         <h1 class="projectname">My website</h1>
                         <span class="projecttext">
-                            <p>Information: <span style="color: #b1b1b1;">This is my portfolio website that contains some info about me.</span></p>
+                            <p>Information: <span style="color: #b1b1b1;">This is my portfolio website that contains information about me. Star on github would be appreciated</span></p>
                             <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/HTML">HTML</a><span style="color: #b1b1b1;">, </span><a
                                     class="pointer"
                                     href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SCSS</a><span style="color: #b1b1b1;"> and </span><a
@@ -224,20 +211,60 @@
                         </span>
                     </div>
                 </div>
+                <div class="item active" style="display: flex; flex-direction: row;" id="skills" rel="preload">
+                    <div class="p-left">
+                        <p class="skills">Skills</p>
+                        <hr id="line4" class="line" data-inviewport="scale-in">
+                        <div class="meter-div">
+                            <label data-inviewport="scale-in" class="html">HTML</label>
+                            <meter class="meters" id="m-html" value="0.9" data-inviewport="scale-in" title="90%">90%</meter>
+                            <label data-inviewport="scale-in" class="css">CSS</label>
+                            <meter class="meters" id="m-css" value="0.8" data-inviewport="scale-in" title="85%">85%</meter>
+                            <label data-inviewport="scale-in" class="js">JS</label>
+                            <meter class="meters" id="m-js" value="0.8" data-inviewport="scale-in" title="80%">80%</meter>
+                            <label data-inviewport="scale-in" class="js">NodeJS</label>
+                            <meter class="meters" id="m-node" value="0.6" data-inviewport="scale-in" title="75%">75%</meter>
+                            <label data-inviewport="scale-in" class="programming">Python</label>
+                            <meter class="meters" id="m-python" value="0.15" data-inviewport="scale-in" title="25%">25%</meter>
+                        </div>
+                        
+                        <p class="padding-top skills">Programs I use</p>
+                        <hr id="line7" class="line" data-inviewport="scale-in">
+                        <div class="meter-div">
+                            <label data-inviewport="scale-in" class="visual">VS Code</label>
+                            <meter class="meters" id="m-html" value="0.95" data-inviewport="scale-in" title="95%">95%</meter>
+                            <label data-inviewport="scale-in" class="visual">VS '22</label>
+                            <meter class="meters" id="m-css" value="0.5" data-inviewport="scale-in" title="50%">50%</meter>
+                        </div>
+                    </div>
+                    <div class="p-right">
+                        <h2>My projects</h2>
+                        <hr id="line5" class="line" data-inviewport="scale-in">
+                        <p class="project-text padding-bottom">This is a list of my projects and work, it keeps on growing with my passion to program!</p>
+                        <p class="project-text">You can look at my biggest work by clicking on the card on the <a>left</a> or <a>right</a>.</p>
+                        <h3 class="padding-top">My other projects</h3>
+                        <hr id="line6" class="line" data-inviewport="scale-in">
+                        <div class="other-p">
+                            <p class="peach" data-inviewport="scale-in">• <a href="crypto">Crypto statistics</a></p>
+                            <p class="peach" data-inviewport="scale-in">• <a href="ip">IP information</a></p>
+                            <p class="peach" data-inviewport="scale-in">• <a href="nft">NFT Gallery</a></p>
+                            <p class="peach" data-inviewport="scale-in">• <a href="generator">Generators</a></p>
+                            <p class="peach" data-inviewport="scale-in">• <a href="spotify">Spotify</a></p>
+                        </div>
+                    </div>
+                </div>
                 <div class="item" id="program" rel="preload">
                     <div class="textbackground">
-                        <h1 class="projectname">Chromium steam hour booster</h1>
+                        <h1 class="projectname">Company website for zsystem.cz</h1>
                         <span class="projecttext">
-                            <p>Information: <span style="color: #b1b1b1;">Steam hour booster that can run unlimited ammount of games at once, checks
-                                for bans and tells you who is trying to message you.</span></p>
-                            <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/Node.js"
-                                    target="_blank">Node.JS</a></p>
+                            <p>Information: <span style="color: #b1b1b1;">Business website with reviews, email sender and visitors tracking.</span></p>
+                            <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/HTML">HTML</a><span style="color: #b1b1b1;">, </span><a
+                                    class="pointer"
+                                    href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SCSS</a><span style="color: #b1b1b1;"> and </span><a
+                                    class="pointer" href="https://en.wikipedia.org/wiki/JavaScript">JS</a></p>
                             <p>Program: <a class="pointer" href="https://code.visualstudio.com/" target="_blank">VS
-                                    Code</a><span style="color: #b1b1b1;">, </span><a class="pointer" href="https://notepad-plus-plus.org/downloads/"
-                                    target="_blank">Notepad++</a></p>
-                            <button id="buyboost" class="raise pointer"
-                                onclick="setClipboard('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'buyboost', 'Buy - $5 BTC')">Buy
-                                - $5 BTC</button>
+                                    Code</a></p>
+                            <button class="raise pointer" onClick="parent.open('https://zsystem.cz')">Visit</button>
                         </span>
                     </div>
                 </div>

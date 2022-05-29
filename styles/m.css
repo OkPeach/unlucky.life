@@ -111,6 +111,26 @@
   content: "\e982  ";
 }
 
+.skills::before {
+  font-family: unicons;
+  content: "\e8c7  ";
+}
+
+.programming::before {
+  font-family: unicons;
+  content: "\ec50  ";
+}
+
+.programs::before {
+  font-family: unicons;
+  content: "\eabf  ";
+}
+
+.visual::before {
+  font-family: unicons;
+  content: "\ec67  ";
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");
