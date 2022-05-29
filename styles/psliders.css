@@ -43,6 +43,9 @@
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
     right: 0;
     margin: 0 auto;
   }
@@ -57,6 +60,9 @@
             box-shadow: 0px 4px 10px #6710f260;
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
+    border-color: #6610f2;
+    border-width: 1px;
+    border-style: solid;
   }
   .slider .item:hover {
     -webkit-transform: scale(0.9);

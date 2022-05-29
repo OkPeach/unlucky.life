@@ -39,6 +39,9 @@
           display: block;
           box-shadow: 0px 10px 10px $blackalpha;
           filter: grayscale(100%);
+          border-color: $indigo;
+          border-width: 1px;
+          border-style: solid;
             
             right:0;
             margin:0 auto;
@@ -50,6 +53,9 @@
             transform:scale(1);
             box-shadow: 0px 4px 10px $indigoalpha;
             filter: grayscale(0%);
+            border-color: $indigo;
+            border-width: 1px;
+            border-style: solid;
           }
         }
         .item:hover {
