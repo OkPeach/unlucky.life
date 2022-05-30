@@ -61,7 +61,7 @@ var p2 = "ad232f1daf9e88efd3d";
 
 function CopyToClipboard(id) {
   setTimeout(function () {
-    navigator.clipboard.writeText("PeachWRLD#8888");
+    navigator.clipboard.writeText("unlucky#8888");
     $("#discord").load(" #discord > *");
   }, 700);
   document.getElementById(id).innerHTML = "Copied tag!";

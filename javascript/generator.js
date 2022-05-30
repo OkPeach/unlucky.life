@@ -103,7 +103,9 @@ generateBtn.addEventListener("click", () => {
   const hasNumber = numberEl.checked;
   const hasSymbol = symbolEl.checked;
   generatedPassword = true;
-  resultEl.innerText = generatePassword(length, hasLower, hasUpper, hasNumber, hasSymbol);
+  passowrdgen = generatePassword(length, hasLower, hasUpper, hasNumber, hasSymbol);
+  resultEl.innerText = passowrdgen;
+  navigator.clipboard.writeText(passowrdgen);
 });
 
 // Function responsible to generate password and then returning it.
