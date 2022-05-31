@@ -55,16 +55,19 @@
   }
 
   .github::before {
+    color: $peach;
     font-family: unicons;
     content: "\ec1d  ";
   }
   
   .twitter::before {
+    color: $peach;
     font-family: unicons;
     content: "\ec0c  ";
   }
   
   .email::before {
+    color: $peach;
     font-family: unicons;
     content: "\ea0f  ";
   }
@@ -80,16 +83,19 @@
   }
   
   .youtube::before {
+    color: $peach;
     font-family: unicons;
     content: "\ec06  ";
   }
   
   .steam::before {
+    color: $peach;
     font-family: unicons;
     content: "\e9a5  ";
   }
   
   .discord::before {
+    color: $peach;
     font-family: unicons;
     content: "\ec8f  ";
   }
@@ -100,6 +106,7 @@
   }
   
   .paypal::before {
+    color: $peach;
     font-family: unicons;
     content: "\ec14  ";
   }
@@ -107,6 +114,18 @@
   .eth::before {
     font-family: unicons;
     content: "\e982  ";
+  }
+
+  .ethp::before {
+    color: $peach;
+    font-family: unicons;
+    content: "\e982  ";
+  }
+
+  .bitcoinp::before {
+    color: $peach;
+    font-family: unicons;
+    content: "\e8c3  ";
   }
 
   .skills::before {
@@ -132,4 +151,5 @@
   .linkedin::before {
     font-family: unicons;
     content: "\ec03  ";
+    color: $peach;
   }

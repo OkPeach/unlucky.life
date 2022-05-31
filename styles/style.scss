@@ -585,8 +585,8 @@ meter::-webkit-meter-optimum-value {
 
 #contact h2 {
   font-size: 3rem;
-  font-weight: bolder;
   color: $indigo;
+  font-weight: 600;
 }
 
 .contact-stuff {
@@ -627,11 +627,12 @@ meter::-webkit-meter-optimum-value {
 
 .contact-social-icons ul a {
   font-size: 1.2rem;
-  color: $textBlue;
+  color: $purple-blue;
   list-style: none;
   text-decoration: none;
   text-shadow: 5px 7px 10px $black;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .contact-social-icons ul a:hover {
@@ -640,6 +641,7 @@ meter::-webkit-meter-optimum-value {
   font-size: 1.5rem;
   transition: all 0.3s ease;
   font-weight: bolder;
+  font-weight: 700;
 }
 
 .contact-social-icons ul a li {
@@ -661,6 +663,7 @@ meter::-webkit-meter-optimum-value {
   color: $lightPurple;
   transition: all 0.3s ease;
   text-shadow: 0px 10px 10px $black;
+  font-weight: 500;
 }
 
 .email::before {
@@ -702,6 +705,7 @@ meter::-webkit-meter-optimum-value {
   transition: all 0.3s ease;
   cursor: url("../images/pointer.webp"), pointer;
   font-weight: bolder;
+  font-weight: 700;
 }
 
 .eth:hover {
