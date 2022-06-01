@@ -404,3 +404,60 @@ gsap.to(fuse, {
   repeatDelay: 0.1,
   ease: Power0.easeNone,
 });
+
+open = false;
+
+$(document).keyup(function(event) {
+  //P keypress
+  if (event.which === 80) {
+    devmenu = $(".dev-menu");
+    if (!open) {
+      devmenu.removeClass('dev-anim-down');
+      devmenu.addClass('dev-anim-up');
+      open = true;
+      console.log('Dev menu opened')
+    }
+    else {
+      devmenu.removeClass('dev-anim-up');
+      devmenu.addClass('dev-anim-down');
+      open = false;
+      console.log('Dev menu closed')
+    }
+  }
+
+  //O keypress
+  if (event.which === 79) {
+    var isaccepted = cookies.replaceAll("\"", "");
+  
+    if(isaccepted=="true") {
+      var defaultcookie = "false";
+      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
+      console.log('Cookies accepted =' + defaultcookie);
+    }
+    else{
+      var defaultcookie = "true";
+      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
+      console.log('Cookies accepted =' + defaultcookie);
+    }
+  }
+
+  //I keypress
+  if (event.which === 73) {
+    var swcss = document.getElementById("switch-css");
+    buttonState = swcss.getAttribute("checked");
+    if (buttonState == "true") {
+      $('#switch-css').removeAttr("checked");
+      var link = document.getElementById("maincss");
+      link.setAttribute("href", "styles/old.min.css");
+      var oldstyle = "styles/old.min.css";
+      localStorage['last-css'] = JSON.stringify(oldstyle);
+    }
+    else {
+      swcss.setAttribute("checked", "true");
+      var link = document.getElementById("maincss");
+      link.setAttribute("href", "styles/style.css");
+      var newstyle = "styles/style.css";
+      localStorage['last-css'] = JSON.stringify(newstyle);
+    }
+  }
+});

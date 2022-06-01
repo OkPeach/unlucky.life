@@ -649,51 +649,11 @@ meter::-webkit-meter-optimum-value {
   padding: 2%;
 }
 
-.github::before {
-  font-family: unicons;
-  content: "\ec1d  ";
-}
-
-.twitter::before {
-  font-family: unicons;
-  content: "\ec0c  ";
-}
-
 .email {
   color: $lightPurple;
   transition: all 0.3s ease;
   text-shadow: 0px 10px 10px $black;
   font-weight: 500;
-}
-
-.email::before {
-  font-family: unicons;
-  content: "\ea0f  ";
-}
-
-.emailSmall::before {
-  font-family: unicons;
-  content: "\ea0f  ";
-}
-
-.age::before {
-  font-family: unicons;
-  content: "\eaf8  ";
-}
-
-.youtube::before {
-  font-family: unicons;
-  content: "\ec06  ";
-}
-
-.steam::before {
-  font-family: unicons;
-  content: "\e9a5  ";
-}
-
-.discord::before {
-  font-family: unicons;
-  content: "\ec8f  ";
 }
 
 .discord:hover {
@@ -714,21 +674,6 @@ meter::-webkit-meter-optimum-value {
 
 .bitcoin:hover {
   cursor: url("../images/pointer.webp"), pointer;
-}
-
-.bitcoin::before {
-  font-family: unicons;
-  content: "\e8c3  ";
-}
-
-.paypal::before {
-  font-family: unicons;
-  content: "\ec14  ";
-}
-
-.eth::before {
-  font-family: unicons;
-  content: "\e982  ";
 }
 
 /* BOTTOM FOOTER */
@@ -1652,4 +1597,67 @@ footer {
 
 .center-text{
   text-align: center;
+}
+
+.dev-menu {
+  display: block;
+  position: fixed;
+  top: -50vh;
+  right: 1vw;
+  z-index: 100;
+  opacity: 0;
+
+  user-select: none;
+  background: $ter-gradient;
+  border-radius: 20px;
+  border-color: $textBlue;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1rem;
+
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dev-menu a {
+  text-decoration: none;
+  color: $purple-blue;
+  font-weight: 700;
+}
+
+.dev-menu span {
+  color: $lighteroffwhite;
+}
+
+.dev-menu h3 {
+  text-align: center;
+}
+
+@keyframes devmenudown {
+  from {
+    top: 11vh;
+    opacity: 1;
+  }
+  to {
+    top: -50vh;
+    opacity: 0;
+  }
+}
+
+@keyframes devmenuup {
+  from {
+    top: -50vh;
+    opacity: 0;
+  }
+  to {
+    top: 11vh;
+    opacity: 1;
+  }
+}
+
+.dev-anim-down{
+  animation: devmenudown 1s forwards;
+}
+
+.dev-anim-up{
+  animation: devmenuup 1s forwards;
 }

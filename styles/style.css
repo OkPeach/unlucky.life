@@ -962,52 +962,12 @@ meter::-webkit-meter-optimum-value {
   padding: 2%;
 }
 
-.github::before {
-  font-family: unicons;
-  content: "\ec1d  ";
-}
-
-.twitter::before {
-  font-family: unicons;
-  content: "\ec0c  ";
-}
-
 .email {
   color: #7c7aff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-shadow: 0px 10px 10px black;
   font-weight: 500;
-}
-
-.email::before {
-  font-family: unicons;
-  content: "\ea0f  ";
-}
-
-.emailSmall::before {
-  font-family: unicons;
-  content: "\ea0f  ";
-}
-
-.age::before {
-  font-family: unicons;
-  content: "\eaf8  ";
-}
-
-.youtube::before {
-  font-family: unicons;
-  content: "\ec06  ";
-}
-
-.steam::before {
-  font-family: unicons;
-  content: "\e9a5  ";
-}
-
-.discord::before {
-  font-family: unicons;
-  content: "\ec8f  ";
 }
 
 .discord:hover {
@@ -1029,21 +989,6 @@ meter::-webkit-meter-optimum-value {
 
 .bitcoin:hover {
   cursor: url("../images/pointer.webp"), pointer;
-}
-
-.bitcoin::before {
-  font-family: unicons;
-  content: "\e8c3  ";
-}
-
-.paypal::before {
-  font-family: unicons;
-  content: "\ec14  ";
-}
-
-.eth::before {
-  font-family: unicons;
-  content: "\e982  ";
 }
 
 /* BOTTOM FOOTER */
@@ -2041,5 +1986,94 @@ footer a {
 
 .center-text {
   text-align: center;
+}
+
+.dev-menu {
+  display: block;
+  position: fixed;
+  top: -50vh;
+  right: 1vw;
+  z-index: 100;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
+  border-radius: 20px;
+  border-color: #4c61f5;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1rem;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dev-menu a {
+  text-decoration: none;
+  color: #737DFE;
+  font-weight: 700;
+}
+
+.dev-menu span {
+  color: #cfcece;
+}
+
+.dev-menu h3 {
+  text-align: center;
+}
+
+@-webkit-keyframes devmenudown {
+  from {
+    top: 11vh;
+    opacity: 1;
+  }
+  to {
+    top: -50vh;
+    opacity: 0;
+  }
+}
+
+@keyframes devmenudown {
+  from {
+    top: 11vh;
+    opacity: 1;
+  }
+  to {
+    top: -50vh;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes devmenuup {
+  from {
+    top: -50vh;
+    opacity: 0;
+  }
+  to {
+    top: 11vh;
+    opacity: 1;
+  }
+}
+
+@keyframes devmenuup {
+  from {
+    top: -50vh;
+    opacity: 0;
+  }
+  to {
+    top: 11vh;
+    opacity: 1;
+  }
+}
+
+.dev-anim-down {
+  -webkit-animation: devmenudown 1s forwards;
+          animation: devmenudown 1s forwards;
+}
+
+.dev-anim-up {
+  -webkit-animation: devmenuup 1s forwards;
+          animation: devmenuup 1s forwards;
 }
 /*# sourceMappingURL=style.css.map */
