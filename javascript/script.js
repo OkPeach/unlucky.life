@@ -556,3 +556,29 @@ function clearNotes() {
   localStorage.clear("notes");
   document.getElementById("textArea").value = "";
 }
+
+function openNotes() {
+  notes = document.getElementById("notes");
+    if (!opennotes) {
+      var note = localStorage.getItem('notes');
+      if(localStorage.getItem("notes") === null){
+        var noteReplaced = "";
+      }
+      else {
+        var noteReplaced = note.replaceAll("\"", "");
+      }
+
+      document.getElementById("textArea").value = noteReplaced;
+      notes.style.opacity = "1";
+      notes.style.zIndex = "100";
+      opennotes = true;
+      console.log('Notes opened!')
+    }
+    else {
+      document.getElementById("textArea").value = "";
+      notes.style.opacity = "0";
+      notes.style.zIndex = "-1";
+      opennotes = false;
+      console.log('Notes closed!')
+    }
+}
