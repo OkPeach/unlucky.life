@@ -2,3 +2,4 @@
 2. Make changes to the info card ✔️
 3. Change the shown projects ✔️
 ?4. Bubble acting weird on smaller monitor sizes?
+5. Add notes saving and loading/clearing
