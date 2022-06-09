@@ -37,6 +37,10 @@ html {
   cursor:         grab;
 }
 
+.text-cursor {
+  cursor: url("../images/text.png"), text;
+}
+
 /* BODY */
 body {
   color: white;
@@ -1673,7 +1677,7 @@ footer {
 .notes {
   display: block;
   position: fixed;
-  top: 80vh;
+  top: 40vh;
   left: 1vw;
   z-index: 100;
   opacity: 0;
@@ -1708,10 +1712,13 @@ footer {
 }
 
 .notes textarea {
-  color: $lighteroffwhite;
+  color: $white;
   margin: 0.5rem;
   background: $ter-gradient;
   border-color: $textBlue;
+  padding: 0.2rem;
+  cursor: url("../images/text.png"), text;
+  caret-color: $white;
 }
 
 .notes h3 {
@@ -1723,4 +1730,54 @@ footer {
 .notesheader svg{
   width: 1rem;
   height: 1rem;
+}
+
+.save-button{
+  backface-visibility: hidden;
+  transform:translate3d(0,0,0);
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  color: $lime-green;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px $black;
+
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.button-menu {
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.save-button:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em $lime-green;
+  transform: translateY(-0.25em);
+}
+
+.clear-button{
+  backface-visibility: hidden;
+  transform:translate3d(0,0,0);
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  color: $red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px $black;
+
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.clear-button:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em $red;
+  transform: translateY(-0.25em);
 }

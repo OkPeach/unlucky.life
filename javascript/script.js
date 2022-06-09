@@ -4,6 +4,8 @@ const logo = document.querySelectorAll("#logo path");
 var stored = localStorage.getItem('last-css') || 'styles/style.css';
 var cookies = localStorage.getItem('cookies-closed') || 'false';
 
+var note = localStorage.getItem('notes');
+
 const sections = document.querySelectorAll("section");
 const bubble = document.querySelector(".bubble");
 
@@ -469,12 +471,22 @@ $(document).keyup(function(event) {
   if (event.which === 78) {
     notes = document.getElementById("notes");
     if (!opennotes) {
+      var note = localStorage.getItem('notes');
+      if(localStorage.getItem("notes") === null){
+        var noteReplaced = "";
+      }
+      else {
+        var noteReplaced = note.replaceAll("\"", "");
+      }
+
+      document.getElementById("textArea").value = noteReplaced;
       notes.style.opacity = "1";
       notes.style.zIndex = "100";
       opennotes = true;
       console.log('Notes opened!')
     }
     else {
+      document.getElementById("textArea").value = "";
       notes.style.opacity = "0";
       notes.style.zIndex = "-1";
       opennotes = false;
@@ -533,4 +545,14 @@ function hideNotes() {
   notes.style.opacity = "0";
   notes.style.zIndex = "-1";
   opennotes = false;
+}
+
+function saveNotes() {
+  text = document.getElementById("textArea").value;
+  localStorage['notes'] = JSON.stringify(text);
+}
+
+function clearNotes() {
+  localStorage.clear("notes");
+  document.getElementById("textArea").value = "";
 }

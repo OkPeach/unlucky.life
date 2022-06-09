@@ -144,7 +144,12 @@
             </svg>
         </div>
         <h3>Notes</h3>
-        <textarea name="myNotes" id="textArea" placeholder="Write your notes here" cols="50" rows="15" minlength="10" maxlength="500"></textarea>
+        <textarea name="myNotes" id="textArea" class="text-cursor" placeholder="Write your notes here" cols="50" rows="15" minlength="10" maxlength="500"></textarea><br>
+        <div class="button-menu">
+            <button class="save-button pointer" onclick="saveNotes()">Save</button>
+            <button class="clear-button pointer" onclick="clearNotes()">Clear</button>
+        </div>
+        
     </div>
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">

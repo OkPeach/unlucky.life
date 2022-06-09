@@ -188,6 +188,10 @@ html {
   cursor: grab;
 }
 
+.text-cursor {
+  cursor: url("../images/text.png"), text;
+}
+
 /* BODY */
 body {
   color: white;
@@ -2087,7 +2091,7 @@ footer a {
 .notes {
   display: block;
   position: fixed;
-  top: 80vh;
+  top: 40vh;
   left: 1vw;
   z-index: 100;
   opacity: 0;
@@ -2123,10 +2127,13 @@ footer a {
 }
 
 .notes textarea {
-  color: #cfcece;
+  color: white;
   margin: 0.5rem;
   background: linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%);
   border-color: #4c61f5;
+  padding: 0.2rem;
+  cursor: url("../images/text.png"), text;
+  caret-color: white;
 }
 
 .notes h3 {
@@ -2138,5 +2145,67 @@ footer a {
 .notesheader svg {
   width: 1rem;
   height: 1rem;
+}
+
+.save-button {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  color: #32CD32;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px black;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.button-menu {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.save-button:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #32CD32;
+          box-shadow: 0 0.5em 0.5em -0.4em #32CD32;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+.clear-button {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 5px 7px 10px black;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.clear-button:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em red;
+          box-shadow: 0 0.5em 0.5em -0.4em red;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
 }
 /*# sourceMappingURL=style.css.map */
