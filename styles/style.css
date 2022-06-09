@@ -2093,7 +2093,7 @@ footer a {
   position: fixed;
   top: 40vh;
   left: 1vw;
-  z-index: 100;
+  z-index: -1;
   opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
