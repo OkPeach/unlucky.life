@@ -792,7 +792,7 @@ meter::-webkit-meter-optimum-value {
   color: #FFCAC9;
 }
 
-.interests {
+.interests-wrapper {
   margin-top: 10px;
 }
 
@@ -802,7 +802,8 @@ meter::-webkit-meter-optimum-value {
 }
 
 .interests_item {
-  padding: 0 15px;
+  padding: 0 0.75rem 0 0.75rem;
+  text-align: center;
   margin-right: 5px;
   line-height: 35px;
   background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
