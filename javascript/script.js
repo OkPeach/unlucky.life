@@ -284,6 +284,8 @@ $(window).on('load', function () {
     $("#line5").addClass("lineanimation");
     $("#line6").addClass("lineanimation");
     $("#line7").addClass("lineanimation");
+    $("#line8").addClass("clineanimation");
+    $("#line9").addClass("clineanimation");
 
     $("#mainNav").addClass("headeranim");
     $("#header").addClass("headeranim");

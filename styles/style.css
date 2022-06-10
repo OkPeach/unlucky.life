@@ -2208,4 +2208,54 @@ footer a {
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
 }
+
+.clineanimation {
+  -webkit-animation: contactlines 0.75s forwards;
+          animation: contactlines 0.75s forwards;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@-webkit-keyframes contactlines {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+@keyframes contactlines {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+.here {
+  font-size: 1.2rem;
+  color: #737DFE;
+  list-style: none;
+  text-decoration: none;
+  text-shadow: 5px 7px 10px black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.here:hover {
+  color: #bf7aff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bolder;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */
