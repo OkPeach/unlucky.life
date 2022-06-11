@@ -185,6 +185,12 @@
   font-size: 1.5rem;
 }
 
+.notification::before {
+  font-family: unicons;
+  content: "\ebdb";
+  font-size: 1.5rem;
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");
@@ -2373,11 +2379,13 @@ footer a {
   display: inline-flex;
   border-top: 2px solid;
   border-top-color: black;
+  text-align: center;
 }
 
 .windows-item {
   height: 100%;
   padding: 0.5rem;
+  text-align: center;
 }
 
 .windows-item:hover {
@@ -2578,5 +2586,17 @@ footer a {
 .windows-close-animation {
   -webkit-animation: windows-close 0.5s forwards;
           animation: windows-close 0.5s forwards;
+}
+
+.time-item {
+  margin: 0 0 0 auto;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.hide-taskbar {
+  border-left: #fff solid 1px;
+  background-color: rgba(189, 189, 189, 0.1);
+  width: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
