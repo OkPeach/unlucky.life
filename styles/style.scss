@@ -1903,6 +1903,8 @@ footer {
   height: 100%;
   padding: 0.5rem;
   text-align: center;
+  border-bottom: 3px solid;
+  border-bottom-color: transparent;
 }
 
 .windows-item:hover {
@@ -2010,14 +2012,29 @@ footer {
   animation: windows-close 0.5s forwards;
 }
 
-.time-item {
-  margin: 0 0 0 auto;
+.text-font-size {
   text-align: center;
   font-size: 0.8rem;
+}
+
+.move-icons-left {
+  margin: 0 0 0 auto;
+}
+
+.inside-icon {
+  transform: translateY(40%);
 }
 
 .hide-taskbar {
   border-left: #fff solid 1px;
   background-color: $offwhite-alpha2;
-  width: 0.5rem;
+  padding: 0.2rem;
+}
+
+.wifi {
+  transform: translateY(20%);
+}
+
+.up-arrow {
+  transform: translateY(20%);
 }

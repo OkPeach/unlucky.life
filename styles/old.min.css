@@ -615,6 +615,8 @@ meter::-webkit-meter-optimum-value {
   .windows-item {
     height: 100%;
     padding: 0.5rem;
+    border-bottom: 3px solid;
+    border-bottom-color: transparent;
   }
   
   .windows-item:hover {
@@ -847,16 +849,34 @@ meter::-webkit-meter-optimum-value {
             animation: windows-close 0.5s forwards;
   }
 
-  .time-item {
-    margin: 0 0 0 auto;
+  .text-font-size {
     text-align: center;
     font-size: 0.8rem;
+  }
+  
+  .move-icons-left {
+    margin: 0 0 0 auto;
+  }
+  
+  .inside-icon {
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
   }
   
   .hide-taskbar {
     border-left: #fff solid 1px;
     background-color: rgba(189, 189, 189, 0.1);
-    width: 0.5rem;
+    padding: 0.2rem;
+  }
+  
+  .wifi {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  
+  .up-arrow {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
   }
 
   .notification::before {
@@ -864,3 +884,10 @@ meter::-webkit-meter-optimum-value {
     content: "\ebdb";
     font-size: 1.5rem;
   }
+
+  .wifi::before {
+    font-family: unicons;
+    content: "\e97f";
+    font-size: 1rem;
+  }
+  

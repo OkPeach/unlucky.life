@@ -134,6 +134,7 @@ function analytics() {
     "https://api.ipdata.co/?api-key=" + deB.toString(CryptoJS.enc.Utf8),
     function( json ) {
       document.getElementById("visits").innerHTML = 'Visits (today): ' + json.count;
+      document.getElementById("language").innerHTML = json.country_code;
     }
   );
 }
@@ -491,7 +492,9 @@ function openNotes() {
       
       $("#notes").removeClass('notes-close-animation');
       $("#notes").addClass("notes-open-animation");
-      $("#notes").css({ top: '36vh' });
+      $("#notes").css({ top: '36vh', });
+      $("#notes-item").css("background-color", "rgba(189, 189, 189, 0.327)");
+      $("#notes-item").css("border-bottom-color", "#4c61f5");
       setTimeout(() => { $("#notes").removeClass('notes-open-animation'); }, 550);
 
       opennotes = true;
@@ -499,6 +502,8 @@ function openNotes() {
     }
     else {
       $("#notes").addClass('notes-close-animation');
+      $("#notes-item").css("background-color", "transparent");
+      $("#notes-item").css("border-bottom-color", "transparent");
       document.getElementById("textArea").value = "";
       opennotes = false;
       console.log('Notes closed!')
@@ -537,12 +542,16 @@ function openEncoder() {
       $("#encoder").removeClass('encoder-close-animation');
       $("#encoder").addClass("encoder-open-animation");
       $("#encoder").css({ top: '12vh' });
+      $("#encoder-item").css("background-color", "rgba(189, 189, 189, 0.327)");
+      $("#encoder-item").css("border-bottom-color", "#4c61f5");
       setTimeout(() => { $("#encoder").removeClass('encoder-open-animation'); }, 550);
       openencoder = true;
       console.log('Encoder opened!')
     }
     else {
       $("#encoder").addClass("encoder-close-animation");
+      $("#encoder-item").css("background-color", "transparent");
+      $("#encoder-item").css("border-bottom-color", "transparent");
       openencoder = false;
       console.log('Encoder closed!')
     }
@@ -553,12 +562,16 @@ function openDev() {
   if (!openmenu) {
     devmenu.removeClass('dev-anim-down');
     devmenu.addClass('dev-anim-up');
+    $("#dev-item").css("background-color", "rgba(189, 189, 189, 0.327)");
+    $("#dev-item").css("border-bottom-color", "#4c61f5");
     openmenu = true;
     console.log('Dev menu opened')
   }
   else {
     devmenu.removeClass('dev-anim-up');
     devmenu.addClass('dev-anim-down');
+    $("#dev-item").css("background-color", "transparent");
+    $("#dev-item").css("border-bottom-color", "transparent");
     openmenu = false;
     console.log('Dev menu closed')
   }

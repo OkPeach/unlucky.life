@@ -169,12 +169,15 @@
     </div>
 
     <div class="windows-bar">
-        <div class="windows-item" onclick="openDev()" title="Menu"><p class="windows"></p></div>
-        <div class="windows-item" onclick="openNotes()" title="Notes app"><p class="notepad"></p></div>
-        <div class="windows-item" onclick="openEncoder()" title="Encoder app"><p class="encodeapp"></p></div>
+        <div class="windows-item" id="dev-item" onclick="openDev()" title="Menu"><p class="windows"></p></div>
+        <div class="windows-item" id="notes-item" onclick="openNotes()" title="Notes app"><p class="notepad"></p></div>
+        <div class="windows-item" id="encoder-item" onclick="openEncoder()" title="Encoder app"><p class="encodeapp"></p></div>
         <div class="windows-item" onclick="switchTheme()" title="Theme switch"><p class="theme"></p></div>
         <div class="windows-item" onclick="switchCookies()" title="Cookies switch"><p class="cookiesapp"></p></div>
-        <div class="windows-item time-item"><p class="time" id="time"></p><p id="date"></p></div>
+        <div class="windows-item move-icons-left"><p class="up-arrow">˄</p></div>
+        <div class="windows-item"><p class="wifi"></p></div>
+        <div class="windows-item text-font-size"><p id="language" class="inside-icon">EN</p></div>
+        <div class="windows-item text-font-size"><p class="time" id="time"></p><p id="date"></p></div>
         <div class="windows-item" title="notification"><p class="notification"></p></div>
         <div class="windows-item hide-taskbar" onclick="hideTaskbar()"></div>
     </div>

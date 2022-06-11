@@ -192,6 +192,12 @@
   font-size: 1.5rem;
 }
 
+.wifi::before {
+  font-family: unicons;
+  content: "\e97f";
+  font-size: 1rem;
+}
+
 @font-face {
   font-family: "unicons";
   src: url("../other/unicons.ttf");
