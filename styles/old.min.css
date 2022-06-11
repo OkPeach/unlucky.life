@@ -356,22 +356,14 @@ meter::-webkit-meter-optimum-value {
   }
   
   .dev-anim-down {
-    -webkit-animation: devmenudown 0.5s forwards;
-            animation: devmenudown 0.5s forwards;
+    -webkit-animation: devmenudown 0.4s forwards;
+            animation: devmenudown 0.4s forwards;
   }
   
   .dev-anim-up {
-    -webkit-animation: devmenuup 0.5s forwards;
-            animation: devmenuup 0.5s forwards;
+    -webkit-animation: devmenuup 0.2s forwards;
+            animation: devmenuup 0.2s forwards;
   }
-.dev-anim-down {
-    -webkit-animation: devmenudown 1s forwards;
-    animation: devmenudown 1s forwards;
-}
-.dev-anim-up {
-    -webkit-animation: devmenuup 1s forwards;
-    animation: devmenuup 1s forwards;
-}
 .dev-menu h3 {
     text-align: center;
 }
@@ -616,8 +608,8 @@ meter::-webkit-meter-optimum-value {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    border-top: 2px solid;
-    border-top-color: black;
+    border-top: 1px solid;
+    border-top-color: rgba(189, 189, 189, 0.1);
   }
   
   .windows-item {

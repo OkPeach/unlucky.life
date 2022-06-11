@@ -1667,11 +1667,11 @@ footer {
 }
 
 .dev-anim-down{
-  animation: devmenudown 0.5s forwards;
+  animation: devmenudown 0.4s forwards;
 }
 
 .dev-anim-up{
-  animation: devmenuup 0.5s forwards;
+  animation: devmenuup 0.2s forwards;
 }
 
 .notes {
@@ -1894,8 +1894,8 @@ footer {
   background: $ter-gradient;
   z-index: 10;
   display: inline-flex;
-  border-top: 2px solid;
-  border-top-color: $black;
+  border-top: 1px solid;
+  border-top-color: $offwhite-alpha2;
   text-align: center;
 }
 
