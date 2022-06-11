@@ -409,7 +409,7 @@ gsap.to(fuse, {
   ease: Power0.easeNone,
 });
 
-open = false;
+openmenu = false;
 opennotes = false;
 openencoder = false;
 opentaskbar = false;
@@ -550,16 +550,16 @@ function openEncoder() {
 
 function openDev() {
   devmenu = $(".dev-menu");
-  if (!open) {
+  if (!openmenu) {
     devmenu.removeClass('dev-anim-down');
     devmenu.addClass('dev-anim-up');
-    open = true;
+    openmenu = true;
     console.log('Dev menu opened')
   }
   else {
     devmenu.removeClass('dev-anim-up');
     devmenu.addClass('dev-anim-down');
-    open = false;
+    openmenu = false;
     console.log('Dev menu closed')
   }
 }
@@ -633,16 +633,16 @@ $(document).keyup(function(event) {
   //W Keypress
   if (event.which === 87) {
     devmenu = $(".windows-bar");
-  if (!open) {
+  if (!opentaskbar) {
     devmenu.removeClass('windows-close-animation');
     devmenu.addClass('windows-open-animation');
-    open = true;
+    opentaskbar = true;
     console.log('Windows bar opened')
   }
   else {
     devmenu.removeClass('windows-open-animation');
     devmenu.addClass('windows-close-animation');
-    open = false;
+    opentaskbar = false;
     console.log('Windows bar closed')
   }
   }
@@ -686,8 +686,9 @@ function getDate() {
   document.getElementById('date').innerHTML = today;
 }
 
-function hideNotes() {
-  devmenu.addClass('windows-close-animation');
-  open = false;
-  console.log('Windows bar closed')
+function hideTaskbar() {
+  devmenu.removeClass('windows-open-animation');
+    devmenu.addClass('windows-close-animation');
+    opentaskbar = false;
+    console.log('Windows bar closed')
 }
