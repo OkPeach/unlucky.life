@@ -632,16 +632,16 @@ $(document).keyup(function(event) {
 
   //W Keypress
   if (event.which === 87) {
-    devmenu = $(".windows-bar");
+    taskbar = $(".windows-bar");
   if (!opentaskbar) {
-    devmenu.removeClass('windows-close-animation');
-    devmenu.addClass('windows-open-animation');
+    taskbar.removeClass('windows-close-animation');
+    taskbar.addClass('windows-open-animation');
     opentaskbar = true;
     console.log('Windows bar opened')
   }
   else {
-    devmenu.removeClass('windows-open-animation');
-    devmenu.addClass('windows-close-animation');
+    taskbar.removeClass('windows-open-animation');
+    taskbar.addClass('windows-close-animation');
     opentaskbar = false;
     console.log('Windows bar closed')
   }
@@ -687,8 +687,8 @@ function getDate() {
 }
 
 function hideTaskbar() {
-  devmenu.removeClass('windows-open-animation');
-    devmenu.addClass('windows-close-animation');
+    taskbar.removeClass('windows-open-animation');
+    taskbar.addClass('windows-close-animation');
     opentaskbar = false;
     console.log('Windows bar closed')
 }
