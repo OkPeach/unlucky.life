@@ -854,3 +854,21 @@ meter::-webkit-meter-optimum-value {
     -webkit-animation: windows-close 0.5s forwards;
             animation: windows-close 0.5s forwards;
   }
+
+  .time-item {
+    margin: 0 0 0 auto;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  .hide-taskbar {
+    border-left: #fff solid 1px;
+    background-color: rgba(189, 189, 189, 0.1);
+    width: 0.5rem;
+  }
+
+  .notification::before {
+    font-family: unicons;
+    content: "\ebdb";
+    font-size: 1.5rem;
+  }
