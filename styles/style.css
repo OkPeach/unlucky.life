@@ -2071,7 +2071,7 @@ footer a {
 
 @-webkit-keyframes devmenudown {
   from {
-    top: 79vh;
+    top: 77vh;
     opacity: 1;
   }
   to {
@@ -2082,7 +2082,7 @@ footer a {
 
 @keyframes devmenudown {
   from {
-    top: 79vh;
+    top: 77vh;
     opacity: 1;
   }
   to {
@@ -2097,7 +2097,7 @@ footer a {
     opacity: 0;
   }
   to {
-    top: 79vh;
+    top: 77vh;
     opacity: 1;
   }
 }
@@ -2108,7 +2108,7 @@ footer a {
     opacity: 0;
   }
   to {
-    top: 79vh;
+    top: 77vh;
     opacity: 1;
   }
 }

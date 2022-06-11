@@ -313,7 +313,7 @@ meter::-webkit-meter-optimum-value {
 }
 @-webkit-keyframes devmenudown {
     from {
-      top: 79vh;
+      top: 77vh;
       opacity: 1;
     }
     to {
@@ -324,7 +324,7 @@ meter::-webkit-meter-optimum-value {
   
   @keyframes devmenudown {
     from {
-      top: 79vh;
+      top: 77vh;
       opacity: 1;
     }
     to {
@@ -339,7 +339,7 @@ meter::-webkit-meter-optimum-value {
       opacity: 0;
     }
     to {
-      top: 79vh;
+      top: 77vh;
       opacity: 1;
     }
   }
@@ -350,7 +350,7 @@ meter::-webkit-meter-optimum-value {
       opacity: 0;
     }
     to {
-      top: 79vh;
+      top: 77vh;
       opacity: 1;
     }
   }
