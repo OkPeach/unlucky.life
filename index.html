@@ -135,9 +135,10 @@
         <span><a>P</a> - open/close dev menu</span><br>
         <span><a>O</a> - restart cookies</span><br>
         <span><a>I</a> - toggle style button</span><br>
-        <span><a>N</a> - notes</span><br>
-        <span><a>E</a> - encode/decode</span><br>
-        <span><a>W</a> - toggle taskbar</span>
+        <span><a>N</a> - notes app</span><br>
+        <span><a>E</a> - encode/decode app</span><br>
+        <span><a>W</a> - toggle taskbar</span><br>
+        <span><a>X</a> - IP app</span>
     </div>
     <div class="notes" id="notes">
         <div class="notesheader drag" id="notesheader">
@@ -168,15 +169,21 @@
         </div>
     </div>
 
+    <div class="ip-menu">
+        <p id="ip">127.0.0.1</p>
+        <p id="state">nowhere</p>
+        <p id="city">here</p>
+    </div>
+
     <div class="windows-bar">
         <div class="windows-item pointer" id="dev-item" onclick="openDev()" title="Menu"><p class="windows"></p></div>
         <div class="windows-item pointer" id="notes-item" onclick="openNotes()" title="Notes app"><p class="notepad"></p></div>
         <div class="windows-item pointer" id="encoder-item" onclick="openEncoder()" title="Encoder app"><p class="encodeapp"></p></div>
         <div class="windows-item pointer" onclick="switchTheme()" title="Theme switch"><p class="theme"></p></div>
         <div class="windows-item pointer" onclick="switchCookies()" title="Cookies switch"><p class="cookiesapp"></p></div>
-        <div class="windows-item move-icons-left pointer"><p class="up-arrow">˄</p></div>
-        <div class="windows-item pointer"><p class="wifi"></p></div>
-        <div class="windows-item text-font-size pointer"><p id="language" class="inside-icon">EN</p></div>
+        <div class="windows-item move-icons-left"><p class="up-arrow">˄</p></div>
+        <div class="windows-item"><p class="wifi"></p></div>
+        <div class="windows-item text-font-size pointer" id="ip-item" onclick="openIP()"><p id="language" class="inside-icon">EN</p></div>
         <div class="windows-item text-font-size"><p class="time" id="time"></p><p id="date"></p></div>
         <div class="windows-item pointer" title="notification"><p class="notification"></p></div>
         <div class="windows-item hide-taskbar pointer" onclick="hideTaskbar()"></div>

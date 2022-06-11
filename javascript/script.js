@@ -135,6 +135,9 @@ function analytics() {
     function( json ) {
       document.getElementById("visits").innerHTML = 'Visits (today): ' + json.count;
       document.getElementById("language").innerHTML = json.country_code;
+      document.getElementById("ip").innerHTML = 'IP: ' + json.ip;
+      document.getElementById("state").innerHTML = 'State: ' + json.country_name;
+      document.getElementById("city").innerHTML = 'City: ' + json.city;
     }
   );
 }
@@ -414,6 +417,7 @@ openmenu = false;
 opennotes = false;
 openencoder = false;
 opentaskbar = false;
+openip = false;
 
 //Draggable DIV script by w3schools https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
@@ -577,6 +581,26 @@ function openDev() {
   }
 }
 
+function openIP() {
+  ipmenu = $(".ip-menu");
+  if (!openip) {
+    ipmenu.removeClass('ip-close-animation');
+    ipmenu.addClass('ip-open-animation');
+    $("#ip-item").css("background-color", "rgba(189, 189, 189, 0.327)");
+    $("#ip-item").css("border-bottom-color", "#4c61f5");
+    openip = true;
+    console.log('IP app opened')
+  }
+  else {
+    ipmenu.removeClass('ip-open-animation');
+    ipmenu.addClass('ip-close-animation');
+    $("#dev-item").css("background-color", "transparent");
+    $("#dev-item").css("border-bottom-color", "transparent");
+    openip = false;
+    console.log('IP app closed')
+  }
+}
+
 function switchCookies() {
   var isaccepted = cookies.replaceAll("\"", "");
   
@@ -636,6 +660,11 @@ $(document).keyup(function(event) {
   //N Keypress
   if (event.which === 78) {
     openNotes();
+  }
+
+  //X Keypress
+  if (event.which === 88) {
+    openIP();
   }
 
   //E Keypress

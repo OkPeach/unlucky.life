@@ -1646,7 +1646,7 @@ footer {
 
 @keyframes devmenudown {
   from {
-    top: 77vh;
+    top: 75vh;
     opacity: 1;
   }
   to {
@@ -1661,7 +1661,7 @@ footer {
     opacity: 0;
   }
   to {
-    top: 77vh;
+    top: 75vh;
     opacity: 1;
   }
 }
@@ -2037,4 +2037,53 @@ footer {
 
 .up-arrow {
   transform: translateY(20%);
+}
+
+.ip-menu {
+  display: block;
+  position: fixed;
+  top: 110vh;
+  z-index: 9;
+  opacity: 0;
+  right: 5rem;
+
+  user-select: none;
+  background: $ter-gradient;
+  //border-radius: 20px;
+  border-color: $textBlue;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1rem;
+
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes ip-close {
+  from {
+    top: 86vh;
+    opacity: 1;
+  }
+  to {
+    top: 110vh;
+    opacity: 0;
+  }
+}
+
+@keyframes ip-open {
+  from {
+    top: 110vh;
+    opacity: 0;
+  }
+  to {
+    top: 86vh;
+    opacity: 1;
+  }
+}
+
+.ip-close-animation{
+  animation: ip-close 0.4s forwards;
+}
+
+.ip-open-animation{
+  animation: ip-open 0.2s forwards;
 }

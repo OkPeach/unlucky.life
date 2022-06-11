@@ -303,57 +303,60 @@ meter::-webkit-meter-optimum-value {
     -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
 }
+
 .dev-menu a {
     text-decoration: none;
     color: #737dfe;
     font-weight: 700;
 }
+
 .dev-menu span {
     color: #cfcece;
 }
+
 @-webkit-keyframes devmenudown {
-    from {
-      top: 77vh;
-      opacity: 1;
-    }
-    to {
-      top: 110vh;
-      opacity: 0;
-    }
+  from {
+    top: 75vh;
+    opacity: 1;
   }
-  
-  @keyframes devmenudown {
-    from {
-      top: 77vh;
-      opacity: 1;
-    }
-    to {
-      top: 110vh;
-      opacity: 0;
-    }
+  to {
+    top: 110vh;
+    opacity: 0;
   }
-  
-  @-webkit-keyframes devmenuup {
-    from {
-      top: 110vh;
-      opacity: 0;
-    }
-    to {
-      top: 77vh;
-      opacity: 1;
-    }
+}
+
+@keyframes devmenudown {
+  from {
+    top: 75vh;
+    opacity: 1;
   }
-  
-  @keyframes devmenuup {
-    from {
-      top: 110vh;
-      opacity: 0;
-    }
-    to {
-      top: 77vh;
-      opacity: 1;
-    }
+  to {
+    top: 110vh;
+    opacity: 0;
   }
+}
+
+@-webkit-keyframes devmenuup {
+  from {
+    top: 110vh;
+    opacity: 0;
+  }
+  to {
+    top: 75vh;
+    opacity: 1;
+  }
+}
+
+@keyframes devmenuup {
+  from {
+    top: 110vh;
+    opacity: 0;
+  }
+  to {
+    top: 75vh;
+    opacity: 1;
+  }
+}
   
   .dev-anim-down {
     -webkit-animation: devmenudown 0.4s forwards;
@@ -891,3 +894,77 @@ meter::-webkit-meter-optimum-value {
     font-size: 1rem;
   }
   
+  
+.ip-menu {
+  display: block;
+  position: fixed;
+  top: 110vh;
+  z-index: 9;
+  opacity: 0;
+  right: 5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: #303134;
+  border-color: #4c61f5;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1rem;
+  -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes ip-close {
+  from {
+    top: 86vh;
+    opacity: 1;
+  }
+  to {
+    top: 110vh;
+    opacity: 0;
+  }
+}
+
+@keyframes ip-close {
+  from {
+    top: 86vh;
+    opacity: 1;
+  }
+  to {
+    top: 110vh;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ip-open {
+  from {
+    top: 110vh;
+    opacity: 0;
+  }
+  to {
+    top: 86vh;
+    opacity: 1;
+  }
+}
+
+@keyframes ip-open {
+  from {
+    top: 110vh;
+    opacity: 0;
+  }
+  to {
+    top: 86vh;
+    opacity: 1;
+  }
+}
+
+.ip-close-animation {
+  -webkit-animation: ip-close 0.4s forwards;
+          animation: ip-close 0.4s forwards;
+}
+
+.ip-open-animation {
+  -webkit-animation: ip-open 0.2s forwards;
+          animation: ip-open 0.2s forwards;
+}
