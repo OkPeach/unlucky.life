@@ -1678,7 +1678,7 @@ footer {
 .notes {
   display: block;
   position: fixed;
-  top: 40vh;
+  top: 47vh;
   left: 1vw;
   z-index: -1;
   opacity: 0;
@@ -1821,4 +1821,68 @@ footer {
 
 .tyna {
   color: $offwhite;
+}
+
+.encoder {
+  display: block;
+  position: fixed;
+  top: 22vh;
+  left: 1vw;
+  z-index: -1;
+  opacity: 0;
+
+  user-select: none;
+  background: $ter-gradient;
+  border-radius: 20px;
+  border-color: $textBlue;
+  border-width: 1px;
+  border-style: solid;
+  //padding: 1rem;
+
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.encoderheader {
+  width: 100%;
+  height: 1.5rem;
+  background: $sec-gradient; 
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-color: $textBlue;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.2rem 1rem;
+}
+
+.encoder a {
+  text-decoration: none;
+  color: $purple-blue;
+  font-weight: 700;
+}
+
+.encoder h3 {
+  margin: 0.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.encoder svg{
+  width: 1rem;
+  height: 1rem;
+}
+
+.encode-button-menu {
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.encoder textarea {
+  color: $white;
+  margin: 0.5rem;
+  background: $ter-gradient;
+  border-color: $textBlue;
+  padding: 0.2rem;
+  cursor: url("../images/text.png"), text;
+  caret-color: $white;
 }

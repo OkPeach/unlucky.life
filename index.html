@@ -134,8 +134,9 @@
         <h3>DEV MENU</h3>
         <span><a>P</a> - open/close dev menu</span><br>
         <span><a>O</a> - restart cookies</span><br>
-        <span><a>I</a> - toggle style button</span>
-        <span><a>N</a> - Notes</span>
+        <span><a>I</a> - toggle style button</span><br>
+        <span><a>N</a> - notes</span>
+        <span><a>E</a> - encode/decode</span>
     </div>
     <div class="notes" id="notes">
         <div class="notesheader drag" id="notesheader">
@@ -149,8 +150,23 @@
             <button class="save-button pointer" onclick="saveNotes()">Save</button>
             <button class="clear-button pointer" onclick="clearNotes()">Clear</button>
         </div>
-        
     </div>
+
+    <div class="encoder" id="encoder">
+        <div class="encoderheader drag" id="encoderheader">
+            <svg class="pointer" onclick="hideEncoder()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+                <path style="fill:#FF6465;" d="M384.955,256l120.28-120.28c9.019-9.019,9.019-23.642,0-32.66L408.94,6.765  c-9.019-9.019-23.642-9.019-32.66,0l-120.28,120.28L135.718,6.765c-9.019-9.019-23.642-9.019-32.66,0L6.764,103.058  c-9.019,9.019-9.019,23.642,0,32.66l120.28,120.28L6.764,376.28c-9.019,9.019-9.019,23.642,0,32.66l96.295,96.294  c9.019,9.019,23.642,9.019,32.66,0l120.28-120.28l120.28,120.28c9.019,9.019,23.642,9.019,32.66,0l96.295-96.294  c9.019-9.019,9.019-23.642,0-32.66L384.955,256z"/>
+            </svg>
+        </div>
+        <h3>encode/decode</h3>
+        <textarea id="user-message" placeholder="Enter message here" name="user-message" cols="50" rows="5" minlength="10" maxlength="500"></textarea><br>
+        <p id="generated-message"></p>
+        <div class="encode-button-menu">
+            <button class="save-button pointer" onclick="encode()">Encode</button>
+            <button class="clear-button pointer" onclick="decode()">Decode</button>
+        </div>
+    </div>
+
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -268,6 +284,7 @@
                         <hr id="line6" class="line" data-inviewport="scale-in">
                         <div class="other-p">
                             <p class="peach" data-inviewport="scale-in">• <a href="crypto" class="pointer" title="Click to open">Crypto statistics</a></p>
+                            <p class="peach" data-inviewport="scale-in">• <a onclick="openEncoder()" class="pointer" title="Click to open">Encoding app (E)</a></p>
                             <p class="peach" data-inviewport="scale-in">• <a href="ip" class="pointer" title="Click to open">IP information</a></p>
                             <p class="peach" data-inviewport="scale-in">• <a onclick="openNotes()" class="pointer" title="Click to open">Notes app (N)</a></p>
                             <p class="peach" data-inviewport="scale-in">• <a href="nft" class="pointer" title="Click to open">NFT Gallery</a></p>

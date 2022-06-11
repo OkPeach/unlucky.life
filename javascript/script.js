@@ -411,9 +411,11 @@ gsap.to(fuse, {
 
 open = false;
 opennotes = false;
+openencoder = false;
 
 $(document).keyup(function(event) {
   isFocused = document.getElementById("textArea") === document.activeElement;
+  isFocused = document.getElementById("user-message") === document.activeElement;
   //console.log(document.getElementById("textArea") === document.activeElement)
   if (isFocused == false) {
   //P keypress
@@ -495,12 +497,30 @@ $(document).keyup(function(event) {
       console.log('Notes closed!')
     }
   }
+
+  //E Keypress
+  if (event.which === 69) {
+    encoder = document.getElementById("encoder");
+    if (!openencoder) {
+      encoder.style.opacity = "1";
+      encoder.style.zIndex = "100";
+      openencoder = true;
+      console.log('Encoder opened!')
+    }
+    else {
+      encoder.style.opacity = "0";
+      encoder.style.zIndex = "-1";
+      openencoder = false;
+      console.log('Encoder closed!')
+    }
+  }
 }
 });
 
 //Draggable DIV script by w3schools https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
 dragElement(document.getElementById("notes"));
+dragElement(document.getElementById("encoder"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -582,5 +602,48 @@ function openNotes() {
       notes.style.zIndex = "-1";
       opennotes = false;
       console.log('Notes closed!')
+    }
+}
+
+function encode() {
+  message = $("#user-message");
+  console.log(message[0].value);
+  encodedMessage = btoa(encodeURIComponent(message[0].value));
+  generated = $("#generated-message");
+  $('#user-message').val(encodedMessage);
+  navigator.clipboard.writeText(encodedMessage);
+
+  console.log(encodedMessage);
+}
+
+function decode() {
+  message = $("#user-message");
+  decodedMessage = decodeURIComponent(atob(message[0].value));
+  
+  $('#user-message').val(decodedMessage);
+  navigator.clipboard.writeText(decodedMessage);
+
+  console.log(decodedMessage);
+}
+
+function hideEncoder() {
+  encoder.style.opacity = "0";
+  encoder.style.zIndex = "-1";
+  openencoder = false;
+}
+
+function openEncoder() {
+  encoder = document.getElementById("encoder");
+    if (!openencoder) {
+      encoder.style.opacity = "1";
+      encoder.style.zIndex = "100";
+      openencoder = true;
+      console.log('Encoder opened!')
+    }
+    else {
+      encoder.style.opacity = "0";
+      encoder.style.zIndex = "-1";
+      openencoder = false;
+      console.log('Encoder closed!')
     }
 }
