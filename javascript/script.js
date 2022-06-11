@@ -682,7 +682,7 @@ function getDate() {
     mm = '0' + mm;
   }
 
-  today = mm + '.' + dd + '.' + yyyy;
+  today = dd + '.' + mm + '.' + yyyy;
   document.getElementById('date').innerHTML = today;
 }
 
