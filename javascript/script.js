@@ -412,110 +412,7 @@ gsap.to(fuse, {
 open = false;
 opennotes = false;
 openencoder = false;
-
-$(document).keyup(function(event) {
-  isFocused = document.getElementById("textArea") === document.activeElement;
-  isFocused = document.getElementById("user-message") === document.activeElement;
-  //console.log(document.getElementById("textArea") === document.activeElement)
-  if (isFocused == false) {
-  //P keypress
-  if (event.which === 80) {
-    devmenu = $(".dev-menu");
-    if (!open) {
-      devmenu.removeClass('dev-anim-down');
-      devmenu.addClass('dev-anim-up');
-      open = true;
-      console.log('Dev menu opened')
-    }
-    else {
-      devmenu.removeClass('dev-anim-up');
-      devmenu.addClass('dev-anim-down');
-      open = false;
-      console.log('Dev menu closed')
-    }
-  }
-
-  //O keypress
-  if (event.which === 79) {
-    var isaccepted = cookies.replaceAll("\"", "");
-  
-    if(isaccepted=="true") {
-      var defaultcookie = "false";
-      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
-      console.log('Cookies accepted =' + defaultcookie);
-    }
-    else{
-      var defaultcookie = "true";
-      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
-      console.log('Cookies accepted =' + defaultcookie);
-    }
-  }
-
-  //I keypress
-  if (event.which === 73) {
-    var swcss = document.getElementById("switch-css");
-    buttonState = swcss.getAttribute("checked");
-    if (buttonState == "true") {
-      $('#switch-css').removeAttr("checked");
-      var link = document.getElementById("maincss");
-      link.setAttribute("href", "styles/old.min.css");
-      var oldstyle = "styles/old.min.css";
-      localStorage['last-css'] = JSON.stringify(oldstyle);
-    }
-    else {
-      swcss.setAttribute("checked", "true");
-      var link = document.getElementById("maincss");
-      link.setAttribute("href", "styles/style.css");
-      var newstyle = "styles/style.css";
-      localStorage['last-css'] = JSON.stringify(newstyle);
-    }
-  }
-
-  //N Keypress
-  if (event.which === 78) {
-    notes = document.getElementById("notes");
-    if (!opennotes) {
-      var note = localStorage.getItem('notes');
-      if(localStorage.getItem("notes") === null){
-        var noteReplaced = "";
-      }
-      else {
-        var noteReplaced = note.replaceAll("\"", "");
-      }
-
-      document.getElementById("textArea").value = noteReplaced;
-      notes.style.opacity = "1";
-      notes.style.zIndex = "100";
-      opennotes = true;
-      console.log('Notes opened!')
-    }
-    else {
-      document.getElementById("textArea").value = "";
-      notes.style.opacity = "0";
-      notes.style.zIndex = "-1";
-      opennotes = false;
-      console.log('Notes closed!')
-    }
-  }
-
-  //E Keypress
-  if (event.which === 69) {
-    encoder = document.getElementById("encoder");
-    if (!openencoder) {
-      encoder.style.opacity = "1";
-      encoder.style.zIndex = "100";
-      openencoder = true;
-      console.log('Encoder opened!')
-    }
-    else {
-      encoder.style.opacity = "0";
-      encoder.style.zIndex = "-1";
-      openencoder = false;
-      console.log('Encoder closed!')
-    }
-  }
-}
-});
+opentaskbar = false;
 
 //Draggable DIV script by w3schools https://www.w3schools.com/howto/howto_js_draggable.asp
 // Make the DIV element draggable:
@@ -564,8 +461,7 @@ function dragElement(elmnt) {
 }
 
 function hideNotes() {
-  notes.style.opacity = "0";
-  notes.style.zIndex = "-1";
+  $("#notes").addClass('notes-close-animation');
   opennotes = false;
 }
 
@@ -590,16 +486,20 @@ function openNotes() {
         var noteReplaced = note.replaceAll("\"", "");
       }
 
+      
       document.getElementById("textArea").value = noteReplaced;
-      notes.style.opacity = "1";
-      notes.style.zIndex = "100";
+      
+      $("#notes").removeClass('notes-close-animation');
+      $("#notes").addClass("notes-open-animation");
+      $("#notes").css({ top: '36vh' });
+      setTimeout(() => { $("#notes").removeClass('notes-open-animation'); }, 550);
+
       opennotes = true;
       console.log('Notes opened!')
     }
     else {
+      $("#notes").addClass('notes-close-animation');
       document.getElementById("textArea").value = "";
-      notes.style.opacity = "0";
-      notes.style.zIndex = "-1";
       opennotes = false;
       console.log('Notes closed!')
     }
@@ -627,23 +527,124 @@ function decode() {
 }
 
 function hideEncoder() {
-  encoder.style.opacity = "0";
-  encoder.style.zIndex = "-1";
+  $("#encoder").addClass("encoder-close-animation");
   openencoder = false;
 }
 
 function openEncoder() {
   encoder = document.getElementById("encoder");
     if (!openencoder) {
-      encoder.style.opacity = "1";
-      encoder.style.zIndex = "100";
+      $("#encoder").removeClass('encoder-close-animation');
+      $("#encoder").addClass("encoder-open-animation");
+      $("#encoder").css({ top: '12vh' });
+      setTimeout(() => { $("#encoder").removeClass('encoder-open-animation'); }, 550);
       openencoder = true;
       console.log('Encoder opened!')
     }
     else {
-      encoder.style.opacity = "0";
-      encoder.style.zIndex = "-1";
+      $("#encoder").addClass("encoder-close-animation");
       openencoder = false;
       console.log('Encoder closed!')
     }
 }
+
+function openDev() {
+  devmenu = $(".dev-menu");
+  if (!open) {
+    devmenu.removeClass('dev-anim-down');
+    devmenu.addClass('dev-anim-up');
+    open = true;
+    console.log('Dev menu opened')
+  }
+  else {
+    devmenu.removeClass('dev-anim-up');
+    devmenu.addClass('dev-anim-down');
+    open = false;
+    console.log('Dev menu closed')
+  }
+}
+
+function switchCookies() {
+  var isaccepted = cookies.replaceAll("\"", "");
+  
+    if(isaccepted=="true") {
+      var defaultcookie = "false";
+      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
+      console.log('Cookies accepted =' + defaultcookie);
+    }
+    else{
+      var defaultcookie = "true";
+      localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
+      console.log('Cookies accepted =' + defaultcookie);
+    }
+}
+
+function switchTheme() {
+  var swcss = document.getElementById("switch-css");
+    buttonState = swcss.getAttribute("checked");
+    if (buttonState == "true") {
+      $('#switch-css').removeAttr("checked");
+      var link = document.getElementById("maincss");
+      link.setAttribute("href", "styles/old.min.css");
+      var oldstyle = "styles/old.min.css";
+      localStorage['last-css'] = JSON.stringify(oldstyle);
+    }
+    else {
+      swcss.setAttribute("checked", "true");
+      var link = document.getElementById("maincss");
+      link.setAttribute("href", "styles/style.css");
+      var newstyle = "styles/style.css";
+      localStorage['last-css'] = JSON.stringify(newstyle);
+    }
+}
+
+
+$(document).keyup(function(event) {
+  isFocused = document.getElementById("textArea") === document.activeElement;
+  isFocused = document.getElementById("user-message") === document.activeElement;
+
+  //console.log(document.getElementById("textArea") === document.activeElement)
+  if (isFocused == false) {
+  //P keypress
+  if (event.which === 80) {
+    openDev();
+  }
+
+  //O keypress
+  if (event.which === 79) {
+    switchCookies();
+  }
+
+  //I keypress
+  if (event.which === 73) {
+    switchTheme();
+  }
+
+  //N Keypress
+  if (event.which === 78) {
+    openNotes();
+  }
+
+  //E Keypress
+  if (event.which === 69) {
+    openEncoder();
+  }
+
+  //W Keypress
+  if (event.which === 87) {
+    devmenu = $(".windows-bar");
+  if (!open) {
+    devmenu.removeClass('windows-close-animation');
+    devmenu.addClass('windows-open-animation');
+    open = true;
+    console.log('Windows bar opened')
+  }
+  else {
+    devmenu.removeClass('windows-open-animation');
+    devmenu.addClass('windows-close-animation');
+    open = false;
+    console.log('Windows bar closed')
+  }
+  }
+}
+});

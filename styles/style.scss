@@ -1489,7 +1489,7 @@ footer {
   display: block;
   position: fixed;
   top: 11vh;
-  left: 1vw;
+  right: 1vw;
   z-index: 100;
 
   user-select: none;
@@ -1615,14 +1615,13 @@ footer {
 .dev-menu {
   display: block;
   position: fixed;
-  top: -50vh;
-  right: 1vw;
-  z-index: 100;
+  top: 110vh;
+  z-index: 9;
   opacity: 0;
 
   user-select: none;
   background: $ter-gradient;
-  border-radius: 20px;
+  //border-radius: 20px;
   border-color: $textBlue;
   border-width: 1px;
   border-style: solid;
@@ -1647,41 +1646,41 @@ footer {
 
 @keyframes devmenudown {
   from {
-    top: 11vh;
+    top: 79vh;
     opacity: 1;
   }
   to {
-    top: -50vh;
+    top: 110vh;
     opacity: 0;
   }
 }
 
 @keyframes devmenuup {
   from {
-    top: -50vh;
+    top: 110vh;
     opacity: 0;
   }
   to {
-    top: 11vh;
+    top: 79vh;
     opacity: 1;
   }
 }
 
 .dev-anim-down{
-  animation: devmenudown 1s forwards;
+  animation: devmenudown 0.5s forwards;
 }
 
 .dev-anim-up{
-  animation: devmenuup 1s forwards;
+  animation: devmenuup 0.5s forwards;
 }
 
 .notes {
   display: block;
   position: fixed;
-  top: 47vh;
+  top: 110vh;
   left: 1vw;
-  z-index: -1;
-  opacity: 0;
+  z-index: 9;
+  opacity: 1;
 
   user-select: none;
   background: $ter-gradient;
@@ -1826,10 +1825,10 @@ footer {
 .encoder {
   display: block;
   position: fixed;
-  top: 22vh;
+  top: 110vh;
   left: 1vw;
-  z-index: -1;
-  opacity: 0;
+  z-index: 9;
+  opacity: 1;
 
   user-select: none;
   background: $ter-gradient;
@@ -1885,4 +1884,126 @@ footer {
   padding: 0.2rem;
   cursor: url("../images/text.png"), text;
   caret-color: $white;
+}
+
+.windows-bar {
+  width: 100%;
+  position: fixed;
+  height: 5vh;
+  top: 110vh;
+  background: $ter-gradient;
+  z-index: 10;
+  display: inline-flex;
+  border-top: 2px solid;
+  border-top-color: $black;
+}
+
+.windows-item {
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.windows-item:hover {
+  border-bottom: 3px solid;
+  //color: $lighteroffwhite;
+  background-color: $offwhite-alpha;
+  border-bottom-color: $textBlue;
+}
+
+@keyframes encoder-close {
+  from {
+    top: 12vh;
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    top: 110vh;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+@keyframes encoder-open {
+  from {
+    top: 110vh;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    top: 12vh;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.encoder-open-animation{
+  animation: encoder-open 0.5s forwards;
+}
+
+.encoder-close-animation{
+  animation: encoder-close 0.5s forwards;
+}
+
+@keyframes notes-close {
+  from {
+    top: 36vh;
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    top: 110vh;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+@keyframes notes-open {
+  from {
+    top: 110vh;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    top: 36vh;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.notes-open-animation{
+  animation: notes-open 0.5s forwards;
+}
+
+.notes-close-animation{
+  animation: notes-close 0.5s forwards;
+}
+
+@keyframes windows-close {
+  from {
+    top: 95vh;
+    opacity: 1;
+  }
+  to {
+    top: 110vh;
+    opacity: 0;
+  }
+}
+
+@keyframes windows-open {
+  from {
+    top: 110vh;
+    opacity: 0;
+  }
+  to {
+    top: 95vh;
+    opacity: 1;
+  }
+}
+
+.windows-open-animation{
+  animation: windows-open 0.5s forwards;
+}
+
+.windows-close-animation{
+  animation: windows-close 0.5s forwards;
 }

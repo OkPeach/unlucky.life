@@ -153,3 +153,33 @@
     content: "\ec03  ";
     color: $peach;
   }
+
+  .windows::before {
+    font-family: unicons;
+    content: "\ecb4";
+    font-size: 1.5rem;
+  }
+  
+  .notepad::before {
+    font-family: unicons;
+    content: "\e8fc";
+    font-size: 1.5rem;
+  }
+  
+  .encodeapp::before {
+    font-family: unicons;
+    content: "\e855";
+    font-size: 1.5rem;
+  }
+
+  .theme::before {
+    font-family: unicons;
+    content: "\ead4";
+    font-size: 1.5rem;
+  }
+
+  .cookiesapp::before {
+    font-family: unicons;
+    content: "\ebe6";
+    font-size: 1.5rem;
+  }

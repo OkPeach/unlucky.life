@@ -135,7 +135,7 @@
         <span><a>P</a> - open/close dev menu</span><br>
         <span><a>O</a> - restart cookies</span><br>
         <span><a>I</a> - toggle style button</span><br>
-        <span><a>N</a> - notes</span>
+        <span><a>N</a> - notes</span><br>
         <span><a>E</a> - encode/decode</span>
     </div>
     <div class="notes" id="notes">
@@ -165,6 +165,14 @@
             <button class="save-button pointer" onclick="encode()">Encode</button>
             <button class="clear-button pointer" onclick="decode()">Decode</button>
         </div>
+    </div>
+
+    <div class="windows-bar">
+        <div class="windows-item" onclick="openDev()" title="Menu"><p class="windows"></p></div>
+        <div class="windows-item" onclick="openNotes()" title="Notes app"><p class="notepad"></p></div>
+        <div class="windows-item" onclick="openEncoder()" title="Encoder app"><p class="encodeapp"></p></div>
+        <div class="windows-item" onclick="switchTheme()" title="Theme switch"><p class="theme"></p></div>
+        <div class="windows-item" onclick="switchCookies()" title="Cookies switch"><p class="cookiesapp"></p></div>
     </div>
 
     <div class="progress-wrap">
