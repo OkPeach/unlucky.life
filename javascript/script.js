@@ -652,8 +652,8 @@ $(document).keyup(function(event) {
     switchCookies();
   }
 
-  //I keypress
-  if (event.which === 73) {
+  //S keypress
+  if (event.which === 83) {
     switchTheme();
   }
 
@@ -662,8 +662,8 @@ $(document).keyup(function(event) {
     openNotes();
   }
 
-  //X Keypress
-  if (event.which === 88) {
+  //I Keypress
+  if (event.which === 73) {
     openIP();
   }
 
