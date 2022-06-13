@@ -3,6 +3,7 @@ const logo = document.querySelectorAll("#logo path");
 
 var stored = localStorage.getItem('last-css') || 'styles/style.css';
 var cookies = localStorage.getItem('cookies-closed') || 'false';
+var taskbarCookie = localStorage.getItem('taskbar-cookie') || 'false';
 
 var note = localStorage.getItem('notes');
 
@@ -308,6 +309,16 @@ $(window).on('load', function () {
       localStorage['cookies-closed'] = JSON.stringify(defaultcookie);
     }
 
+    var isacceptedtaskbar = taskbarCookie.replaceAll("\"", "");
+  
+    if(isacceptedtaskbar=="true") {
+      taskbarSwitch();
+      console.log('Taskbar is on!');
+    }
+    else{
+      console.log('Taskbar is off!');
+    }
+
   }, 1250);
 
   console.log('Loaded, welcome!')
@@ -594,8 +605,8 @@ function openIP() {
   else {
     ipmenu.removeClass('ip-open-animation');
     ipmenu.addClass('ip-close-animation');
-    $("#dev-item").css("background-color", "transparent");
-    $("#dev-item").css("border-bottom-color", "transparent");
+    $("#ip-item").css("background-color", "transparent");
+    $("#ip-item").css("border-bottom-color", "transparent");
     openip = false;
     console.log('IP app closed')
   }
@@ -633,6 +644,28 @@ function switchTheme() {
       var newstyle = "styles/style.css";
       localStorage['last-css'] = JSON.stringify(newstyle);
     }
+}
+
+
+function taskbarSwitch() {
+  taskbar = $(".windows-bar");
+
+  if (!opentaskbar) {
+    var taskbarcookieswitch = "true";
+    localStorage['taskbar-cookie'] = JSON.stringify(taskbarcookieswitch);
+    taskbar.removeClass('windows-close-animation');
+    taskbar.addClass('windows-open-animation');
+    opentaskbar = true;
+    console.log('Windows bar opened')
+  }
+  else {
+    var taskbarcookieswitch = "false";
+    localStorage['taskbar-cookie'] = JSON.stringify(taskbarcookieswitch);
+    taskbar.removeClass('windows-open-animation');
+    taskbar.addClass('windows-close-animation');
+    opentaskbar = false;
+    console.log('Windows bar closed')
+  }
 }
 
 
@@ -674,19 +707,7 @@ $(document).keyup(function(event) {
 
   //W Keypress
   if (event.which === 87) {
-    taskbar = $(".windows-bar");
-  if (!opentaskbar) {
-    taskbar.removeClass('windows-close-animation');
-    taskbar.addClass('windows-open-animation');
-    opentaskbar = true;
-    console.log('Windows bar opened')
-  }
-  else {
-    taskbar.removeClass('windows-open-animation');
-    taskbar.addClass('windows-close-animation');
-    opentaskbar = false;
-    console.log('Windows bar closed')
-  }
+    taskbarSwitch();
   }
 }});
 
