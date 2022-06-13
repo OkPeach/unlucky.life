@@ -2613,7 +2613,8 @@ footer a {
 .hide-taskbar {
   border-left: #fff solid 1px;
   background-color: rgba(189, 189, 189, 0.1);
-  padding: 0.2rem;
+  padding: 0.3rem;
+  margin-left: 0.15rem;
 }
 
 .wifi {
