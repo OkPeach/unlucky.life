@@ -116,7 +116,7 @@ function getAge(dateString) {
     age--;
   }
   
-  return age;
+  return age + " Years old"; 
 }
 
 function analytics() {
