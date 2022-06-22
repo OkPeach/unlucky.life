@@ -1,8 +1,15 @@
 //credit: DenverCoder1 edited by me
+//get age with decimal places from date of birth
 function getAge(dateString) {
-    var ageInMilliseconds = new Date() - new Date(dateString);
-    var years = Math.floor(ageInMilliseconds/1000/60/60/24/365); // convert to years
-    return ' ' + years + ' years old'
+  var today = new Date();
+  var birthDate = new Date(dateString);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  
+  return age + " Years old"; 
   }
   //console.log(getAge('2002-06-24'));
 
