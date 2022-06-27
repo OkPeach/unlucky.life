@@ -1,5 +1,6 @@
 const logo = document.querySelectorAll("#logo path");
 
+let width = screen.width;
 
 var stored = localStorage.getItem('last-css') || 'styles/style.css';
 var cookies = localStorage.getItem('cookies-closed') || 'false';
@@ -282,6 +283,11 @@ $(window).on('load', function () {
 
     console.log('Last theme: ' + stored)
     console.log('Are cookies accepted? ' + cookies)
+
+    if(width <= "960"){
+      $("#infoCard").removeAttribute("data-tilt");
+    };
+    
 
     //adds animation after load
     $("#logo").addClass("logoAnim");
