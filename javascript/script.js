@@ -284,9 +284,9 @@ $(window).on('load', function () {
     console.log('Last theme: ' + stored)
     console.log('Are cookies accepted? ' + cookies)
 
-    if(width >= "960"){
-      $("#infoCard").setProperty("data-tilt", "");
-    };
+    //if(width >= "960"){
+      //$("#infoCard").setProperty("data-tilt", "");
+    //};
     
 
     //adds animation after load
