@@ -751,12 +751,6 @@ nav {
   transition: all 0.1s ease;
 }
 
-.meters:hover {
-  height: 2rem;
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
-}
-
 meter::-webkit-meter-optimum-value {
   background: -webkit-gradient(linear, left top, right top, from(#30a8f0), to(#737DFE));
   background: linear-gradient(to right, #30a8f0, #737DFE);
