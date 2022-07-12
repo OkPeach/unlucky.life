@@ -70,35 +70,19 @@
             box-shadow: 0px 15px 10px $indigoalpha;
         }
         #website {
-            background-image: url(../images/websitenew.webp);
-            background-size: 120%;
+            background-image: url(../images/site.webp);
+            background-size: 100%;
             background-repeat: no-repeat;
-            background-position: center 90%;
+            background-position: center -2%;
             transition: all ease 0.5s;
           }
-        #website:hover {
-            transition: all ease 0.5s;
-            background-size: 100%;
-            background-position: center 150%;
-        }
         #program{
-            background-image: url(../images/hourbooster.webp);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-        #selfbot {
-            background-image: url(../images/ug.webp);
-            background-size: 120%;
-            background-repeat: no-repeat;
-            background-position: center 100%;
-            transition: all ease 0.5s;
-          }
-        #selfbot:hover {
-            transition: all ease 0.5s;
+            background-image: url(../images/zsystem.webp);
             background-size: 100%;
-            background-position: center -100%;
-          }
+            background-repeat: no-repeat;
+            background-position: center -2%;
+            transition: all ease 0.5s;
+        }
         .textbackground{
             height: 100%;
             width: 100%;

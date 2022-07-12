@@ -81,38 +81,20 @@
             box-shadow: 0px 15px 10px #6710f260;
   }
   .slider #website {
-    background-image: url(../images/websitenew.webp);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: center 90%;
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-  }
-  .slider #website:hover {
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
+    background-image: url(../images/site.webp);
     background-size: 100%;
-    background-position: center 150%;
+    background-repeat: no-repeat;
+    background-position: center -2%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
   }
   .slider #program {
-    background-image: url(../images/hourbooster.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .slider #selfbot {
-    background-image: url(../images/ug.webp);
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: center 100%;
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-  }
-  .slider #selfbot:hover {
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
+    background-image: url(../images/zsystem.webp);
     background-size: 100%;
-    background-position: center -100%;
+    background-repeat: no-repeat;
+    background-position: center -2%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
   }
   .slider .textbackground {
     height: 100%;
