@@ -605,7 +605,7 @@ meter::-webkit-meter-optimum-value {
     width: 100%;
     position: fixed;
     height: 5vh;
-    top: 95vh;
+    top: 110vh;
     background: #303134;
     z-index: 10;
     display: -webkit-inline-box;
