@@ -6,3 +6,6 @@
 
 #ignore workspace
 main.code-workspace
+
+#ignore favicons
+favicons/
