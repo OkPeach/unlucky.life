@@ -505,7 +505,7 @@ nav {
 
 .infoTab p {
   font-family: 'Rubik', sans-serif;
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: 300;
   color: white;
   margin: 5px 0;
@@ -636,6 +636,16 @@ nav {
 .visits::before {
   font-family: "unicons";
   content: "\ebaf  ";
+}
+
+.star::before {
+  font-family: "unicons";
+  content: "\e84e  ";
+}
+
+.commits::before {
+  font-family: "unicons";
+  content: "\ec1d  ";
 }
 
 .profile_img {

@@ -969,3 +969,13 @@ meter::-webkit-meter-optimum-value {
   -webkit-animation: ip-open 0.2s forwards;
           animation: ip-open 0.2s forwards;
 }
+
+.commits::before {
+  font-family: "unicons";
+  content: "\ec1d  ";
+}
+
+.star::before {
+  font-family: "unicons";
+  content: "\e84e  ";
+}

@@ -107,6 +107,49 @@ function CopyToClipboardETH(value, id) {
   document.getElementById(id).innerHTML = "Copied wallet!";
 }
 
+$.getJSON(
+  "https://api.github-star-counter.workers.dev/user/OkPeach",
+  function( json ) {
+    document.getElementById("star").innerHTML = 'Github stars: ' + json.stars;
+  })
+
+  const base_url = 'https://api.github.com';
+
+function httpGet(theUrl, return_headers) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", theUrl, false); // false for synchronous request
+    xmlHttp.send(null);
+    if (return_headers) {
+        return xmlHttp
+    }
+    return xmlHttp.responseText;
+}
+
+function get_all_commits_count(owner, repo, sha) {
+    let first_commit = get_first_commit(owner, repo);
+    let compare_url = base_url + '/repos/' + owner + '/' + repo + '/compare/' + first_commit + '...' + sha;
+    let commit_req = httpGet(compare_url);
+    let commit_count = JSON.parse(commit_req)['total_commits'] + 1;
+    console.log('Commit Count: ', commit_count);
+    return commit_count
+}
+
+function get_first_commit(owner, repo) {
+    let url = base_url + '/repos/' + owner + '/' + repo + '/commits';
+    let req = httpGet(url, true);
+    let first_commit_hash = '';
+    if (req.getResponseHeader('Link')) {
+        let page_url = req.getResponseHeader('Link').split(',')[1].split(';')[0].split('<')[1].split('>')[0];
+        let req_last_commit = httpGet(page_url);
+        let first_commit = JSON.parse(req_last_commit);
+        first_commit_hash = first_commit[first_commit.length - 1]['sha']
+    } else {
+        let first_commit = JSON.parse(req.responseText);
+        first_commit_hash = first_commit[first_commit.length - 1]['sha'];
+    }
+    return first_commit_hash;
+}
+
 //get age with decimal places from date of birth
 function getAge(dateString) {
   var today = new Date();
@@ -307,6 +350,18 @@ $(window).on('load', function () {
     $("#header").addClass("headeranim");
 
     $(".bubble").addClass("bubbleanim");
+
+    let owner = "OkPeach";
+    let sha = "main";
+
+    let unluckyCommits = get_all_commits_count(owner, "unlucky.life", sha);
+    let chromiumCommits = get_all_commits_count("Chromium-menu", "Chromium.wtf", sha);
+    let unluckyBotCommits = get_all_commits_count(owner, "unlucky-discord-utility-bot", sha);
+
+
+    let totalcommits = unluckyCommits + chromiumCommits + unluckyBotCommits;
+
+    document.getElementById("commits").innerHTML = 'Commits: ' + totalcommits;
 
     var isaccepted = cookies.replaceAll("\"", "");
   
