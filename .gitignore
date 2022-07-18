@@ -1,0 +1,8 @@
+#ignore css map
+*.css.map
+
+#ignore scss
+*.scss
+
+#ignore workspace
+main.code-workspace
