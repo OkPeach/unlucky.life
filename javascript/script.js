@@ -113,6 +113,8 @@ $.getJSON(
     document.getElementById("star").innerHTML = 'Github stars: ' + json.stars;
   })
 
+
+//GITHUB COMMITS BY: https://gist.github.com/yershalom/a7c08f9441d1aadb13777bce4c7cdc3b?permalink_comment_id=3278742#gistcomment-3278742
   const base_url = 'https://api.github.com';
 
 function httpGet(theUrl, return_headers) {
@@ -125,6 +127,7 @@ function httpGet(theUrl, return_headers) {
     return xmlHttp.responseText;
 }
 
+//GITHUB COMMITS BY: https://gist.github.com/yershalom/a7c08f9441d1aadb13777bce4c7cdc3b?permalink_comment_id=3278742#gistcomment-3278742
 function get_all_commits_count(owner, repo, sha) {
     let first_commit = get_first_commit(owner, repo);
     let compare_url = base_url + '/repos/' + owner + '/' + repo + '/compare/' + first_commit + '...' + sha;
@@ -134,6 +137,7 @@ function get_all_commits_count(owner, repo, sha) {
     return commit_count
 }
 
+//GITHUB COMMITS BY: https://gist.github.com/yershalom/a7c08f9441d1aadb13777bce4c7cdc3b?permalink_comment_id=3278742#gistcomment-3278742
 function get_first_commit(owner, repo) {
     let url = base_url + '/repos/' + owner + '/' + repo + '/commits';
     let req = httpGet(url, true);
