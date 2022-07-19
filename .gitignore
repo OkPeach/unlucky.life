@@ -12,3 +12,6 @@ favicons/
 
 #ignore development js
 script.js
+
+#ignore todo.txt
+todo.txt
