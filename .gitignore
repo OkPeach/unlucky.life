@@ -9,3 +9,6 @@ main.code-workspace
 
 #ignore favicons
 favicons/
+
+#ignore development js
+script.js
