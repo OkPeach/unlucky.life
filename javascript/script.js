@@ -133,7 +133,7 @@ function get_all_commits_count(owner, repo, sha) {
     let compare_url = base_url + '/repos/' + owner + '/' + repo + '/compare/' + first_commit + '...' + sha;
     let commit_req = httpGet(compare_url);
     let commit_count = JSON.parse(commit_req)['total_commits'] + 1;
-    console.log('Commit Count: ', commit_count);
+    //console.log('Commit Count: ', commit_count);
     return commit_count
 }
 
@@ -361,7 +361,6 @@ $(window).on('load', function () {
     let unluckyCommits = get_all_commits_count(owner, "unlucky.life", sha);
     let chromiumCommits = get_all_commits_count("Chromium-menu", "Chromium.wtf", sha);
     let unluckyBotCommits = get_all_commits_count(owner, "unlucky-discord-utility-bot", sha);
-
 
     let totalcommits = unluckyCommits + chromiumCommits + unluckyBotCommits;
 
