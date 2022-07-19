@@ -387,6 +387,9 @@ header {
 
 .navbarUL a {
   font-weight: 500;
+  padding-bottom: 0.1rem;
+  z-index: 2;
+  color: #7c7aff;
 }
 
 #selectionHome {
@@ -424,18 +427,14 @@ nav {
 /* FLOATING BUBBLE UNDER NAVBAR TEXT */
 .bubble {
   position: fixed;
-  z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0c0927), color-stop(#110d36), to(rgba(12, 9, 39, 0)));
-  background: linear-gradient(to bottom, #0c0927, #110d36, rgba(12, 9, 39, 0));
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
-  border-radius: 0.5rem;
   border-color: #4c61f5;
-  border-width: 0.1vw;
-  border-style: solid;
-  padding: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2rem;
   opacity: 0;
 }
 
