@@ -33,7 +33,7 @@
     <link href="styles/psliders.css" rel="stylesheet">
     <link href="styles/loading.css" rel="stylesheet">
 
-    <link href="styles/style.css" rel="stylesheet" id="maincss">
+    <link href="styles/style.min.css" rel="stylesheet" id="maincss">
     <title>Lucien.wtf</title>
 </head>
 
@@ -208,7 +208,7 @@
             <div class="card js-tilt'" id="infoCard" style="transform-style: preserve-3d" data-tilt data-tilt-perspective="1500" data-tilt-max="15" data-tilt-speed="300" data-tilt-glare="false" data-tilt-max-glare="0.05" data-tilt-scale="1.15">
                 <div class="left" style="transform: translateZ(20px)">
                     <img class="profile_img" src="images/coke.webp" alt="coke" />
-                    <div class="flag_wrapper">
+                    <div class="flag_wrapper" id="flag_wrap">
                         <img class="flag"
                             src="https://unlucky.life/images/cz.webp"
                             alt="cz flag" />
@@ -223,25 +223,36 @@
                     </div>
                 </div>
                 <div class="right">
-                    <h2 class="name cardH2 center-text" id="name">Lucien</h2>
+                    <h2 class="name cardH2 center-text" id="name">Lucien </h2>
                     <hr id="line3" class="line" data-inviewport="scale-in">
                     <p id="location" class="fontText center-text"><span class="title fontText dev">front-end and back-end junior developer |&nbsp;</span><span class="blurState location">Czech Republic</span></p>
                     <hr id="line2" class="line" data-inviewport="scale-in">
+                    <p class="interests_title fontText">Interests: </p>
                     <div class="interests-wrapper">
-                        <p class="interests_title fontText">Interests: </p>
                         <span class="interests_item fontText computer">Computers</span>
-                        <span class="interests_item fontText technology">Technology</span>
                         <span class="interests_item fontText coding">Coding</span>
                         <span class="interests_item fontText btc">Crypto</span>
                         <span class="interests_item fontText gaming">Gaming</span>
                         <span class="interests_item fontText csharp">C#</span>
                         <span class="interests_item fontText html">HTML</span>
-                        <span class="interests_item fontText css">CSS</span>
+                        <span class="interests_item fontText technology">Technology</span>
                         <span class="interests_item fontText js">JavaScript</span>
+                        <span class="interests_item fontText css">CSS</span>
                         <span class="interests_item fontText js">NodeJS</span>
                         <span class="interests_item fontText btc">luc1en.eth</span>
                     </div>
-                </div>
+
+                    <div class="toomannywraps">
+                        <p class="interests_title fontText">Discord: </p>
+                        <div class="discord_card">
+                            <img id="discord_pfp" class="discord_status" alt="dc" />
+                            <div class="status_wrapper" id="status_wrap"></div>
+                            <div class="activity_div">
+                                <p class="discord_message fontText" id="dmsg"></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
             </div>
             <!--information card end-->
 

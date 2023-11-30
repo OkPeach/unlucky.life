@@ -528,7 +528,6 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    overflow-y: scroll;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     background: linear-gradient(242.18deg, rgba(57, 208, 216, 0.08) 68.05%, rgba(57, 208, 216, 0.02) 86.71%), #0c0926;
@@ -536,6 +535,8 @@ nav {
             box-shadow: rgba(171, 196, 255, 0.12);
     z-index: 1;
     min-height: 25rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
   .card:hover {
     -webkit-box-shadow: 10px 10px 10px #6710f260;
@@ -677,6 +678,70 @@ nav {
   border-style: solid;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.status_wrapper {
+  width: 0.8vw;
+  height: 0.8vw;
+  background-color: #fffefe;
+  border-radius: 100%;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(440%, -75%);
+          transform: translate(440%, -75%);
+}
+
+.discord_message {
+  white-space: pre-wrap;
+}
+
+.discord_card {
+  width: 20vw;
+  height: auto;
+  background-color: #18134D;
+  border-radius: 20px;
+  border-color: #4c61f5;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(25%, -25%);
+          transform: translate(25%, -25%);
+}
+
+.toomannywraps {
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(0%, -15%);
+          transform: translate(0%, -15%);
+}
+
+.activity_div {
+  width: 100%;
+  height: 4vw;
+  position: fixed;
+  -webkit-transform: translate(30%, -115%);
+          transform: translate(30%, -115%);
+}
+
+.discord_status {
+  -webkit-transform: translate(10%, 10%);
+          transform: translate(10%, 10%);
+  width: 4vw;
+  height: 4vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  border-radius: 100%;
+  border-color: #4c61f5;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .flag {
@@ -838,7 +903,10 @@ meter::-webkit-meter-optimum-value {
 }
 
 .interests-wrapper {
-  margin-top: 10px;
+  -webkit-transform: translate(18%, -22%);
+          transform: translate(18%, -22%);
+  width: 85%;
+  height: auto;
 }
 
 .interests_title {
