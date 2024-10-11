@@ -15,3 +15,6 @@ script.js
 
 #ignore todo.txt
 todo.txt
+
+#ignore todo.txt
+.DS_Store
