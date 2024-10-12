@@ -9,8 +9,8 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    background-image: url('../images/bc/background.webp'); /* Replace with your background image */
+    padding: 2vh;
+    background-image: url('../images/bc/background.webp');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -18,14 +18,16 @@ body {
     color: #ffffff;
     cursor: url("../images/cursor.webp"), default;
     overscroll-behavior-y: none;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 /* Container for all widgets */
 .widgets {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns for desktop */
-    grid-template-rows: auto auto; /* First row for large widget, second for pinned widgets */
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
     width: 90vw;
     max-width: 1200px;
     margin: 0 auto;
@@ -34,54 +36,45 @@ body {
 /* Large Top Widget */
 .large-widget {
     grid-column: span 3;
-    padding: 20px; /* Inner padding for content */
+    padding: 1.5rem;
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 20px; /* Apple-like rounded corners */
-    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    width: 100%;
     aspect-ratio: 3 / 1;
 }
 
-/* Image */
-.profile-image {
-    background-image: url(../images/pattern.webp);
-    aspect-ratio: 1 / 1;
-    max-height: 300px;
-}
-
+/* Divider Line */
 .line {
     grid-column: span 3;
-    margin: 1rem auto 1rem auto;
+    margin: 1rem auto;
     width: 90%;
-    opacity: 1;
-    border-width: 1px;
-    border-style: none;
     background: darkgray;
-    height: 0.15rem;
+    height: 2px;
 }
 
 /* Pinned Row */
 .pinned-row {
     grid-column: span 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Each pinned widget occupies one column */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 /* Widget Styles */
 .widget-small, .widget-medium {
-    padding: 20px; /* Inner padding for Apple-style look */
+    padding: 1.5rem;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 20px; /* Consistent rounded corners */
-    backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
 }
 
 /* Small Widget */
 .widget-small {
     width: 100%;
     aspect-ratio: 1 / 1;
-    max-height: 300px;
 }
 
 /* Medium Widget */
@@ -89,15 +82,45 @@ body {
     grid-column: span 2;
     width: 100%;
     aspect-ratio: 2 / 1;
-    max-height: 300px;
 }
 
-/* Responsive Adjustments */
+
+
+/* Responsive Adjustments for Mobile View */
 @media (max-width: 768px) {
     .widgets {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        width: 90vw;
     }
-    .pinned-row {
-        grid-template-columns: 1fr;
+
+    .large-widget {
+        grid-column: 1;
+        margin-bottom: 1.5rem;
+        width: 90vw;
     }
+
+    .large-widget, .pinned-row, .widget-small, .widget-medium {
+        grid-column: 1;
+        max-width: 90vw;
+        width: 90vw;
+    }
+
+    /* Divider Line */
+.line {
+    grid-column: span 1;
+    margin: 1rem auto;
+    width: 90%;
+    background: darkgray;
+    height: 2px;
+}
+
+    /* Custom aspect ratio classes */
+.aspect-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-auto {
+    aspect-ratio: auto;
+}
 }
