@@ -10,18 +10,18 @@ var _app = function ()
     this.shouldIgnoreVideo = false;
     this.effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "jello"];
     this.brandDescription = [
-        "unlucky gamer", 
+        "meme", 
         "professional minecrafter", 
-        "gh0st", 
-        "unkn0wn entity",
-        "failure",
-        "developer"
+        "unlucky.life", 
+        "unkn0wn",
+        "luc1en.eth",
+        "wanna be developer"
     ];
 
     this.titleChanger = function (text, delay)
     {
         text = text ||
-            ['Lucien.RIP', 'Unlucky.life', 'Who?', 'Lucien@unlucky.life:~$'];
+            ['Lucien.rip', 'unlucky.life', 'Who?', 'Lucien@unlucky.life:~$'];
         delay = delay || 2000;
 
         var counter = 0;

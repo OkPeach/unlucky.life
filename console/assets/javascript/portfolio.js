@@ -190,7 +190,7 @@
 
                         clearCursor();
 
-                        writeLine(["<i style='color: #F62459'>Lucien@unlucky.life:~$ cd db/" + ((data.city) ? data.city : 'your city') + "/</i>"], 60, 500, function () {
+                        writeLine(["<i style='color: #F62459'>Lucien@unlucky.life:~$ cd db/" + ((data.city) ? data.city : 'your city') + "/index.html</i>"], 60, 500, function () {
 
                             timeouts.push(setTimeout(function () {
 
