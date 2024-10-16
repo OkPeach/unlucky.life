@@ -1,0 +1,150 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2vh;
+    background-image: url('../images/bc/background.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    cursor: url("../images/cursor.webp"), default;
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+/* Container for all widgets */
+.widgets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Large Top Widget */
+.large-widget {
+    grid-column: span 3;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    aspect-ratio: 3 / 1;
+}
+
+.info {
+    width: 50%;
+    float: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+.profile-image {
+    width: 50%;
+    float: right;
+    margin-left: auto;
+    margin-right: 0px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.pfp {
+    background-image: url(../images/pattern.webp);
+    border-radius: 20rem;
+    width: 50%;
+    float: right;
+    top: 50%;
+    transform: translateY(10%);
+}
+
+/* Divider Line */
+.line {
+    grid-column: span 3;
+    margin: 1rem auto;
+    width: 90%;
+    background: darkgray;
+    height: 2px;
+}
+
+/* Pinned Row */
+.pinned-row {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Widget Styles */
+.widget-small, .widget-medium {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Small Widget */
+.widget-small {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Medium Widget */
+.widget-medium {
+    grid-column: span 2;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+}
+
+
+
+/* Responsive Adjustments for Mobile View */
+@media (max-width: 768px) {
+    .widgets {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 1fr);
+        width: 90vw;
+    }
+
+    .large-widget {
+        grid-column: 1;
+        margin-bottom: 1.5rem;
+        width: 90vw;
+    }
+
+    .large-widget, .pinned-row, .widget-small, .widget-medium {
+        grid-column: 1;
+        max-width: 90vw;
+        width: 90vw;
+    }
+
+    /* Divider Line */
+.line {
+    grid-column: span 1;
+    margin: 1rem auto;
+    width: 90%;
+    background: darkgray;
+    height: 2px;
+}
+
+    /* Custom aspect ratio classes */
+.aspect-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-auto {
+    aspect-ratio: auto;
+}
+}
