@@ -54,7 +54,7 @@
             {
                 $("#brand").replaceWith('<span id="brand" style="margin-left:0.3pc;"></span>');
 
-                //$("#background").replaceWith('<div id="background" style="background-image: url(console/assets/images/mobile-background.gif);"></div>');
+                $("#background").replaceWith('<div id="background" style="background-image: url(console/assets/others/walk.mp4);"></div>');
 
                 $("#audio").remove();
 
