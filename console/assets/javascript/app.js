@@ -10,12 +10,11 @@ var _app = function ()
     this.shouldIgnoreVideo = false;
     this.effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "jello"];
     this.brandDescription = [
-        "meme", 
+        "memer", 
         "professional minecrafter", 
         "unlucky.life", 
-        "unkn0wn",
-        "luc1en.eth",
-        "wanna be developer"
+        "wanna be dev",
+        "luc1en.eth"
     ];
 
     this.titleChanger = function (text, delay)

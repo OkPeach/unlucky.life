@@ -287,6 +287,15 @@ hr {
 hr {
   border-left-style: dashed;
 }
+.drag {
+  cursor: url("../../../images/drag.png");
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.pointer {
+  cursor: url("../../../images/pointer.webp"), pointer;
+}
 hr {
   border-bottom-style: dashed;
 }
