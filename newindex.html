@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Little website for personal projects :)">
+    <meta name="keywords" content="Lucien Pauer, Lucien, Unlucky, unlucky life, unlucky.life, life, unlucky web, unluckylife">
+    <meta name="author" content="Lucien">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="unlucky.life">
+    <meta property="og:description" content="Just a little website">
+    <meta property="og:image" content="./images/favicon.webp">
+    <meta property="og:url" content="https://unlucky.life">
+
+    <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+    <meta name="twitter:card" content="./images/favicon.webp">
+    <meta name="twitter:title" content="unlucky.life">
+    <meta name="twitter:description" content="Just a little webste">
+    <meta name="twitter:image" content="./images/favicon.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.webp" type="image/x-icon">
+    <title>Luc1en.eth</title>
+
+    <link href="styles/loading.css" rel="stylesheet">
+    <style>
+        
+        @font-face {
+            font-family:unicons;
+            src:url("../other/unicons.ttf")
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #e2e2e2;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .main-box {
+            max-width: 45%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            position: relative;
+        }
+
+        pre {
+            font-weight: bold;
+            color: #e2e2e2;
+            text-align: center;
+            position: relative;
+        }
+
+        #user-greet {
+            text-align: center;
+            opacity: 75%;
+        }
+
+        .logo {
+            background: linear-gradient(90deg, #696EFF, #a369ff);
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+            font-weight: bolder;
+        }
+
+        pre::after, h3::after, h3::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 1px solid #ffffff;
+            z-index: -2;
+        }
+
+        pre::after, h3::after{
+            border-color: #ffffff;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+        }
+
+        pre em h3 {
+            font-style: italic;
+            background: linear-gradient(90deg, #696EFF, #a369ff);
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+            font-weight: normal;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin: 10px 0; /* Reduced margin */
+        }
+
+        .intro h2 {
+            font-size: 1.5rem;
+            color: #a369ff;
+            text-align: center;
+        }
+
+        .intro p {
+            margin: 5px 0; /* Less vertical space */
+            font-size: 1.2rem;
+            color: #c7c7c7;
+            text-align: left;
+        }
+
+        .intro p::before {
+            content: "[ × ] ";
+            color: #ffffff;
+        }
+
+        .intro h2::before {
+            content: "[     ";
+            color: #ffffff;
+        }
+
+        .intro h2::after {
+            content: "]";
+            color: #ffffff;
+        }
+
+        #discord::before {
+            font-family:unicons;
+            content:"\ec8f "
+        }
+
+        #steam::before {
+            font-family:unicons;
+            content:"\e9a5 "
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #c7c7c7;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 2px solid #e2e2e2;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #696EFF, #a369ff);
+            z-index: -1;
+            transition: left 0.3s;
+        }
+
+        .links a:hover::before {
+            left: 0;
+        }
+
+        .links a:hover {
+            color: #0d0d0d;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #c7c7c7;
+            padding: 5px 0;
+            height: 3vh;
+        }
+
+        footer a {
+            color: #696EFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="particles-js"></div>
+        <div class="main-box">
+            <pre class="logo">
+             _            _            _ _  __     
+            | |          | |          | (_)/ _|    
+ _   _ _ __ | |_   _  ___| | ___   _  | |_| |_ ___ 
+| | | | '_ \| | | | |/ __| |/ / | | | | | |  _/ _ \
+| |_| | | | | | |_| | (__|   <| |_| |_| | | ||  __/
+ \__,_|_| |_|_|\__,_|\___|_|\_\\__, (_)_|_|_| \___|
+                                __/ |              
+                               |___/               
+            </pre></br>
+            <div class="intro">
+                <h3 id="user-greet">Good morning <em id="user-ip">127.0.0.1</em> </h3>
+                </br><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></br>
+                <p>My name is Lucien and I'm <span id="age"></span> years old.</p>
+                <p>I enjoy gaming, programming and tech stuff.</p>
+                <p>I go by many nicknames, mainly 'unlucky' and 'lucien.eth'</p>
+            </div>
+            <div class="links">
+                <a href="https://x.com/lucienrip">Twitter</a>
+                <a href="https://github.com/okpeach">GitHub</a>
+                <a href="https://www.instagram.com/lucienrip/">Instagram</a>
+                <a href="/portfolio">Portfolio</a>
+            </div>
+            <div class="info">
+                <p id="country">CZE</p><p>|</p>
+                <p id="views">0 Views</p><p>|</p>
+                <p id="discord"> unlucky.life</p><p>|</p>
+                <p id="steam"> unluckycs2</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Designed by <a href="#">Lucien</a> with ❤️.</p>
+    </footer>
+    <script src="javascript/newparticles/particles.min.js"></script>
+    <script src="javascript/newparticles/particles.js"></script>
+    <script>
+        async function fetchUserData() {
+            try {
+                const response = await fetch('https://api.ipdata.co/?api-key=ad232f1daf9e88efd3dc4f63734d426f5f3c93bee2e7a3ebf5f31893');
+                const data = await response.json();
+    
+                // Update flag
+                const countryElement = document.getElementById('country');
+                countryElement.textContent = data.country_code;
+                const flagImage = document.createElement('img');
+                flagImage.src = data.flag;
+                flagImage.alt = `Flag of ${data.country_name}`;
+                flagImage.style.marginLeft = '10px';
+                flagImage.style.width = '20px';
+                flagImage.style.height = '15px';
+                flagImage.style.verticalAlign = 'middle';
+                countryElement.appendChild(flagImage);
+    
+                // Determine greeting based on local time
+                const userTime = new Date(data.time_zone.current_time);
+                const hours = userTime.getHours();
+                let greeting;
+    
+                if (hours >= 5 && hours < 12) {
+                    greeting = "Good morning";
+                } else if (hours >= 12 && hours < 18) {
+                    greeting = "Good afternoon";
+                } else {
+                    greeting = "Good evening";
+                }
+    
+                const userGreetElement = document.getElementById('user-greet');
+                userGreetElement.textContent = `${greeting} `;
+                userGreetElement.appendChild(document.createElement('em')).textContent = data.ip + '\u00A0';
+    
+                // Update view count dynamically
+                document.getElementById('views').textContent = `${data.count} Views`;
+    
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        }
+    
+        function updateAge(birthDate) {
+            const today = new Date();
+            const birth = new Date(birthDate);
+            let age = today.getFullYear() - birth.getFullYear();
+            const isBeforeBirthday =
+                today.getMonth() < birth.getMonth() ||
+                (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate());
+    
+            if (isBeforeBirthday) {
+                age--;
+            }
+    
+            document.getElementById('age').textContent = age;
+        }
+    
+        // Call the functions
+        updateAge('2002-6-24');
+        fetchUserData();
+    </script>
+    
+</body>
+</html>
