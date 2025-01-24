@@ -1,462 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.webp">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="1 days">
-    <meta name="description" content="Personal website I made for fun & to get some experience :)">
-    <meta name="keywords" content="unlucky.life, unlucky, unlucky#8888, unlucky life, life, unluckylife, Lucien, Pauer, Lucien Pauer, Lucienk">
-
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Lucien.wtf" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://unlucky.life" />
-    <meta property="og:image" content="https://unlucky.life/images/favicon.webp" />
-    <meta property="og:description" content="Personal website I made for fun & to get some experience :)" />
-    <meta name="theme-color" content="#6610f2">
 
-    <script type="text/javascript" src="javascript/redirection-mobile.js"></script><script type="text/javascript">// <![CDATA[
-        SA.redirection_mobile ({
-        mobile_url : "unlucky.life/m",
-        tablet_redirection : "true"
-        });
-        
-       // ]]></script>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Little website for personal projects :)">
+    <meta name="keywords" content="Lucien Pauer, Lucien, Unlucky, unlucky life, unlucky.life, life, unlucky web, unluckylife">
+    <meta name="author" content="Lucien">
 
-    <!-- Include this to make the og:image larger 
-    <meta name="twitter:card" content="summary_large_image"> -->
-    <link href="styles/psliders.css" rel="stylesheet">
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="unlucky.life">
+    <meta property="og:description" content="Just a little website">
+    <meta property="og:image" content="./images/favicon.webp">
+    <meta property="og:url" content="https://unlucky.life">
+
+    <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+    <meta name="twitter:card" content="./images/favicon.webp">
+    <meta name="twitter:title" content="unlucky.life">
+    <meta name="twitter:description" content="Just a little webste">
+    <meta name="twitter:image" content="./images/favicon.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.webp" type="image/x-icon">
+    <title>Luc1en.eth</title>
+
     <link href="styles/loading.css" rel="stylesheet">
-
-    <link href="styles/style.min.css" rel="stylesheet" id="maincss">
-    <title>unlucky.life</title>
+    <link href="styles/s.css" rel="stylesheet">
 </head>
+<body>
 
-<body onload="analytics(); setBackgroundColor(); getTime(); getDate()">
-    
     <div id="loading">
         <div class="circle">
             <div class="noise animated"></div>
         </div>
     </div>
 
-    <div class="progbar" id="progress-bar"></div>
-    <header id="header">
-        <nav id="mainNav">
-            <a href="#" class="pointer big-logo">
-                <svg class="planet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Icons" x="0px" y="0px" viewBox="0 0 32 32" style="height: 4rem;" xml:space="preserve">
-                    <circle class="st0" cx="16" cy="16" r="10"/>
-                    <path class="st1" d="M21.5,7.7c3.7-1.3,6.6-1.3,7.5,0.1c1.5,2.3-3,7.9-10.2,12.5s-14.1,6.3-15.6,4c-0.9-1.4,0.3-3.8,1.6-6"/>
-                </svg> 
-                <svg width="357" id="logo" height="61" viewBox="0 0 357 61" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.608 51.376H27.528V58H2.40002V7.95998H10.608V51.376Z" stroke="#6610F2"
-                        stroke-width="3" />
-                    <path
-                        d="M70.3202 18.328V58H62.1122V53.32C60.8162 54.952 59.1122 56.248 57.0002 57.208C54.9362 58.12 52.7282 58.576 50.3762 58.576C47.2562 58.576 44.4482 57.928 41.9522 56.632C39.5042 55.336 37.5602 53.416 36.1202 50.872C34.7282 48.328 34.0322 45.256 34.0322 41.656V18.328H42.1682V40.432C42.1682 43.984 43.0562 46.72 44.8322 48.64C46.6082 50.512 49.0322 51.448 52.1042 51.448C55.1762 51.448 57.6002 50.512 59.3762 48.64C61.2002 46.72 62.1122 43.984 62.1122 40.432V18.328H70.3202Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M78.414 38.128C78.414 34.048 79.23 30.472 80.862 27.4C82.542 24.28 84.846 21.88 87.774 20.2C90.702 18.52 94.062 17.68 97.854 17.68C102.654 17.68 106.614 18.832 109.734 21.136C112.902 23.392 115.038 26.632 116.142 30.856H107.286C106.566 28.888 105.414 27.352 103.83 26.248C102.246 25.144 100.254 24.592 97.854 24.592C94.494 24.592 91.806 25.792 89.79 28.192C87.822 30.544 86.838 33.856 86.838 38.128C86.838 42.4 87.822 45.736 89.79 48.136C91.806 50.536 94.494 51.736 97.854 51.736C102.606 51.736 105.75 49.648 107.286 45.472H116.142C114.99 49.504 112.83 52.72 109.662 55.12C106.494 57.472 102.558 58.648 97.854 58.648C94.062 58.648 90.702 57.808 87.774 56.128C84.846 54.4 82.542 52 80.862 48.928C79.23 45.808 78.414 42.208 78.414 38.128Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M128.498 13.072C127.01 13.072 125.762 12.568 124.754 11.56C123.746 10.552 123.242 9.30399 123.242 7.81598C123.242 6.32798 123.746 5.07998 124.754 4.07199C125.762 3.06398 127.01 2.55998 128.498 2.55998C129.938 2.55998 131.162 3.06398 132.17 4.07199C133.178 5.07998 133.682 6.32798 133.682 7.81598C133.682 9.30399 133.178 10.552 132.17 11.56C131.162 12.568 129.938 13.072 128.498 13.072ZM132.53 18.328V58H124.322V18.328H132.53Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M179.666 37.192C179.666 38.68 179.57 40.024 179.378 41.224H149.066C149.306 44.392 150.482 46.936 152.594 48.856C154.706 50.776 157.298 51.736 160.37 51.736C164.786 51.736 167.906 49.888 169.73 46.192H178.586C177.386 49.84 175.202 52.84 172.034 55.192C168.914 57.496 165.026 58.648 160.37 58.648C156.578 58.648 153.17 57.808 150.146 56.128C147.17 54.4 144.818 52 143.09 48.928C141.41 45.808 140.57 42.208 140.57 38.128C140.57 34.048 141.386 30.472 143.018 27.4C144.698 24.28 147.026 21.88 150.002 20.2C153.026 18.52 156.482 17.68 160.37 17.68C164.114 17.68 167.45 18.496 170.378 20.128C173.306 21.76 175.586 24.064 177.218 27.04C178.85 29.968 179.666 33.352 179.666 37.192ZM171.098 34.6C171.05 31.576 169.97 29.152 167.858 27.328C165.746 25.504 163.13 24.592 160.01 24.592C157.178 24.592 154.754 25.504 152.738 27.328C150.722 29.104 149.522 31.528 149.138 34.6H171.098Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M207.76 17.68C210.88 17.68 213.664 18.328 216.112 19.624C218.608 20.92 220.552 22.84 221.944 25.384C223.336 27.928 224.032 31 224.032 34.6V58H215.896V35.824C215.896 32.272 215.008 29.56 213.232 27.688C211.456 25.768 209.032 24.808 205.96 24.808C202.888 24.808 200.44 25.768 198.616 27.688C196.84 29.56 195.952 32.272 195.952 35.824V58H187.744V18.328H195.952V22.864C197.296 21.232 199 19.96 201.064 19.048C203.176 18.136 205.408 17.68 207.76 17.68Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M237.814 58.504C236.326 58.504 235.078 58 234.07 56.992C233.062 55.984 232.558 54.736 232.558 53.248C232.558 51.76 233.062 50.512 234.07 49.504C235.078 48.496 236.326 47.992 237.814 47.992C239.254 47.992 240.478 48.496 241.486 49.504C242.494 50.512 242.998 51.76 242.998 53.248C242.998 54.736 242.494 55.984 241.486 56.992C240.478 58 239.254 58.504 237.814 58.504Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M305.149 18.328L292.837 58H284.197L276.205 28.696L268.213 58H259.573L247.189 18.328H255.541L263.821 50.224L272.245 18.328H280.813L288.877 50.08L297.085 18.328H305.149Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M320.859 25.024V46.984C320.859 48.472 321.195 49.552 321.867 50.224C322.587 50.848 323.787 51.16 325.467 51.16H330.507V58H324.027C320.331 58 317.499 57.136 315.531 55.408C313.563 53.68 312.579 50.872 312.579 46.984V25.024H307.899V18.328H312.579V8.46399H320.859V18.328H330.507V25.024H320.859Z"
-                        stroke="#6610F2" stroke-width="3" />
-                    <path
-                        d="M354.704 25.024H347.36V58H339.08V25.024H334.4V18.328H339.08V15.52C339.08 10.96 340.28 7.64798 342.68 5.58398C345.128 3.47198 348.944 2.41599 354.128 2.41599V9.25598C351.632 9.25598 349.88 9.73598 348.872 10.696C347.864 11.608 347.36 13.216 347.36 15.52V18.328H354.704V25.024Z"
-                        stroke="#6610F2" stroke-width="3" />
-                </svg>
-            </a>
-            <ul class="navbarUL">
-                <li><a id="selectionHome" data-page="sectionHome" href="#" class="pointer">Home</a></li>
-                <li><a id="selectionProjects" data-page="sectionProjects" href="#projects" class="pointer">Projects</a></li>
-                <li><a id="selectionLinks" data-page="sectionLinks" href="#contact" class="pointer">Contact</a></li>
-                <li>
-                    <label class="toggle pointer" title="Switch theme">
-                    <input class="toggle-checkbox" type="checkbox" id="switch-css">
-                    <div class="toggle-switch"></div>
-                    </label> 
-                </li>
-                <div class="bubble pointer" id="bubble"></div>
-            </ul>
-        </nav>
-    </header>
-    <nav role="navigation" id="naviburger">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="menu">
-                <a href="#">
-                    <li>About me</li>
-                </a>
-                <a href="#projects">
-                    <li>Projects</li>
-                </a>
-                <a href="#contact">
-                    <li>Contact</li>
-                </a>
-                <a href="/apps/crypto">
-                    <li>Crypto</li>
-                </a>
-                <a href="/apps/nft">
-                    <li>NFT Gallery</li>
-                </a>
-                <a href="/apps/generator">
-                    <li>Generators</li>
-                </a>
-            </ul>
-        </div>
-    </nav>
-    <div id="cookies" class="cookies">
-        <span>
-            We use cookies!
-            <svg class="pointer" onclick="deleteCookie()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-            <path style="fill:#FF6465;" d="M384.955,256l120.28-120.28c9.019-9.019,9.019-23.642,0-32.66L408.94,6.765  c-9.019-9.019-23.642-9.019-32.66,0l-120.28,120.28L135.718,6.765c-9.019-9.019-23.642-9.019-32.66,0L6.764,103.058  c-9.019,9.019-9.019,23.642,0,32.66l120.28,120.28L6.764,376.28c-9.019,9.019-9.019,23.642,0,32.66l96.295,96.294  c9.019,9.019,23.642,9.019,32.66,0l120.28-120.28l120.28,120.28c9.019,9.019,23.642,9.019,32.66,0l96.295-96.294  c9.019-9.019,9.019-23.642,0-32.66L384.955,256z"/>
-            </svg>
-        </span><br>
-
-        <a href="#" class="pointer">Learn more</a>
-    </div>
-    <div class="dev-menu">
-        <h3>DEV MENU</h3>
-        <span><a>P</a> - open/close dev menu</span><br>
-        <span><a>O</a> - restart cookies</span><br>
-        <span><a>S</a> - toggle style button</span><br>
-        <span><a>N</a> - notes app</span><br>
-        <span><a>E</a> - encode/decode app</span><br>
-        <span><a>W</a> - toggle taskbar</span><br>
-        <span><a>I</a> - IP app</span>
-    </div>
-    <div class="notes" id="notes">
-        <div class="notesheader drag" id="notesheader">
-            <svg class="pointer" onclick="hideNotes()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-                <path style="fill:#FF6465;" d="M384.955,256l120.28-120.28c9.019-9.019,9.019-23.642,0-32.66L408.94,6.765  c-9.019-9.019-23.642-9.019-32.66,0l-120.28,120.28L135.718,6.765c-9.019-9.019-23.642-9.019-32.66,0L6.764,103.058  c-9.019,9.019-9.019,23.642,0,32.66l120.28,120.28L6.764,376.28c-9.019,9.019-9.019,23.642,0,32.66l96.295,96.294  c9.019,9.019,23.642,9.019,32.66,0l120.28-120.28l120.28,120.28c9.019,9.019,23.642,9.019,32.66,0l96.295-96.294  c9.019-9.019,9.019-23.642,0-32.66L384.955,256z"/>
-            </svg>
-        </div>
-        <h3>Notes</h3>
-        <textarea name="myNotes" id="textArea" class="text-cursor" placeholder="Write your notes here" cols="50" rows="15" minlength="10" maxlength="500"></textarea><br>
-        <div class="button-menu">
-            <button class="save-button pointer" onclick="saveNotes()">Save</button>
-            <button class="clear-button pointer" onclick="clearNotes()">Clear</button>
-        </div>
-    </div>
-
-    <div class="encoder" id="encoder">
-        <div class="encoderheader drag" id="encoderheader">
-            <svg class="pointer" onclick="hideEncoder()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
-                <path style="fill:#FF6465;" d="M384.955,256l120.28-120.28c9.019-9.019,9.019-23.642,0-32.66L408.94,6.765  c-9.019-9.019-23.642-9.019-32.66,0l-120.28,120.28L135.718,6.765c-9.019-9.019-23.642-9.019-32.66,0L6.764,103.058  c-9.019,9.019-9.019,23.642,0,32.66l120.28,120.28L6.764,376.28c-9.019,9.019-9.019,23.642,0,32.66l96.295,96.294  c9.019,9.019,23.642,9.019,32.66,0l120.28-120.28l120.28,120.28c9.019,9.019,23.642,9.019,32.66,0l96.295-96.294  c9.019-9.019,9.019-23.642,0-32.66L384.955,256z"/>
-            </svg>
-        </div>
-        <h3>encode/decode</h3>
-        <textarea id="user-message" placeholder="Enter message here" name="user-message" cols="50" rows="5" minlength="10" maxlength="500"></textarea><br>
-        <p id="generated-message"></p>
-        <div class="encode-button-menu">
-            <button class="save-button pointer" onclick="encode()">Encode</button>
-            <button class="clear-button pointer" onclick="decode()">Decode</button>
-        </div>
-    </div>
-
-    <div class="ip-menu">
-        <p id="ip">127.0.0.1</p>
-        <p id="state">nowhere</p>
-        <p id="city">here</p>
-    </div>
-
-    <div class="windows-bar">
-        <div class="windows-item pointer" id="dev-item" onclick="openDev()" title="Menu"><p class="windows"></p></div>
-        <div class="windows-item pointer" id="notes-item" onclick="openNotes()" title="Notes app"><p class="notepad"></p></div>
-        <div class="windows-item pointer" id="encoder-item" onclick="openEncoder()" title="Encoder app"><p class="encodeapp"></p></div>
-        <div class="windows-item pointer" onclick="switchTheme()" title="Theme switch"><p class="theme"></p></div>
-        <div class="windows-item pointer" onclick="switchCookies()" title="Cookies switch"><p class="cookiesapp"></p></div>
-        <div class="windows-item move-icons-left"><p class="up-arrow">˄</p></div>
-        <div class="windows-item"><p class="wifi"></p></div>
-        <div class="windows-item text-font-size" id="ip-item" onclick="openIP()"><p id="language" class="inside-icon">EN</p></div>
-        <div class="windows-item text-font-size"><p class="time" id="time"></p><p id="date"></p></div>
-        <div class="windows-item" title="notification"><p class="notification"></p></div>
-        <div class="windows-item hide-taskbar" onclick="hideTaskbar()"></div>
-    </div>
-
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <main>
-        <section data-index="0" class="sectionHome" id="aboutme">
-            <!--information card-->
-            <div class="card js-tilt'" id="infoCard" style="transform-style: preserve-3d" data-tilt data-tilt-perspective="1500" data-tilt-max="15" data-tilt-speed="300" data-tilt-glare="false" data-tilt-max-glare="0.05" data-tilt-scale="1.15">
-                <div class="left" style="transform: translateZ(20px)">
-                    <img class="profile_img" src="images/coke.webp" alt="coke" />
-                    <div class="flag_wrapper" id="flag_wrap">
-                        <img class="flag"
-                            src="https://unlucky.life/images/cz.webp"
-                            alt="cz flag" />
-                    </div>
-                    <hr id="line" class="line" data-inviewport="scale-in">
-                    <div class="infoTab">
-                        <p id="age" class="age">00 years old</p>
-                        <p id="emailSmall" class="emailSmall">lucien@unlucky.life</p>
-                        <p id="visits" class="visits">Visits (today): 00</p>
-                        <p id="star" class="star">Github stars: 00</p>
-                        <p id="commits" class="commits">Commits: 00</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <h2 class="name cardH2 center-text" id="name">Lucien </h2>
-                    <hr id="line3" class="line" data-inviewport="scale-in">
-                    <p id="location" class="fontText center-text"><span class="title fontText dev">front-end and back-end junior developer |&nbsp;</span><span class="blurState location">Czech Republic</span></p>
-                    <hr id="line2" class="line" data-inviewport="scale-in">
-                    <p class="interests_title fontText">Interests: </p>
-                    <div class="interests-wrapper">
-                        <span class="interests_item fontText computer">Computers</span>
-                        <span class="interests_item fontText coding">Coding</span>
-                        <span class="interests_item fontText btc">Crypto</span>
-                        <span class="interests_item fontText gaming">Gaming</span>
-                        <span class="interests_item fontText csharp">C#</span>
-                        <span class="interests_item fontText html">HTML</span>
-                        <span class="interests_item fontText technology">Technology</span>
-                        <span class="interests_item fontText js">JavaScript</span>
-                        <span class="interests_item fontText css">CSS</span>
-                        <span class="interests_item fontText js">NodeJS</span>
-                        <span class="interests_item fontText btc">luc1en.eth</span>
-                    </div>
-
-                    <hr id="line2" class="line" data-inviewport="scale-in">
-                    <div class="toomannywraps">
-                        <p class="interests_title fontText">Discord: </p>
-                        <div class="discord_card">
-                            <img id="discord_pfp" class="discord_status" alt="dc" />
-                            <div class="status_wrapper" id="status_wrap"></div>
-                            <div class="activity_div">
-                                <p class="discord_message fontText" id="dmsg"></p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+    <div class="container">
+        <div id="particles-js"></div>
+        <div class="main-box">
+            <pre class="logo">
+             _            _            _ _  __     
+            | |          | |          | (_)/ _|    
+ _   _ _ __ | |_   _  ___| | ___   _  | |_| |_ ___ 
+| | | | '_ \| | | | |/ __| |/ / | | | | | |  _/ _ \
+| |_| | | | | | |_| | (__|   <| |_| |_| | | ||  __/
+ \__,_|_| |_|_|\__,_|\___|_|\_\\__, (_)_|_|_| \___|
+                                __/ |              
+                               |___/               
+            </pre></br>
+            <div class="intro">
+                <h3 id="user-greet">Good morning <em id="user-ip">127.0.0.1</em> </h3>
+                </br><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></br>
+                <p>My name is Lucien and I'm <span id="age"></span> years old.</p>
+                <p>I enjoy gaming, programming and tech stuff.</p>
+                <p>I go by many nicknames, mainly 'unlucky' and 'lucien.eth'</p>
             </div>
-            <!--information card end-->
-
-            <!--Mouse-->
-            <a href="#projects" class="pointer">
-                <div class="mouse_scroll" data-inviewport="scale-in">
-                    <div class="mouse">
-                        <div class="wheel"></div>
-                    </div>
-                    <div>
-                        <span class="m_scroll_arrows unu"></span>
-                        <span class="m_scroll_arrows doi"></span>
-                        <span class="m_scroll_arrows trei"></span>
-                    </div>
-            </a>
-            <!--Mouse end-->
+            <div class="links">
+                <a href="https://x.com/lucienrip">Twitter</a>
+                <a href="https://github.com/okpeach">GitHub</a>
+                <a href="https://www.instagram.com/lucienrip/">Instagram</a>
+                <a href="/portfolio">Portfolio</a>
             </div>
-            </a>
-        </section>
-
-        <section data-index="1" class="sectionProjects" id="projects" rel="preload">
-        <div id="particles-js" class="particles"></div>
-        <div class="projectsTop" id="projectsTop">
-            <div class="slider">
-                <div class="item" id="website" rel="preload">
-                    <div class="textbackground">
-                        <h1 class="projectname">My website</h1>
-                        <span class="projecttext">
-                            <p>Information: <span style="color: #b1b1b1;">This is my portfolio website that contains information about me. Star on github would be appreciated</span></p>
-                            <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/HTML">HTML</a><span style="color: #b1b1b1;">, </span><a
-                                    class="pointer"
-                                    href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SCSS</a><span style="color: #b1b1b1;"> and </span><a
-                                    class="pointer" href="https://en.wikipedia.org/wiki/JavaScript">JS</a></p>
-                            <p>Program: <a class="pointer" href="https://code.visualstudio.com/" target="_blank">VS
-                                    Code</a></p>
-                            <button class="raise pointer" onclick="location.href='https://github.com/OkPeach/unlucky.life'" title="Click to open">Visit
-                                Github</button>
-                        </span>
-                    </div>
-                </div>
-                <div class="item active" style="display: flex; flex-direction: row;" id="skills" rel="preload">
-                    <div class="p-left">
-                        <p class="skills">Skills</p>
-                        <hr id="line4" class="line" data-inviewport="scale-in">
-                        <div class="meter-div">
-                            <label data-inviewport="scale-in" class="html">HTML</label>
-                            <meter class="meters" id="m-html" value="0.9" data-inviewport="scale-in" title="90%">90%</meter>
-                            <label data-inviewport="scale-in" class="css">CSS</label>
-                            <meter class="meters" id="m-css" value="0.8" data-inviewport="scale-in" title="85%">85%</meter>
-                            <label data-inviewport="scale-in" class="js">JS</label>
-                            <meter class="meters" id="m-js" value="0.8" data-inviewport="scale-in" title="80%">80%</meter>
-                            <label data-inviewport="scale-in" class="js">NodeJS</label>
-                            <meter class="meters" id="m-node" value="0.6" data-inviewport="scale-in" title="75%">75%</meter>
-                            <label data-inviewport="scale-in" class="programming">Python</label>
-                            <meter class="meters" id="m-python" value="0.15" data-inviewport="scale-in" title="25%">25%</meter>
-                        </div>
-                        
-                        <p class="padding-top skills">Programs I use</p>
-                        <hr id="line7" class="line" data-inviewport="scale-in">
-                        <div class="meter-div">
-                            <label data-inviewport="scale-in" class="visual">VS Code</label>
-                            <meter class="meters" id="m-html" value="0.95" data-inviewport="scale-in" title="95%">95%</meter>
-                            <label data-inviewport="scale-in" class="visual">VS '22</label>
-                            <meter class="meters" id="m-css" value="0.5" data-inviewport="scale-in" title="50%">50%</meter>
-                        </div>
-                    </div>
-                    <div class="p-right">
-                        <h2>My projects</h2>
-                        <hr id="line5" class="line" data-inviewport="scale-in">
-                        <p class="project-text padding-bottom">This is a list of my projects and work, it keeps on growing with my passion to program!</p>
-                        <p class="project-text">You can look at my biggest work by clicking on the card on the <a>left</a> or <a>right</a>.</p>
-                        <h3 class="padding-top">My other projects</h3>
-                        <hr id="line6" class="line" data-inviewport="scale-in">
-                        <div class="other-p">
-                            <p class="peach" data-inviewport="scale-in">• <a href="https://chromium.wtf" class="pointer" title="Click to open">Chromium.wtf</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a href="/apps/crypto" class="pointer" title="Click to open">Crypto statistics</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a onclick="openEncoder()" class="pointer" title="Click to open">Encoding app (E)</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a href="/apps/ip" class="pointer" title="Click to open">IP information</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a onclick="openNotes()" class="pointer" title="Click to open">Notes app (N)</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a href="/apps/nft" class="pointer" title="Click to open">NFT Gallery</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a href="/apps/generator" class="pointer" title="Click to open">Generators</a></p>
-                            <p class="peach" data-inviewport="scale-in">• <a href="/apps/spotify" class="pointer" title="Click to open">Spotify</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item" id="program" rel="preload">
-                    <div class="textbackground">
-                        <h1 class="projectname">Company website for zsystem.cz</h1>
-                        <span class="projecttext">
-                            <p>Information: <span style="color: #b1b1b1;">Business website with reviews, email sender and visitors tracking.</span></p>
-                            <p>Languages: <a class="pointer" href="https://en.wikipedia.org/wiki/HTML">HTML</a><span style="color: #b1b1b1;">, </span><a
-                                    class="pointer"
-                                    href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">SCSS</a><span style="color: #b1b1b1;"> and </span><a
-                                    class="pointer" href="https://en.wikipedia.org/wiki/JavaScript">JS</a></p>
-                            <p>Program: <a class="pointer" href="https://code.visualstudio.com/" target="_blank">VS
-                                    Code</a></p>
-                            <button class="raise pointer" onclick="location.href='https://zsystem.cz'" title="Click to open">Visit</button>
-                        </span>
-                    </div>
-                </div>
+            <div class="info">
+                <p id="country">CZE</p><p>|</p>
+                <p id="views">0 Views</p><p>|</p>
+                <p id="discord"> unlucky.life</p><p>|</p>
+                <p id="steam"> unluckycs2</p>
             </div>
-
-
-            <br /><br />
-            <!--Mouse-->
-            <a href="#contact" class="pointer" data-inviewport="scale-in">
-                <div class="mouse_scroll">
-                    <div class="mouse">
-                        <div class="wheel"></div>
-                    </div>
-                    <div>
-                        <span class="m_scroll_arrows unu"></span>
-                        <span class="m_scroll_arrows doi"></span>
-                        <span class="m_scroll_arrows trei"></span>
-                    </div>
-            </a>
-            <!--Mouse end-->
         </div>
-        </section>
-
-        <section data-index="2" class="sectionLinks" id="contact">
-
-            <div id="contact" class="contact-stuff">
-                <h2 class="text-center contact-header" data-inviewport="scale-in">Contact Me</h2><br />
-                <hr id="line9" class="line" data-inviewport="scale-in">
-                <p data-inviewport="scale-in">Get in touch with me <span class="email underline" id="email" title="Click to copy"
-                        onclick="CopyToClipboardEmail('email')">lucien@unlucky.life</span></p><br />
-                <div class="text-center contact-social-icons">
-                    <p data-inviewport="scale-in">Or find me on:</p>
-                    <ul class="shadow" data-inviewport="scale-in">
-                        <a href="https://github.com/okpeach" target="_blank" title="Click to open">
-                            <li class="github pointer underline"> Github</li>
-                        </a>
-                        <a href="https://twitter.com/lucienkkk" target="_blank" title="Click to open">
-                            <li class="twitter pointer underline"> Twitter</li>
-                        </a>
-                        <a href="https://www.youtube.com/c/Lucienrip" target="_blank" title="Click to open">
-                            <li class="youtube pointer underline"> YouTube</li>
-                        </a>
-                    </ul>
-                    <ul class="shadow" data-inviewport="scale-in">
-                        <a href="https://steamcommunity.com/id/unluckyCS2" target="_blank" title="Click to open">
-                            <li class="steam pointer underline"> Steam</li>
-                        </a>
-                        <a class="pointer" onclick="CopyToClipboard('discord')" id="discord" title="Click to copy">
-                            <li class="discord pointer underline"> unlucky.life</li>
-                        </a>
-                        <a href="" target="_blank" title="Click to open">
-                            <li class="linkedin pointer underline"> LinkedIn</li>
-                        </a>
-                    </ul>
-                    <p data-inviewport="scale-in" style="padding-top: 1rem;">Support me:</p>
-                    <ul class="shadow" data-inviewport="scale-in">
-                        <a class="pointer" title="Click to copy"
-                            onclick="CopyToClipboardBTC('bc1qydz4rlm9sgdg6hyt8a704ugvj8uczmkh3dpzc9', 'bitcoin')"
-                            id="bitcoin">
-                            <li class="bitcoinp underline"> BTC</li>
-                        </a>
-                        <a class="pointer" href="https://paypal.me/lucienkkk/5USD" target="_blank" title="Click to open">
-                            <li class="paypal underline"> PayPal</li>
-                        </a>
-                        <a class="pointer" title="Click to copy"
-                            onclick="CopyToClipboardETH('0x64f74ad48cE1A6086C8822Ed9CC15401ABA22fa1', 'eth')" id="eth">
-                            <li class="ethp underline"> ETH</li>
-                        </a>
-                    </ul>
-                    <hr id="line8" class="line" data-inviewport="scale-in">
-                    <p data-inviewport="scale-in" class="tyna">Also check out my friend programmer Týna's portfolio <a class="here underline" title="Click to open" href="https://anekogurasu.github.io/" target="_blank">here</a>.</p>
-                </div>
-        </section>
-    </main>
-
-    <footer data-inviewport="footer">
-            <h4 id="rightsreserved" class="rightsreserved"><span id="year"></span> Lucien Pauer. All rights reserved.</h4>  
+    </div>
+    <footer>
+        <p>Designed by <a href="#">Lucien</a> with ❤️.</p>
     </footer>
-    <script src="javascript/particles/particles.min.js"></script>
-    <script src="javascript/particles/app.js"></script>
-    <script src="javascript/bar.js"></script>
+    <script src="javascript/newparticles/particles.min.js"></script>
+    <script src="javascript/newparticles/particles.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
         integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <!--<script src="javascript/vanilla-tilt.min.js"></script>-->
-    <script src="javascript/titleEffect.jquery.min.js"></script>
-    <script src="javascript/console.js"></script>
-    <script src="javascript/script-obf.js"></script>
-    <script src="javascript/backToTop.js"></script>
-
-    <!-- Default Statcounter code for unlucky.life https://unlucky.life -->
-<script type="text/javascript">
-    var sc_project=13071679; 
-    var sc_invisible=1; 
-    var sc_security="9bcc45ba"; 
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="web statistics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/13071679/0/9bcc45ba/1/" alt="web statistics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-    <!-- End of Statcounter Code -->
+    <script src="javascript/sobf.js"></script>
 </body>
-
 </html>

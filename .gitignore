@@ -13,6 +13,9 @@ favicons/
 #ignore development js
 script.js
 
+#ignore development js
+s.js
+
 #ignore todo.txt
 todo.txt
 
