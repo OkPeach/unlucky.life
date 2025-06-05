@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Little website for personal projects :)">
+    <meta name="keywords" content="Lucien Pauer, Lucien, Unlucky, unlucky life, unlucky.life, life, unlucky web, unluckylife">
+    <meta name="author" content="Lucien">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="unlucky.life">
+    <meta property="og:description" content="Just a little website">
+    <meta property="og:image" content="./images/favicon.webp">
+    <meta property="og:url" content="https://unlucky.life">
+
+    <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+    <meta name="twitter:card" content="./images/favicon.webp">
+    <meta name="twitter:title" content="unlucky.life">
+    <meta name="twitter:description" content="Just a little webste">
+    <meta name="twitter:image" content="./images/favicon.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.webp" type="image/x-icon">
+    <title>dream.list</title>
+
+  <link href="styles/s.css" rel="stylesheet" />
+  <style>
+    
+    pre {
+    font-weight: bold;
+    color: #e2e2e2;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    }
+
+    .bucket-container {
+      display: flex;
+      justify-content:flex-start;
+      align-items:flex-start;
+      gap: 40px;
+      padding: 40px;
+      flex: 1 1 50%;
+    }
+
+    .main-box {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-direction:row;
+        background-color: transparent
+    }
+
+
+    .list-box {
+        flex: 1;
+        border: double 4px white;
+        padding: 20px;
+        height: 80vh;
+        box-sizing: border-box;
+        background-color: rgba(7, 7, 7, 0.85);
+    }
+
+    .ascii-bucket {
+        flex: 1;
+        white-space: pre;
+        font-family: monospace;
+        color: #c7c7c7;
+        user-select: none;
+        height: 80vh;
+        box-sizing: border-box;
+    }
+
+    .bucket-bucket {
+        margin-top: 25%;
+        height: 50vh;
+    }
+
+    .ascii-titles {
+      text-align: left;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+      white-space: pre;
+      font-weight: bold;
+      background: linear-gradient(90deg, #696eff, #a369ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 6px;
+    }
+
+    .bucket-item {
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-left: 4px;
+      transition: all 0.2s;
+    }
+
+    .centerText{
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      width: 100%;
+    }
+
+    h2::before {
+        content: "[";
+        color: #ffffff;
+    }
+
+    h2::after {
+        content: "]";
+        color: #ffffff;
+    }
+
+    .bucket-item.completed {
+      color: #bebebe67;
+      text-decoration: line-through;
+    }
+
+    .bucket-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .bucket-add {
+      color: #a369ff;
+      cursor: pointer;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .bucket-add:hover {
+      color: #c7c7c7;
+    }
+  </style>
+  <link href="styles/loading.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="particles-js"></div>
+    <div id="loading">
+        <div class="circle">
+            <div class="noise animated"></div>
+        </div>
+    </div>
+
+  <div class="container">
+    <div class="main-box bucket-container">
+      <!-- Left side: Bucket list items -->
+      <div class="list-box">
+        <pre class="ascii-titles">
+$$$$$$$\                                                        
+$$  __$$\                                                       
+$$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$\  $$$$$$\$$$$\   $$$$$$$\ 
+$$ |  $$ |$$  __$$\ $$  __$$\  \____$$\ $$  _$$  _$$\ $$  _____|
+$$ |  $$ |$$ |  \__|$$$$$$$$ | $$$$$$$ |$$ / $$ / $$ |\$$$$$$\  
+$$ |  $$ |$$ |      $$   ____|$$  __$$ |$$ | $$ | $$ | \____$$\ 
+$$$$$$$  |$$ |      \$$$$$$$\ \$$$$$$$ |$$ | $$ | $$ |$$$$$$$  |
+\_______/ \__|       \_______| \_______|\__| \__| \__|\_______/ 
+        </pre>
+        </br><div class="centerText">
+            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        </div></br>
+        <div id="bucket-items">
+          <!-- Items go here -->
+        </div>
+        <div class="bucket-add" onclick="addItem()">[+] Add Item</div>
+      </div>
+
+      <!-- Right side: ASCII Bucket -->
+      <div class="ascii-bucket">
+<pre class="ascii-titles bucket-bucket">
+          _______
+      _.-()______)-._
+    .'               '.
+   /                   \
+  :      _________      :
+  |.--'''         '''--.|
+  (                     )
+  :'--..._________...--':
+  :                     :
+   :                   :
+   :                   :
+    :                 :
+    :                 :
+     :               :
+     :               :
+      :             :
+      :_           _:
+        '''-----'''
+</pre>
+      </div>
+    </div>
+  </div>
+<footer>
+        <p>Designed by <a href="#">Lucien</a> with ❤️.</p>
+</footer>
+<script src="javascript/newparticles/particles.min.js"></script>
+    <script src="javascript/newparticles/particles.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascript/titleEffect.jquery.min.js"></script>
+    <script src="javascript/list.js"></script>
+</body>
+</html>

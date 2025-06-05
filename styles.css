@@ -1,0 +1,321 @@
+body {
+    background: #18171C;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(8, var(--grid-size, 100px)); /* 8 columns */
+    grid-template-rows: repeat(4, var(--grid-size, 100px)); /* 4 rows */
+    gap: 10px;
+    width: 80%;
+    height: 80vh;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Widget Styling */
+.widget {
+    background: #18181A;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #28272C;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+    cursor: move;
+    min-height: 0;
+    min-width: 0;
+    overflow: auto;
+}
+
+.widget:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.04);
+    transform: translateY(-2px);
+}
+
+.widget.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
+.widget h2 {
+    margin: 0 0 10px;
+    font-size: 1.1em;
+    color: #ff4d4d;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Initial Widget Layouts */
+.heatmap {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.overdue {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+}
+
+.work-done {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.todos {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.quick-note {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 3;
+}
+
+.forgotten {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.pomodoro {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.calendar {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+/* Placeholder for drop position */
+.placeholder {
+    background: rgba(255, 77, 77, 0.2);
+    border: 2px dashed #ff4d4d;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+/* Calendar Widget */
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #ff4d4d;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.nav-button {
+    background: #ff4d4d;
+    border: none;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-button:hover {
+    background: #ff6b6b;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.calendar-grid div {
+    padding: 6px;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #aaa;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.calendar-grid div:hover {
+    background: #3f3f3f;
+    border-radius: 50%;
+}
+
+.calendar-grid .day-header {
+    font-weight: 400;
+    font-size: 0.8em;
+    color: #888;
+    background: transparent;
+    cursor: default;
+    padding: 4px;
+}
+
+.calendar-grid .day-header:hover {
+    background: transparent;
+}
+
+.calendar-grid .current-day {
+    background: #ff4d4d;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 50%;
+}
+
+.calendar-grid .other-month {
+    color: #555;
+    background: transparent;
+}
+
+/* Pomodoro Timer */
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    background: conic-gradient(#ff4d4d 0% 50%, #18181A 50% 100%);
+    border-radius: 50%;
+    margin: 10px auto;
+    position: relative;
+}
+
+.progress-circle::before {
+    content: "Done";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+}
+
+/* Heatmap */
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+}
+
+.heatmap-row {
+    display: contents;
+}
+
+.heatmap-cell {
+    width: 100%;
+    height: 1.6rem;
+    background: #2a2a2a;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    background: #ff4d4d;
+    border: none;
+    padding: 8px 16px;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #ff6b6b;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs and Textarea */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    background: #2a2a2a;
+    border: 1px solid #28272C;
+    color: #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 60px;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    margin: 6px 0;
+    color: #aaa;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+
+ul li input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #ff4d4d;
+}
+
+ul li input[type="checkbox"]:checked + span {
+    color: #666;
+    text-decoration: line-through;
+}
+
+/* Overdue/Forgotten Headers */
+.overdue h2, .forgotten h2 {
+    margin-top: 15px;
+}
+
+.overdue h2:first-child, .forgotten h2:first-child {
+    margin-top: 0;
+}

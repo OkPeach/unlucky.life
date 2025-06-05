@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multitask Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Pomodoro Activity Heatmap (1x2) -->
+        <div class="heatmap widget" draggable="true" data-index="0" data-width="1" data-height="2">
+            <h2>Pomodoro Activity</h2>
+            <div class="heatmap-grid">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+
+        <!-- Calendar (1x1) -->
+        <div class="calendar widget" draggable="true" data-index="1" data-width="1" data-height="1">
+            <div class="calendar-header">
+                <button id="prev-month" class="nav-button">←</button>
+                <h2 id="current-month">Brézen 2025</h2>
+                <button id="next-month" class="nav-button">→</button>
+            </div>
+            <div class="calendar-grid">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+
+        <!-- Pomodoro Timer (1x1) -->
+        <div class="pomodoro widget" draggable="true" data-index="2" data-width="1" data-height="1">
+            <h2>Pomodoros</h2>
+            <div class="timer">
+                <p>Done</p>
+                <div class="progress-circle"></div>
+                <p>40 min</p>
+            </div>
+            <button id="start-stop">Start</button>
+        </div>
+
+        <!-- Work Done Today (1x1) -->
+        <div class="work-done widget" draggable="true" data-index="3" data-width="1" data-height="1">
+            <h2>Work done today</h2>
+            <ul id="work-done-list">
+                <!-- JavaScript will populate this -->
+            </ul>
+        </div>
+
+        <!-- Work Todos Today (1x2) -->
+        <div class="todos widget" draggable="true" data-index="4" data-width="1" data-height="2">
+            <h2>Work todos today</h2>
+            <input type="text" id="todo-input" placeholder="Quick add todo...">
+            <ul id="todo-list">
+                <!-- JavaScript will populate this -->
+            </ul>
+        </div>
+
+        <!-- Quick Note (1x3) -->
+        <div class="quick-note widget" draggable="true" data-index="5" data-width="1" data-height="3">
+            <h2>Quick Note</h2>
+            <textarea id="quick-note" placeholder="Stop reading my todos"></textarea>
+        </div>
+
+        <!-- Forgotten (1x2) -->
+        <div class="forgotten widget" draggable="true" data-index="6" data-width="1" data-height="2">
+            <h2>Forgotten</h2>
+            <ul id="forgotten-list">
+                <!-- JavaScript will populate this -->
+            </ul>
+        </div>
+
+        <!-- Overdue (1x3) -->
+        <div class="overdue widget" draggable="true" data-index="7" data-width="1" data-height="3">
+            <h2>Overdue</h2>
+            <ul id="overdue-list">
+                <!-- JavaScript will populate this -->
+            </ul>
+        </div>
+
+        <!-- Pomodoro Activity Heatmap (1x2) -->
+<div class="heatmap widget" draggable="true" data-index="0" data-width="1" data-height="2">
+    <h2>Pomodoro Activity</h2>
+    <div class="heatmap-grid">
+        <!-- Placeholder heatmap -->
+        <div class="heatmap-row">
+            <div class="heatmap-cell" style="background: #ff4d4d;"></div>
+            <div class="heatmap-cell"></div>
+            <div class="heatmap-cell"></div>
+            <div class="heatmap-cell" style="background: #ff4d4d;"></div>
+            <div class="heatmap-cell"></div>
+        </div>
+        <div class="heatmap-row">
+            <div class="heatmap-cell"></div>
+            <div class="heatmap-cell" style="background: #ff4d4d;"></div>
+            <div class="heatmap-cell"></div>
+            <div class="heatmap-cell"></div>
+            <div class="heatmap-cell" style="background: #ff4d4d;"></div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
