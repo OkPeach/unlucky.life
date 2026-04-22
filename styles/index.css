@@ -157,7 +157,7 @@ pre.logo {
   min-width: 0;
   overflow: hidden;
 }
-.foot-dot { color: var(--dim); }
+.sep-dot { color: var(--dim); }
 
 @keyframes up {
   from { opacity: 0; transform: translateY(14px); }
