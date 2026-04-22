@@ -99,7 +99,7 @@ pre.logo {
 .links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin-bottom: 20px;
   opacity: 0;
   animation: up 0.5s ease 0.55s forwards;
@@ -107,7 +107,7 @@ pre.logo {
 .links-inner {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 .links a {
